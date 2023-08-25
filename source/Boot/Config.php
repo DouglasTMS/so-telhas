@@ -22,7 +22,7 @@ define("CONF_FACEBOOK_ADMINS", []);
 ##  Configuração de URL
 ##
 define("CONF_URL_BASE", "https://www.dignonome.com.br");
-define("CONF_URL_TEST", "https://www.localhost/digno-nome");
+define("CONF_URL_TEST", "https://www.localhost/so-telhas");
 
 ##
 ##  Configuração de Datas
