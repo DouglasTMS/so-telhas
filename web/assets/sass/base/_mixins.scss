@@ -1,0 +1,5 @@
+@mixin respond($value) {
+    @media (min-width: ($value / 16)+em) {
+        @content;
+    }
+}
