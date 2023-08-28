@@ -1,0 +1,70 @@
+.slider {
+    position: relative;
+    overflow: hidden;
+
+    &__box {
+        width: 100%;
+        display: flex;
+
+        &__item {
+            width: 100%;
+            display: flex;
+            position: relative;
+
+            &__box {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 90%;
+                margin: 0 5%;
+                max-width: 960px;
+                display: flex;
+                flex-direction: column;
+
+                & h1 {
+                    color: var(--color-white);
+                    font-size: 3.5em;
+                    font-weight: bold;
+                }
+
+                & p {
+                    color: var(--color-white);
+                    background-color: var(--color-grey-dark);
+                    display: flex;
+                    align-self: flex-start;
+                    padding: 5px 50px;
+                    border-radius: 8px;
+                }
+            }
+
+            & img {
+                display: flex;
+            }
+        }
+    }
+
+
+
+    &__controls {
+        position: absolute;
+        width: 90%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: space-between;
+
+        & li {
+            cursor: pointer;
+
+            &:first-child {
+                transform: rotate(180deg);
+            }
+
+            & svg {
+                display: flex;
+                stroke: var(--color-white);
+            }
+        }
+    }
+}

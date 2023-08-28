@@ -53,11 +53,15 @@
     </div>
 
     <div class="row slider">
-        <div class="slider__box">
-            <div class="slider__box__item">
-                <h1>Só Telhas</h1>
-                <p>Cobrindo o Brasil com Aço</p>
-                <img src="" title="" alt="">
+        <div class="slider__box style= width: 100%">
+            <div class="slider__box__item style= width: 100%">
+
+                <div class="slider__box__item__box">
+                    <h1>Só Telhas</h1>
+                    <p>Cobrindo o Brasil com Aço</p>
+                </div>
+
+                <img src="<?= thumb()->make("storage/slider-01.png", 600, 500) ?>" title="" alt="">
             </div>
 
             <div class="slider__controls">
