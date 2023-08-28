@@ -66,7 +66,7 @@
             </div>
 
             <div class="about-us__box__main__right">
-                <img src="" title="" alt="">
+                <img src="<?= url("web/assets/img/telhas-1.jpg"); ?>" title="" alt="">
             </div>
         </main>
 
