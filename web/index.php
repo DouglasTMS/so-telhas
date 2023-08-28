@@ -20,7 +20,7 @@
                 <img src="<?= url("web/assets/img/logo-so-telhas.svg"); ?>" alt="<?= CONF_SITE_TITLE ?>" title="<?= CONF_SITE_TITLE ?>">
             </a>
 
-            <a target="_blank" class="header__box__whatsapp" href="wa.me/5565999994919" title="Só Telhas no WhatsApp"></a>
+            <a target="_blank" class="header__box__whatsapp" href="wa.me/5565999994919" title="Só Telhas no WhatsApp"><i></i><span>Peça um Orçamento</span></a>
         </div>
     </header>
 

@@ -1,0 +1,80 @@
+.header {
+    background-color: var(--color-white);
+
+    &__box {
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__logo {
+            display: flex;
+            width: 100%;
+            max-width: 150px;
+
+            @include respond(425) {
+                max-width: 200px;
+            }
+        }
+
+        &__whatsapp {
+            @media (max-width: 47.9em) {
+                background-color: var(--color-primary);
+                display: flex;
+                position: relative;
+                margin-top: 25px;
+                padding: 5px 10px;
+                border-radius: 4px;
+                background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary-light));
+
+                & i {
+                    width: 35px;
+                    height: 35px;
+                    background-color: var(--color-primary);
+                    position: absolute;
+                    top: -85%;
+                    left: 50%;
+                    transform: translate(-50% -50%);
+                    background-image: url("../img/icon/whatsapp.svg");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: auto 60%;
+                    border-radius: 50%;
+                }
+
+                & span {
+                    font-size: .8em;
+                    color: var(--color-white);
+                }
+            }
+
+            @media (min-width: 48em) {
+
+                background-color: var(--color-primary);
+                background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary-light));
+                padding: 5px 25px;
+                border-radius: 50px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                max-width: 250px;
+
+
+                & i {
+                    width: 30px;
+                    height: 30px;
+                    background-image: url("../img/icon/whatsapp.svg");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 80% auto;
+                    margin-right: 5px;
+                }
+
+                & span {
+                    color: var(--color-white);
+                    font-size: .9em;
+                }
+            }
+        }
+    }
+}
