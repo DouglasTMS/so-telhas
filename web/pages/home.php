@@ -2,47 +2,29 @@
 
 <section class="row our-products">
     <div class="box our-products__box">
-        <header>
+        <header class="our-products__box__header">
             <h1>Nossas Telhas</h1>
         </header>
 
-        <main>
+        <main class="our-products__box__main">
 
-            <article class="our-products__box__item">
-                <img src="" title="" alt="">
-                <h1>Telhas Semi Sanduíche</h1>
-                <p class="price">R$ 89,90</p>
-                <p class="pay-info">ou até 12X de R$ 7,49</p>
-                <a href="" title="">Saiba Mais</a>
-            </article>
+            <?php for ($i = 1; $i <= 4; $i++) : ?>
 
-            <article class="our-products__box__item">
-                <img src="" title="" alt="">
-                <h1>Telhas Semi Sanduíche</h1>
-                <p class="price">R$ 89,90</p>
-                <p class="pay-info">ou até 12X de R$ 7,49</p>
-                <a href="" title="">Saiba Mais</a>
-            </article>
+                <article class="our-products__box__main__item">
+                    <img src="<?= thumb()->make("storage/slider-01.png", 300, 200); ?>" title="" alt="">
+                    <div class="our-products__box__main__item__box">
+                        <h1>Telhas Semi Sanduíche</h1>
+                        <p class="price">R$ 89,90</p>
+                        <p class="pay-info">ou até 12X de R$ 7,49</p>
+                        <a href="" title="">Saiba Mais</a>
+                    </div>
+                </article>
 
-            <article class="our-products__box__item">
-                <img src="" title="" alt="">
-                <h1>Telhas Semi Sanduíche</h1>
-                <p class="price">R$ 89,90</p>
-                <p class="pay-info">ou até 12X de R$ 7,49</p>
-                <a href="" title="">Saiba Mais</a>
-            </article>
-
-            <article class="our-products__box__item">
-                <img src="" title="" alt="">
-                <h1>Telhas Semi Sanduíche</h1>
-                <p class="price">R$ 89,90</p>
-                <p class="pay-info">ou até 12X de R$ 7,49</p>
-                <a href="" title="">Saiba Mais</a>
-            </article>
+            <?php endfor; ?>
 
         </main>
 
-        <footer>
+        <footer class="our-products__box__footer">
             <a href="" title="">Ver Todas</a>
         </footer>
     </div>
