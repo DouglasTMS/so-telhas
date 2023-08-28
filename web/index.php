@@ -27,6 +27,7 @@
     <div class="row menu">
 
         <ul class="menu__box box">
+
             <li>
                 <a href="<?= url(); ?>" title="Início">Início</a>
             </li>
@@ -43,6 +44,12 @@
                 <a href="<?= url("orcamento"); ?>" title="Orçamento">Orçamento</a>
             </li>
         </ul>
+
+        <div class="menu__mobile-icon">
+            <div class="menu__mobile-icon__box">
+                <span></span>
+            </div>
+        </div>
     </div>
 
     <div class="row slider">
