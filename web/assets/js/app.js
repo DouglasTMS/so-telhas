@@ -21,4 +21,9 @@ $(function () {
         $(this).toggleClass("active");
         $(".menu__box").toggleClass("active");
     });
+
+
+    $(".our-differentials").on("scroll", function () {
+        console.log("ok");
+    });
 });
