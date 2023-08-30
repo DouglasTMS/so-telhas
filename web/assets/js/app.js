@@ -21,4 +21,20 @@ $(function () {
         $(this).toggleClass("active");
         $(".menu__box").toggleClass("active");
     });
+
+    //---------------------------------------------------------------------------------------------
+    // Open and Close WhatsApp Phones List --------------------------------------------------------
+    //---------------------------------------------------------------------------------------------
+    $(".whatsapp-fixed__open-list").on("click", function (e) {
+        e.preventDefault();
+        $(this).toggleClass("active");
+        let iconUri = $(this).data("icon-uri");
+
+        if ($(this).hasClass("active")) {
+            $(this).find("img").attr("src", iconUri + "/whatsapp-fixed-close.svg");
+        } else {
+            $(this).find("img").attr("src", iconUri + "/whatsapp-fixed.svg");
+        }
+        $(".whatsapp-fixed__list-box").toggleClass("visible");
+    });
 });

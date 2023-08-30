@@ -155,10 +155,43 @@
         </div>
     </footer>
 
+    <div class="whatsapp-fixed">
+        <a target="_blank" data-icon-uri="<?= url("web/assets/img/icon"); ?>" href="https://api.whatsapp.com/send/?phone=5565996823535&text=Olá! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Consultor" class="whatsapp-fixed__open-list">
+            <img width="50px" height="50px" src="<?= url("web/assets/img/icon/whatsapp-fixed.svg"); ?>" alt="Falar com Consultor">
+            <p>Falar com Consultor</p>
+        </a>
 
-    <a target="_blank" href="https://api.whatsapp.com/send/?phone=5565996823535&text=Olá! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Consultor" class="whatsapp-fixed"><img width="50px" height="50px" src="<?= url("web/assets/icon/whatsapp-fixed.svg"); ?>" alt="Falar com Consultor">
-        <p>Falar com Consultor</p>
-    </a>
+        <ul class="whatsapp-fixed__list-box">
+            <div class="whatsapp-fixed__list-box__header">
+                <img src="<?= url("web/assets/img/icon/whatsapp.svg"); ?>" title="WhatsApp" alt="WhatsApp">
+                <p>Com qual consultor gostaria de falar?</p>
+            </div>
+
+            <li class="whatsapp-fixed__list-box__item">
+                <a href="" title="" class="whatsapp-fixed__list-box__item__name">
+                    Hihasmin Eufrasio
+                </a>
+
+                <a href="" title="" class="whatsapp-fixed__list-box__item__phone">
+                    (62) 99999-9999
+                </a>
+            </li>
+
+            <li class="whatsapp-fixed__list-box__item">
+                <a href="" title="" class="whatsapp-fixed__list-box__item__name">
+                    Luiz Kelwer
+                </a>
+
+                <a href="" title="" class="whatsapp-fixed__list-box__item__phone">
+                    (62) 99999-9999
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+
+
 
     <div class="load"></div>
     <div class="alpha"></div>
