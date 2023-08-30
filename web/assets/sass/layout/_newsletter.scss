@@ -1,0 +1,87 @@
+.newsletter {
+    margin-top: -40px;
+    position: relative;
+    z-index: 1;
+    padding: 70px 0 50px 0;
+    background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &__header {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+
+            & img {
+                display: flex;
+                width: 60px;
+                height: 60px;
+            }
+
+            & h1 {
+                display: flex;
+                color: var(--color-white);
+                width: 100%;
+                text-align: left;
+                font-size: 1.5em;
+                margin: 20px auto 10px auto;
+                line-height: 1.2;
+                max-width: 400px;
+
+                @include respond(768) {
+                    text-align: center;
+                    font-size: 1.8em;
+                    max-width: 580px;
+                }
+            }
+
+            & p {
+                color: var(--color-white);
+                line-height: 1.5;
+                width: 100%;
+                text-align: left;
+                max-width: 400px;
+
+                @include respond(768) {
+                    text-align: center;
+                }
+            }
+        }
+
+        &__footer {
+            & form {
+                display: flex;
+                flex-direction: column;
+
+                & input {
+                    padding: 15px 25px;
+                    border: none;
+                    outline: none;
+                    border-radius: 50px;
+                    width: 100%;
+                    color: var(--color-grey-dark);
+                    margin-bottom: 10px;
+
+                    &[type="submit"] {
+                        background-color: var(--color-grey-dark);
+                        color: var(--color-white);
+                        cursor: pointer;
+                        transition: .5s ease all;
+
+                        &:hover {
+                            background-color: var(--color-grey-light);
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

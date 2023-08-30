@@ -1,0 +1,104 @@
+.contact {
+    padding: 50px 0;
+    background-image: linear-gradient(to right, var(--color-secundary-light), var(--color-secundary-dark));
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &__header {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+
+            & img {
+                display: flex;
+                width: 60px;
+                height: 60px;
+            }
+
+            & h1 {
+                display: flex;
+                color: var(--color-white);
+                width: 100%;
+                text-align: left;
+                font-size: 1.5em;
+                margin: 20px auto 10px auto;
+                line-height: 1.2;
+                max-width: 400px;
+
+                @include respond(768) {
+                    text-align: center;
+                    font-size: 1.8em;
+                    max-width: 580px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            & p {
+                color: var(--color-white);
+                line-height: 1.5;
+                width: 100%;
+                text-align: left;
+                max-width: 400px;
+
+                @include respond(768) {
+                    text-align: center;
+                }
+            }
+        }
+
+        &__main {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+
+            & p {
+                color: var(--color-white);
+                width: 100%;
+                text-align: center;
+                font-size: 1.3em;
+            }
+
+            &__phone {
+                font-size: 2.3em;
+                color: var(--color-white);
+
+                & b {
+                    color: var(--color-white);
+                }
+            }
+
+            &__whatsapp {
+                padding: 20px 30px 20px 60px;
+                background-color: var(--color-green);
+                color: var(--color-white);
+                border-radius: 8px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.5em;
+                background-image: url("../img/icon/whatsapp.svg");
+                background-position: 40px center;
+                background-repeat: no-repeat;
+                background-size: 40px auto;
+                width: 100%;
+                max-width: 330px;
+
+
+                & b {
+                    color: var(--color-white);
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}

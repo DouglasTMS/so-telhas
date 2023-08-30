@@ -116,10 +116,11 @@
 
 <section class="row newsletter">
     <div class="box newsletter__box">
+
         <header class="newsletter__box__header">
-            <img src="" alt="" title="">
+            <img width="60px" height="60px" src="<?= url("web/assets/img/icon/gift.svg"); ?>" alt="Newsletter" title="Newsletter">
             <h1>Gostaria de receber nossas novidades e promoções?</h1>
-            <p></p>
+            <p>Cadastre seu e-mail em nossa newsletter e fique por dentro das novidades e promoções.</p>
         </header>
 
         <footer class="newsletter__box__footer">
@@ -163,7 +164,7 @@
 <section class="row contact">
     <div class="box contact__box">
         <header class="contact__box__header">
-            <img src="" alt="" title="">
+            <img src="<?= url("web/assets/img/icon/gift.svg"); ?>" alt="Contato" title="Contato">
             <h1>Entre em Contato Conosco</h1>
             <p>Tire suas dúvidas e faça um orçamento entrando em contato:</p>
         </header>
@@ -171,11 +172,7 @@
         <main class="contact__box__main">
             <p>Ligue agora</p>
             <a class="contact__box__main__phone" href="tel:062981752910" title="Ligue para a Só Telhas" target="_blank">62 <b>98175-2910</b></a>
-            <a class="contact__box__main__whatsapp" href="wa.me/5562981752910" title="Fale com a Só Telhas" target="_blank">62 98175-2910</a>
+            <a class="contact__box__main__whatsapp" href="wa.me/5562981752910" title="Fale com a Só Telhas" target="_blank">62 <b>98175-2910</b></a>
         </main>
-
-        <footer class="contact__box__footer">
-            <a href="" title=""></a>
-        </footer>
     </div>
 </section>
