@@ -147,7 +147,7 @@
         <main class="feedback__box__main">
             <div class="feedback__container">
                 <article class="feedback__item">
-                    <img src="" alt="" title="">
+                    <img src="<?= thumb()->make("storage/slider-01.png", 300, 300); ?>" alt="" title="">
                     <h1>Douglas Siebert</h1>
                     <p>Muito bom!</p>
                 </article>

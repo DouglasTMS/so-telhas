@@ -88,14 +88,17 @@
                 <ul class="footer__box__footer__contact">
                     <p>Contato</p>
                     <li>
+                        <img width="20" height="20.1" src="<?= url("web/assets/img/icon/whatsapp.svg"); ?>" title="WhatsApp" alt="WhatsApp">
                         <a href="" target="_blank" title="">65 99999-9999</a>
                     </li>
 
                     <li>
+                        <img width="20" height="21.82" src="<?= url("web/assets/img/icon/phone.svg"); ?>" title="Telefone" alt="Telefone">
                         <a href="" target="_blank" title="">65 99999-9999</a>
                     </li>
 
                     <li>
+                        <img width="20" height="15" src="<?= url("web/assets/img/icon/email.svg"); ?>" title="E-mail" alt="E-mail">
                         <a href="" target="_blank" title="">oi@sotelhasmt.com</a>
                     </li>
                 </ul>
@@ -103,10 +106,12 @@
                 <ul class="footer__box__footer__social">
                     <p>Redes Sociais</p>
                     <li>
+                        <img width="20" height="20" src="<?= url("web/assets/img/icon/instagram.svg"); ?>" title="Instagram" alt="Instagram">
                         <a href="" target="_blank" title="">Instagram</a>
                     </li>
 
                     <li>
+                        <img width="20" height="20" src="<?= url("web/assets/img/icon/facebook.svg"); ?>" title="Facebook" alt="Facebook">
                         <a href="" target="_blank" title="">Facebook</a>
                     </li>
                 </ul>
@@ -114,35 +119,35 @@
                 <ul class="footer__box__footer__payment-types">
                     <p>Formas de Pagamento</p>
                     <li>
-                        <a href="" target="_blank" title=""><img src="" title="" alt=""></a>
+                        <img width="60" height="35" src="<?= url("web/assets/img/icon/visa.svg"); ?>" title="Visa" alt="Visa">
                     </li>
 
                     <li>
-                        <a href="" target="_blank" title=""><img src="" title="" alt=""></a>
+                        <img width="60" height="35" src="<?= url("web/assets/img/icon/mastercard.svg"); ?>" title="Mastercard" alt="Mastercard">
                     </li>
 
                     <li>
-                        <a href="" target="_blank" title=""><img src="" title="" alt=""></a>
+                        <img width="60" height="35" src="<?= url("web/assets/img/icon/visa.svg"); ?>" title="Visa" alt="Visa">
                     </li>
 
                     <li>
-                        <a href="" target="_blank" title=""><img src="" title="" alt=""></a>
+                        <img width="60" height="35" src="<?= url("web/assets/img/icon/mastercard.svg"); ?>" title="Mastercard" alt="Mastercard">
                     </li>
 
                     <li>
-                        <a href="" target="_blank" title=""><img src="" title="" alt=""></a>
+                        <img width="60" height="35" src="<?= url("web/assets/img/icon/visa.svg"); ?>" title="Visa" alt="Visa">
                     </li>
 
                     <li>
-                        <a href="" target="_blank" title=""><img src="" title="" alt=""></a>
+                        <img width="60" height="35" src="<?= url("web/assets/img/icon/mastercard.svg"); ?>" title="Mastercard" alt="Mastercard">
                     </li>
 
                     <li>
-                        <a href="" target="_blank" title=""><img src="" title="" alt=""></a>
+                        <img width="60" height="35" src="<?= url("web/assets/img/icon/visa.svg"); ?>" title="Visa" alt="Visa">
                     </li>
 
                     <li>
-                        <a href="" target="_blank" title=""><img src="" title="" alt=""></a>
+                        <img width="60" height="35" src="<?= url("web/assets/img/icon/mastercard.svg"); ?>" title="Mastercard" alt="Mastercard">
                     </li>
                 </ul>
 
