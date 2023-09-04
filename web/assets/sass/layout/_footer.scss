@@ -29,12 +29,26 @@
             width: 100%;
             padding: 50px 0;
 
+            @include respond(768) {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
             &__contact,
             &__social,
             &__payment-types {
                 display: flex;
                 flex-direction: column;
                 margin-bottom: 35px;
+
+                @include respond(768) {
+                    width: 49%;
+                }
+
+                @include respond(1024) {
+                    width: 32% !important;
+                }
 
                 & p {
                     color: var(--color-white);
@@ -84,9 +98,14 @@
                 flex-direction: row;
                 flex-wrap: wrap;
 
+                @include respond(768) {
+                    width: 100%;
+                }
+
                 & p {}
 
                 & li {
+
 
                     & img {
                         margin: 0;

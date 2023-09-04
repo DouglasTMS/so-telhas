@@ -9,6 +9,7 @@
         &__item {
             width: 100%;
             display: flex;
+            justify-content: center;
             position: relative;
 
             &__box {
@@ -16,15 +17,19 @@
                 top: 50%;
                 transform: translateY(-50%);
                 width: 90%;
-                margin: 0 5%;
                 max-width: 960px;
                 display: flex;
                 flex-direction: column;
+                max-width: 1024px;
 
                 & h1 {
                     color: var(--color-white);
                     font-size: 3.5em;
                     font-weight: bold;
+
+                    @include respond(1260) {
+                        font-size: 5.5em;
+                    }
                 }
 
                 & p {
@@ -34,6 +39,10 @@
                     align-self: flex-start;
                     padding: 5px 50px;
                     border-radius: 8px;
+
+                    @include respond(1260) {
+                        font-size: 1.5em;
+                    }
                 }
             }
 
@@ -42,8 +51,6 @@
             }
         }
     }
-
-
 
     &__controls {
         position: absolute;

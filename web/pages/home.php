@@ -8,7 +8,7 @@
 
         <main class="our-products__box__main">
 
-            <?php for ($i = 1; $i <= 4; $i++) : ?>
+            <?php for ($i = 1; $i <= 3; $i++) : ?>
 
                 <article class="our-products__box__main__item">
                     <img src="<?= thumb()->make("storage/slider-01.png", 300, 200); ?>" title="" alt="">

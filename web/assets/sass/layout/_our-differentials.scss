@@ -26,6 +26,10 @@
                 width: 100%;
                 text-align: center;
                 line-height: 1;
+
+                @include respond(1024) {
+                    font-size: 2.5em;
+                }
             }
         }
 

@@ -5,6 +5,10 @@
     padding: 70px 0 50px 0;
     background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
 
+    @include respond(1024) {
+        padding-bottom: 70px;
+    }
+
     &__box {
         display: flex;
         flex-direction: column;
@@ -56,29 +60,79 @@
         }
 
         &__footer {
+            display: flex;
+            width: 100%;
+            max-width: 600px;
+
+            @include respond(1024) {
+                max-width: 800px;
+            }
+
             & form {
                 display: flex;
                 flex-direction: column;
+                width: 100%;
 
-                & input {
-                    padding: 15px 25px;
-                    border: none;
-                    outline: none;
-                    border-radius: 50px;
+                @include respond(1024) {
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+
+                & label {
                     width: 100%;
-                    color: var(--color-grey-dark);
-                    margin-bottom: 10px;
+                    display: flex;
+                    flex-direction: column;
 
-                    &[type="submit"] {
-                        background-color: var(--color-grey-dark);
-                        color: var(--color-white);
-                        cursor: pointer;
-                        transition: .5s ease all;
-
-                        &:hover {
-                            background-color: var(--color-grey-light);
+                    @include respond(1024) {
+                        &:first-of-type {
+                            width: 48%;
                         }
 
+                        &:last-of-type {
+                            width: 50%;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+
+                            & input {
+                                width: 49%;
+
+                                &[type="text"] {
+                                    border-top-right-radius: 0;
+                                    border-bottom-right-radius: 0;
+                                    width: 65%;
+                                }
+
+                                &[type="submit"] {
+                                    width: 35%;
+                                    border-top-left-radius: 0;
+                                    border-bottom-left-radius: 0;
+                                }
+                            }
+                        }
+                    }
+
+                    & input {
+                        width: 100%;
+                        padding: 15px 25px;
+                        border: none;
+                        outline: none;
+                        border-radius: 50px;
+                        width: 100%;
+                        color: var(--color-grey-dark);
+                        margin-bottom: 10px;
+
+                        &[type="submit"] {
+                            background-color: var(--color-grey-dark);
+                            color: var(--color-white);
+                            cursor: pointer;
+                            transition: .5s ease all;
+
+                            &:hover {
+                                background-color: var(--color-grey-light);
+                            }
+
+                        }
                     }
                 }
             }
