@@ -172,7 +172,7 @@
         <main class="contact__box__main">
             <p>Ligue agora</p>
             <a class="contact__box__main__phone" href="tel:062981752910" title="Ligue para a Só Telhas" target="_blank">62 <b>98175-2910</b></a>
-            <a class="contact__box__main__whatsapp" href="wa.me/5562981752910" title="Fale com a Só Telhas" target="_blank">62 <b>98175-2910</b></a>
+            <a class="contact__box__main__whatsapp" href="https://api.whatsapp.com/send/?phone=5562981752910&text=Olá, Luiz Kelwer! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Fale com a Só Telhas" target="_blank">62 <b>98175-2910</b></a>
         </main>
     </div>
 </section>

@@ -20,7 +20,7 @@
                 <img src="<?= url("web/assets/img/logo-so-telhas.svg"); ?>" alt="<?= CONF_SITE_TITLE ?>" title="<?= CONF_SITE_TITLE ?>">
             </a>
 
-            <a target="_blank" class="header__box__whatsapp" href="wa.me/5565999994919" title="Só Telhas no WhatsApp"><i></i><span>Peça um Orçamento</span></a>
+            <a target="_blank" class="header__box__whatsapp" data-icon-uri="<?= url("web/assets/img/icon"); ?>" href="#" title="Só Telhas no WhatsApp"><i></i><span>Peça um Orçamento</span></a>
         </div>
     </header>
 
@@ -95,17 +95,17 @@
                     <p>Contato</p>
                     <li>
                         <img width="20" height="20.1" src="<?= url("web/assets/img/icon/whatsapp.svg"); ?>" title="WhatsApp" alt="WhatsApp">
-                        <a href="" target="_blank" title="">65 99999-9999</a>
+                        <a href="https://api.whatsapp.com/send/?phone=5562981752910&text=Olá, Luiz Kelwer! Eu estava no seu site e gostaria de tirar algumas dúvidas." target="_blank" title="Falar com a Só Telhas">(62) 98175-2910</a>
                     </li>
 
                     <li>
                         <img width="20" height="21.82" src="<?= url("web/assets/img/icon/phone.svg"); ?>" title="Telefone" alt="Telefone">
-                        <a href="" target="_blank" title="">65 99999-9999</a>
+                        <a href="tel:062981752910" target="_blank" title="Ligar para a Só Telhas">(62) 98175-2910</a>
                     </li>
 
                     <li>
                         <img width="20" height="15" src="<?= url("web/assets/img/icon/email.svg"); ?>" title="E-mail" alt="E-mail">
-                        <a href="" target="_blank" title="">oi@sotelhasmt.com</a>
+                        <a href="mailto:comercial@sotelhasmt.com" target="_blank" title="Enviar e-mail para a Só Telhas">comercial@sotelhasmt.com</a>
                     </li>
                 </ul>
 
@@ -113,12 +113,12 @@
                     <p>Redes Sociais</p>
                     <li>
                         <img width="20" height="20" src="<?= url("web/assets/img/icon/instagram.svg"); ?>" title="Instagram" alt="Instagram">
-                        <a href="" target="_blank" title="">Instagram</a>
+                        <a href="https://www.instagram.com/sotelhasmt" target="_blank" title="Instagram da Só Telhas">Instagram</a>
                     </li>
 
                     <li>
                         <img width="20" height="20" src="<?= url("web/assets/img/icon/facebook.svg"); ?>" title="Facebook" alt="Facebook">
-                        <a href="" target="_blank" title="">Facebook</a>
+                        <a href="https://www.facebook.com/sotelhasmt" target="_blank" title="Facebook da Só Telhas">Facebook</a>
                     </li>
                 </ul>
 
@@ -162,7 +162,7 @@
     </footer>
 
     <div class="whatsapp-fixed">
-        <a target="_blank" data-icon-uri="<?= url("web/assets/img/icon"); ?>" href="https://api.whatsapp.com/send/?phone=5565996823535&text=Olá! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Consultor" class="whatsapp-fixed__open-list">
+        <a target="_blank" data-icon-uri="<?= url("web/assets/img/icon"); ?>" href="#" title="Falar com Consultor" class="whatsapp-fixed__open-list">
             <img width="50px" height="50px" src="<?= url("web/assets/img/icon/whatsapp-fixed.svg"); ?>" alt="Falar com Consultor">
             <p>Falar com Consultor</p>
         </a>
@@ -174,22 +174,32 @@
             </div>
 
             <li class="whatsapp-fixed__list-box__item">
-                <a href="" title="" class="whatsapp-fixed__list-box__item__name">
-                    Hihasmin Eufrasio
-                </a>
-
-                <a href="" title="" class="whatsapp-fixed__list-box__item__phone">
-                    (62) 99999-9999
-                </a>
-            </li>
-
-            <li class="whatsapp-fixed__list-box__item">
-                <a href="" title="" class="whatsapp-fixed__list-box__item__name">
+                <a href="https://api.whatsapp.com/send/?phone=5562981752910&text=Olá, Luiz Kelwer! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Luiz Kelwer" target="_blank" class="whatsapp-fixed__list-box__item__name">
                     Luiz Kelwer
                 </a>
 
                 <a href="" title="" class="whatsapp-fixed__list-box__item__phone">
-                    (62) 99999-9999
+                    (62) 98175-2910
+                </a>
+            </li>
+
+            <li class="whatsapp-fixed__list-box__item">
+                <a href="https://api.whatsapp.com/send/?phone=5562981148564&text=Olá, Hihasmin! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Hihasmin" class="whatsapp-fixed__list-box__item__name">
+                    Hihasmin
+                </a>
+
+                <a href="" title="" class="whatsapp-fixed__list-box__item__phone">
+                    (62) 98114-8604
+                </a>
+            </li>
+
+            <li class="whatsapp-fixed__list-box__item">
+                <a href="https://api.whatsapp.com/send/?phone=5562981148564&text=Olá, Gessika! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Gessika" class="whatsapp-fixed__list-box__item__name">
+                    Gessika
+                </a>
+
+                <a href="" title="" class="whatsapp-fixed__list-box__item__phone">
+                    (62) 98114-8564
                 </a>
             </li>
 

@@ -37,4 +37,17 @@ $(function () {
         }
         $(".whatsapp-fixed__list-box").toggleClass("visible");
     });
+
+    $(".header__box__whatsapp").on("click", function (e) {
+        e.preventDefault();
+        $(".whatsapp-fixed__open-list").toggleClass("active");
+        let iconUri = $(this).data("icon-uri");
+
+        if ($(".whatsapp-fixed__open-list").hasClass("active")) {
+            $(".whatsapp-fixed__open-list").find("img").attr("src", iconUri + "/whatsapp-fixed-close.svg");
+        } else {
+            $(".whatsapp-fixed__open-list").find("img").attr("src", iconUri + "/whatsapp-fixed.svg");
+        }
+        $(".whatsapp-fixed__list-box").toggleClass("visible");
+    });
 });
