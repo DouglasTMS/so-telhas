@@ -62,10 +62,10 @@
                 </div>
 
                 <picture alt="">
-                    <source srcset="<?= thumb()->make("storage/slider-01.png", 1920, 600) ?>" media="(min-width: 1024px)">
-                    <source srcset="<?= thumb()->make("storage/slider-01.png", 1920, 900) ?>" media="(min-width: 768px)">
-                    <source srcset="<?= thumb()->make("storage/slider-01.png", 1200, 1000) ?>" media="(min-width: 510px)">
-                    <img src="<?= thumb()->make("storage/slider-01.png", 1200, 1350) ?>" alt="">
+                    <source srcset="<?= thumb()->make("web/assets/img/slider-01.jpg", 1920, 600) ?>" media="(min-width: 1024px)">
+                    <source srcset="<?= thumb()->make("web/assets/img/slider-01.jpg", 1920, 900) ?>" media="(min-width: 768px)">
+                    <source srcset="<?= thumb()->make("web/assets/img/slider-01.jpg", 1200, 1000) ?>" media="(min-width: 510px)">
+                    <img src="<?= thumb()->make("web/assets/img/slider-01.jpg", 1200, 1350) ?>" alt="">
                 </picture>
 
             </div>
