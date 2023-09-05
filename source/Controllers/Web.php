@@ -26,6 +26,14 @@ class Web
     }
 
     /**
+     * Página produtos.
+     */
+    public function products(?array $data)
+    {
+        echo $this->view->render("pages/products", []);
+    }
+
+    /**
      * Ajax.
      */
     public function ajax(?array $data)

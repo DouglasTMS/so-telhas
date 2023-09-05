@@ -13,6 +13,8 @@ $route = new Router(url(), ":");
 ###----------------------------------------------------------------------------------------------------###
 $route->namespace("Source\Controllers");
 $route->get("/", "Web:home");
+$route->get("/produtos", "Web:products");
+$route->get("/produtos/", "Web:products");
 
 
 $route->post("/ajax", "Web:ajax");

@@ -1,36 +1,9 @@
 <?php $v->layout("index"); ?>
-<div class="row slider">
-    <div class="slider__box style= width: 100%">
-        <div class="slider__box__item style= width: 100%">
-
-            <div class="slider__box__item__box">
-                <h1>Só Telhas</h1>
-                <p>Cobrindo o Brasil com Aço</p>
-            </div>
-
-            <picture alt="">
-                <source srcset="<?= thumb()->make("web/assets/img/slider-01.jpg", 1920, 600) ?>" media="(min-width: 1024px)">
-                <source srcset="<?= thumb()->make("web/assets/img/slider-01.jpg", 1920, 900) ?>" media="(min-width: 768px)">
-                <source srcset="<?= thumb()->make("web/assets/img/slider-01.jpg", 1200, 1000) ?>" media="(min-width: 510px)">
-                <img src="<?= thumb()->make("web/assets/img/slider-01.jpg", 1200, 1350) ?>" alt="">
-            </picture>
-
-        </div>
-
-        <div class="slider__controls">
-            <span></span>
-            <span class="active"></span>
-            <span></span>
-        </div>
-
-    </div>
-</div>
-
 
 <section class="row our-products">
     <div class="box our-products__box">
         <header class="our-products__box__header">
-            <h1>Nossas Telhas</h1>
+            <h1>Conheça nossos Produtos</h1>
         </header>
 
         <main class="our-products__box__main">
@@ -67,13 +40,66 @@
                 </div>
             </article>
 
+            <article class="our-products__box__main__item">
+                <img src="<?= thumb()->make("storage/01.jpg", 1200, 800); ?>" title="" alt="">
+                <div class="our-products__box__main__item__box">
+                    <h1>Telha Forro</h1>
+                    <p class="price hide">R$ 89,90</p>
+                    <p class="pay-info hide">ou até 12X de R$ 7,49</p>
+                    <a href="<?= url("produtos/telha-forro"); ?>" title="Telha Forro">Saiba Mais</a>
+                </div>
+            </article>
 
+            <article class="our-products__box__main__item">
+                <img src="<?= thumb()->make("storage/02.jpg", 1200, 800); ?>" title="" alt="">
+                <div class="our-products__box__main__item__box">
+                    <h1>Telha Semi-Sanduiche</h1>
+                    <p class="price hide">R$ 89,90</p>
+                    <p class="pay-info hide">ou até 12X de R$ 7,49</p>
+                    <a href="<?= url("produtos/telha-semi-sanduiche"); ?>" title="Telha Semi-sanduiche">Saiba Mais</a>
+                </div>
+            </article>
 
+            <article class="our-products__box__main__item">
+                <img src="<?= thumb()->make("storage/03.jpg", 1200, 800); ?>" title="" alt="">
+                <div class="our-products__box__main__item__box">
+                    <h1>Telha Sanduiche</h1>
+                    <p class="price hide">R$ 89,90</p>
+                    <p class="pay-info hide">ou até 12X de R$ 7,49</p>
+                    <a href="<?= url("produtos/telha-sanduiche"); ?>" title="Telha Sanduiche">Saiba Mais</a>
+                </div>
+            </article>
+
+            <article class="our-products__box__main__item">
+                <img src="<?= thumb()->make("storage/01.jpg", 1200, 800); ?>" title="" alt="">
+                <div class="our-products__box__main__item__box">
+                    <h1>Telha Forro</h1>
+                    <p class="price hide">R$ 89,90</p>
+                    <p class="pay-info hide">ou até 12X de R$ 7,49</p>
+                    <a href="<?= url("produtos/telha-forro"); ?>" title="Telha Forro">Saiba Mais</a>
+                </div>
+            </article>
+
+            <article class="our-products__box__main__item">
+                <img src="<?= thumb()->make("storage/02.jpg", 1200, 800); ?>" title="" alt="">
+                <div class="our-products__box__main__item__box">
+                    <h1>Telha Semi-Sanduiche</h1>
+                    <p class="price hide">R$ 89,90</p>
+                    <p class="pay-info hide">ou até 12X de R$ 7,49</p>
+                    <a href="<?= url("produtos/telha-semi-sanduiche"); ?>" title="Telha Semi-sanduiche">Saiba Mais</a>
+                </div>
+            </article>
+
+            <article class="our-products__box__main__item">
+                <img src="<?= thumb()->make("storage/03.jpg", 1200, 800); ?>" title="" alt="">
+                <div class="our-products__box__main__item__box">
+                    <h1>Telha Sanduiche</h1>
+                    <p class="price hide">R$ 89,90</p>
+                    <p class="pay-info hide">ou até 12X de R$ 7,49</p>
+                    <a href="<?= url("produtos/telha-sanduiche"); ?>" title="Telha Sanduiche">Saiba Mais</a>
+                </div>
+            </article>
         </main>
-
-        <footer class="our-products__box__footer">
-            <a href="" title="">Ver Todas</a>
-        </footer>
     </div>
 </section>
 

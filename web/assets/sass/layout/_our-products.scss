@@ -75,12 +75,20 @@
                         font-weight: bold;
                         font-size: 1.4em;
                         margin-bottom: 10px;
+
+                        &.hide {
+                            display: none;
+                        }
                     }
 
                     & .pay-info {
                         font-size: .85em;
                         margin-bottom: 15px;
                         color: var(--color-grey-light);
+
+                        &.hide {
+                            display: none;
+                        }
                     }
 
                     & a {
