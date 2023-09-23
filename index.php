@@ -15,6 +15,10 @@ $route->namespace("Source\Controllers");
 $route->get("/", "Web:home");
 $route->get("/produtos", "Web:products");
 $route->get("/produtos/", "Web:products");
+$route->get("/quem-somos", "Web:whoWeAre");
+$route->get("/quem-somos/", "Web:whoWeAre");
+$route->get("/orcamento", "Web:leads");
+$route->get("/orcamento/", "Web:leads");
 
 
 $route->post("/ajax", "Web:ajax");

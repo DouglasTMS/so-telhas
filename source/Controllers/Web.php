@@ -34,6 +34,22 @@ class Web
     }
 
     /**
+     * Página quem somos.
+     */
+    public function whoWeAre(?array $data)
+    {
+        echo $this->view->render("pages/who-we-are", []);
+    }
+
+    /**
+     * Página orçamento.
+     */
+    public function leads(?array $data)
+    {
+        echo $this->view->render("pages/leads", []);
+    }
+
+    /**
      * Ajax.
      */
     public function ajax(?array $data)

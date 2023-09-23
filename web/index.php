@@ -150,36 +150,33 @@
                     Luiz Kelwer
                 </a>
 
-                <a href="" title="" class="whatsapp-fixed__list-box__item__phone">
+                <a href="https://api.whatsapp.com/send/?phone=5562981752910&text=Olá, Luiz Kelwer! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Luiz Kelwer" target="_blank" class="whatsapp-fixed__list-box__item__phone">
                     (62) 98175-2910
                 </a>
             </li>
 
             <li class="whatsapp-fixed__list-box__item">
-                <a href="https://api.whatsapp.com/send/?phone=5562981148564&text=Olá, Hihasmin! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Hihasmin" class="whatsapp-fixed__list-box__item__name">
+                <a href="https://api.whatsapp.com/send/?phone=5562981148564&text=Olá, Hihasmin! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Hihasmin" target="_blank" class="whatsapp-fixed__list-box__item__name">
                     Hihasmin
                 </a>
 
-                <a href="" title="" class="whatsapp-fixed__list-box__item__phone">
+                <a href="https://api.whatsapp.com/send/?phone=5562981148564&text=Olá, Hihasmin! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Hihasmin" target="_blank" class="whatsapp-fixed__list-box__item__phone">
                     (62) 98114-8604
                 </a>
             </li>
 
             <li class="whatsapp-fixed__list-box__item">
-                <a href="https://api.whatsapp.com/send/?phone=5562981148564&text=Olá, Gessika! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Gessika" class="whatsapp-fixed__list-box__item__name">
+                <a href="https://api.whatsapp.com/send/?phone=5562981148564&text=Olá, Gessika! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Gessika" target="_blank" class="whatsapp-fixed__list-box__item__name">
                     Gessika
                 </a>
 
-                <a href="" title="" class="whatsapp-fixed__list-box__item__phone">
+                <a href="https://api.whatsapp.com/send/?phone=5562981148564&text=Olá, Gessika! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Gessika" target="_blank" class="whatsapp-fixed__list-box__item__phone">
                     (62) 98114-8564
                 </a>
             </li>
 
         </ul>
     </div>
-
-
-
 
     <div class="load"></div>
     <div class="alpha"></div>
