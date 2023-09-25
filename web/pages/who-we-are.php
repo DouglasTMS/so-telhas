@@ -9,7 +9,7 @@
 
         <main class="about-us__box__main">
             <div class="about-us__box__main__left">
-                <p>A Gigafer é uma empresa do ramo siderúrgico que trabalha desde 2018 com a fabricação própria de telhas metálicas, termoacústica, com manta térmica e com PVC.</p>
+                <p>A Só Telhas é uma empresa do ramo siderúrgico que trabalha desde 2018 com a fabricação própria de telhas metálicas, termoacústica, com manta térmica e com PVC.</p>
                 <p>A empresa conta com um trabalho sério, transparente e com foco em garantir sempre o melhor custo-benefício, agilidade e qualidade em nossos produtos, para que clientes e parceiros tenham, sempre, os melhores resultados.</p>
             </div>
 
