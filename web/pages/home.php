@@ -194,9 +194,9 @@
         <main class="feedback__box__main">
             <div class="feedback__container">
                 <article class="feedback__item">
-                    <img src="<?= thumb()->make("storage/slider-01.png", 300, 300); ?>" alt="" title="">
+                    <img src="<?= thumb()->make("storage/douglas-siebert.jpeg", 300, 300); ?>" alt="Douglas Siebert" title="Douglas Siebert">
                     <h1>Douglas Siebert</h1>
-                    <p>Muito bom!</p>
+                    <p>A Só Telhas é uma empresa que indico muito pois, além de ter preços muito bom, a qualidade do material é de excelência. Estou muito satisfeito e queria agraceder a equipe da Só Telhas pela acessoria que me ajudou muito no meu projeto.</p>
                 </article>
             </div>
         </main>
