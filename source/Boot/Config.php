@@ -2,11 +2,11 @@
 ##
 ##  Configuração Geral de SEO
 ##
-define("CONF_SITE_NAME", "Digno Nome");
+define("CONF_SITE_NAME", "Só Telhas");
 define("CONF_SITE_LANG", "pt_BR");
-define("CONF_SITE_TITLE", "Digno Nome");
+define("CONF_SITE_TITLE", "Só Telhas");
 define("CONF_SITE_DESCRIPTION", "");
-define("CONF_SITE_DOMAIN", "dignonome.com.br");
+define("CONF_SITE_DOMAIN", "sotelhasmt.com");
 
 // Twitter
 define("CONF_TWITTER_CREATOR_PROFILE", "");

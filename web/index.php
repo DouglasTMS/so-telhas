@@ -10,6 +10,20 @@
     <link rel="stylesheet" href="<?= url('web/assets/css/style.css'); ?>">
     <link rel="shortcut icon" href="<?= url("web/assets/img/faveicon.png"); ?>">
     <title><?= CONF_SITE_TITLE ?></title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JQQ8P8DF67"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-JQQ8P8DF67');
+    </script>
+
 </head>
 
 <body>
