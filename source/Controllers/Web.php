@@ -3,6 +3,7 @@
 namespace Source\Controllers;
 
 use Source\Core\View;
+use Source\Models\Products;
 use Source\Supports\Seo;
 
 class Web
@@ -22,7 +23,9 @@ class Web
      */
     public function home(?array $data)
     {
-        echo $this->view->render("pages/home", []);
+        echo $this->view->render("pages/home", [
+            "products" => (new Products())->get("ORDER BY rand() LIMIT :limit", "limit=3")
+        ]);
     }
 
     /**
@@ -30,7 +33,9 @@ class Web
      */
     public function products(?array $data)
     {
-        echo $this->view->render("pages/products", []);
+        echo $this->view->render("pages/products", [
+            "products" => (new Products())->get()
+        ]);
     }
 
     /**

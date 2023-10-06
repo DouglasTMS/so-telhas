@@ -47,7 +47,7 @@
             </li>
 
             <li>
-                <a href="<?= url("produtos"); ?>" title="Nossas Telhas">Nossas Telhas</a>
+                <a href="<?= url("telhas"); ?>" title="Nossas Telhas">Nossas Telhas</a>
             </li>
 
             <li>
