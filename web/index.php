@@ -174,7 +174,7 @@
                     Hihasmin
                 </a>
 
-                <a href="https://api.whatsapp.com/send/?phone=5562981148564&text=Olá, Hihasmin! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Hihasmin" target="_blank" class="whatsapp-fixed__list-box__item__phone">
+                <a href="https://api.whatsapp.com/send/?phone=5562981148604&text=Olá, Hihasmin! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Hihasmin" target="_blank" class="whatsapp-fixed__list-box__item__phone">
                     (62) 98114-8604
                 </a>
             </li>
