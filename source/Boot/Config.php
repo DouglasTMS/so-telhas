@@ -39,10 +39,10 @@ define("CONF_VIEW_EXT", "php");
 ##
 ##  Configuração de Banco de Dados
 ##
-define("CONF_DB_HOST", "localhost");
-define("CONF_DB_USER", "root");
-define("CONF_DB_PASS", "");
-define("CONF_DB_NAME", "so_telhas");
+define("CONF_DB_HOST", "185.213.81.154");
+define("CONF_DB_USER", "u261531561_sotelhas");
+define("CONF_DB_PASS", "HX2581ODt&9");
+define("CONF_DB_NAME", "u261531561_sotelhas");
 define("CONF_DB_DRIVE", "mysql");
 define("CONF_DB_DENIED_ACCESS_FIELDS", [
     "id",
