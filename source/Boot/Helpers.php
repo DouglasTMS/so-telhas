@@ -14,7 +14,7 @@ use Source\Supports\Thumb;
  */
 function is_email(string $email): bool
 {
- return filter_var($email, FILTER_VALIDATE_EMAIL);
+    return filter_var($email, FILTER_VALIDATE_EMAIL);
 }
 
 /**
@@ -25,11 +25,11 @@ function is_email(string $email): bool
  */
 function is_pass(string $password): bool
 {
- if (mb_strlen($password) < CONF_PASS_MIN_LEN || mb_strlen($password) > CONF_PASS_MAX_LEN) {
-  return false;
- }
+    if (mb_strlen($password) < CONF_PASS_MIN_LEN || mb_strlen($password) > CONF_PASS_MAX_LEN) {
+        return false;
+    }
 
- return true;
+    return true;
 }
 
 /**
@@ -40,7 +40,7 @@ function is_pass(string $password): bool
  */
 function pass(string $password): string
 {
- return password_hash($password, CONF_PASS_ALGO, CONF_PASS_OPTION);
+    return password_hash($password, CONF_PASS_ALGO, CONF_PASS_OPTION);
 }
 
 /**
@@ -52,7 +52,7 @@ function pass(string $password): string
  */
 function pass_verify(string $password, string $hash): bool
 {
- return password_verify($password, $hash);
+    return password_verify($password, $hash);
 }
 
 /**
@@ -63,7 +63,7 @@ function pass_verify(string $password, string $hash): bool
  */
 function pass_rehash(string $hash): bool
 {
- return password_needs_rehash($hash, CONF_PASS_ALGO, CONF_PASS_OPTION);
+    return password_needs_rehash($hash, CONF_PASS_ALGO, CONF_PASS_OPTION);
 }
 
 /**
@@ -74,17 +74,17 @@ function pass_rehash(string $hash): bool
  */
 function str_slug(string $string): string
 {
- $string = filter_var(mb_strtolower($string), FILTER_SANITIZE_STRIPPED);
+    $string = filter_var(mb_strtolower($string), FILTER_SANITIZE_STRIPPED);
 
- $formats = 'ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜüÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûýýþÿRr"!@#$%&*()_-+={[}]/?;:.,\\\'<>°ºª';
- $replace = 'aaaaaaaceeeeiiiidnoooooouuuuuybsaaaaaaaceeeeiiiidnoooooouuuyybyRr                                 ';
+    $formats = 'ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜüÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûýýþÿRr"!@#$%&*()_-+={[}]/?;:.,\\\'<>°ºª';
+    $replace = 'aaaaaaaceeeeiiiidnoooooouuuuuybsaaaaaaaceeeeiiiidnoooooouuuyybyRr                                 ';
 
- $string = strtr(utf8_decode($string), utf8_decode($formats), $replace);
- $string = trim($string);
- $string = str_replace(" ", "-", $string);
- $string = str_replace(["-----", "----", "---", "--"], "-", $string);
+    $string = strtr(utf8_decode($string), utf8_decode($formats), $replace);
+    $string = trim($string);
+    $string = str_replace(" ", "-", $string);
+    $string = str_replace(["-----", "----", "---", "--"], "-", $string);
 
- return $string;
+    return $string;
 }
 
 /**
@@ -97,18 +97,18 @@ function str_slug(string $string): string
  */
 function str_limit_words(string $string, int $limit, string $pointer = "..."): string
 {
- $string   = filter_var($string, FILTER_SANITIZE_SPECIAL_CHARS);
- $string   = trim($string);
- $arrWords = explode(" ", $string);
- $numWords = count($arrWords);
+    $string   = filter_var($string, FILTER_SANITIZE_SPECIAL_CHARS);
+    $string   = trim($string);
+    $arrWords = explode(" ", $string);
+    $numWords = count($arrWords);
 
- if ($numWords <= $limit) {
-  return $string;
- }
+    if ($numWords <= $limit) {
+        return $string;
+    }
 
- $string = implode(" ", array_slice($arrWords, 0, $limit));
+    $string = implode(" ", array_slice($arrWords, 0, $limit));
 
- return "{$string}{$pointer}";
+    return "{$string}{$pointer}";
 }
 
 /**
@@ -121,18 +121,18 @@ function str_limit_words(string $string, int $limit, string $pointer = "..."): s
  */
 function str_limit_chars(string $string, int $limit, string $pointer = "..."): string
 {
- $string = filter_var($string, FILTER_SANITIZE_SPECIAL_CHARS);
- $string = trim($string);
+    $string = filter_var($string, FILTER_SANITIZE_SPECIAL_CHARS);
+    $string = trim($string);
 
- if (mb_strlen($string) <= $limit) {
-  return $string;
- }
+    if (mb_strlen($string) <= $limit) {
+        return $string;
+    }
 
- $string    = mb_substr($string, 0, $limit);
- $lastSpace = mb_strrpos($string, " ");
- $string    = mb_substr($string, 0, $lastSpace);
+    $string    = mb_substr($string, 0, $limit);
+    $lastSpace = mb_strrpos($string, " ");
+    $string    = mb_substr($string, 0, $lastSpace);
 
- return "{$string}{$pointer}";
+    return "{$string}{$pointer}";
 }
 
 /**
@@ -143,19 +143,19 @@ function str_limit_chars(string $string, int $limit, string $pointer = "..."): s
  */
 function url(string $path = null): string
 {
- if (mb_strpos($_SERVER["HTTP_HOST"], "localhost")) {
-  if (!empty($path)) {
-   return CONF_URL_TEST . "/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
-  }
+    if (mb_strpos($_SERVER["HTTP_HOST"], "localhost")) {
+        if (!empty($path)) {
+            return CONF_URL_TEST . "/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
+        }
 
-  return CONF_URL_TEST;
- }
+        return CONF_URL_TEST;
+    }
 
- if (!empty($path)) {
-  return CONF_URL_BASE . "/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
- }
+    if (!empty($path)) {
+        return CONF_URL_BASE . "/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
+    }
 
- return CONF_URL_BASE;
+    return CONF_URL_BASE;
 }
 
 /**
@@ -166,19 +166,19 @@ function url(string $path = null): string
  */
 function url_theme(string $path = null): string
 {
- if (mb_strpos($_SERVER["HTTP_HOST"], "localhost")) {
-  if (!empty($path)) {
-   return CONF_URL_TEST . "/themes/" . CONF_THEME_NAME . "/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
-  }
+    if (mb_strpos($_SERVER["HTTP_HOST"], "localhost")) {
+        if (!empty($path)) {
+            return CONF_URL_TEST . "/themes/" . CONF_THEME_NAME . "/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
+        }
 
-  return CONF_URL_TEST . "/themes/" . CONF_THEME_NAME;
- }
+        return CONF_URL_TEST . "/themes/" . CONF_THEME_NAME;
+    }
 
- if (!empty($path)) {
-  return CONF_URL_BASE . "/themes/" . CONF_THEME_NAME . "/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
- }
+    if (!empty($path)) {
+        return CONF_URL_BASE . "/themes/" . CONF_THEME_NAME . "/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
+    }
 
- return CONF_URL_BASE . "/themes/" . CONF_THEME_NAME;
+    return CONF_URL_BASE . "/themes/" . CONF_THEME_NAME;
 }
 
 /**
@@ -189,24 +189,24 @@ function url_theme(string $path = null): string
  */
 function url_admin(string $path = null): string
 {
- if (mb_strpos($_SERVER["HTTP_HOST"], "localhost")) {
-  if (!empty($path)) {
-   return CONF_URL_TEST . "/themes/admin/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
-  }
+    if (mb_strpos($_SERVER["HTTP_HOST"], "localhost")) {
+        if (!empty($path)) {
+            return CONF_URL_TEST . "/themes/admin/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
+        }
 
-  return CONF_URL_TEST . "/themes/admin";
- }
+        return CONF_URL_TEST . "/themes/admin";
+    }
 
- if (!empty($path)) {
-  return CONF_URL_BASE . "/themes/admin/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
- }
+    if (!empty($path)) {
+        return CONF_URL_BASE . "/themes/admin/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
+    }
 
- return CONF_URL_BASE . "/themes/admin";
+    return CONF_URL_BASE . "/themes/admin";
 }
 
 function to_real(float $price): string
 {
- return "R$ " . number_format($price, 2, ",", ".");
+    return "R$ " . number_format($price, 2, ",", ".");
 }
 
 /**
@@ -217,16 +217,16 @@ function to_real(float $price): string
  */
 function redirect(string $url): void
 {
- header("HTTP/1.1 302 Redirect");
+    header("HTTP/1.1 302 Redirect");
 
- if (filter_var($url, FILTER_VALIDATE_URL)) {
-  header("Location: {$url}");
-  exit;
- }
+    if (filter_var($url, FILTER_VALIDATE_URL)) {
+        header("Location: {$url}");
+        exit;
+    }
 
- $location = url($url);
- header("Location: {$location}");
- exit;
+    $location = url($url);
+    header("Location: {$location}");
+    exit;
 }
 
 /**
@@ -238,7 +238,7 @@ function redirect(string $url): void
  */
 function whatsapp(string $whatsAppNumber): string
 {
- return $whatsAppNumber = "55" . str_replace(["(", ")", " ", "-"], "", $whatsAppNumber);
+    return $whatsAppNumber = "https://wa.me/55" . str_replace(["(", ")", " ", "-"], "", $whatsAppNumber);
 }
 
 /**
@@ -248,7 +248,7 @@ function whatsapp(string $whatsAppNumber): string
  */
 function session(): Session
 {
- return new Session();
+    return new Session();
 }
 
 /**
@@ -256,7 +256,7 @@ function session(): Session
  */
 function thumb(): Thumb
 {
- return new Thumb();
+    return new Thumb();
 }
 
 /**
@@ -264,28 +264,26 @@ function thumb(): Thumb
  */
 function getCategoryById(int $categoryId, string $column)
 {
- $category     = new Category();
- $categoryName = $category->get("WHERE id = :id", "id={$categoryId}");
+    $category     = new Category();
+    $categoryName = $category->get("WHERE id = :id", "id={$categoryId}");
 
- if (!empty($categoryName[0])) {
-  return $categoryName[0]->$column;
- }
+    if (!empty($categoryName[0])) {
+        return $categoryName[0]->$column;
+    }
 
- return null;
-
+    return null;
 }
 
 function getCategoryByUri(string $uri, string $column)
 {
- $category     = new Category();
- $categoryName = $category->get("WHERE uri = :uri", "uri={$uri}");
+    $category     = new Category();
+    $categoryName = $category->get("WHERE uri = :uri", "uri={$uri}");
 
- if (!empty($categoryName[0])) {
-  return $categoryName[0]->$column;
- }
+    if (!empty($categoryName[0])) {
+        return $categoryName[0]->$column;
+    }
 
- return null;
-
+    return null;
 }
 
 /**
@@ -293,52 +291,48 @@ function getCategoryByUri(string $uri, string $column)
  */
 function getBranchByUri(string $branchUri, string $column)
 {
- $branch     = new Branch();
- $result = $branch->get("WHERE uri = :uri", "uri={$branchUri}");
+    $branch     = new Branch();
+    $result = $branch->get("WHERE uri = :uri", "uri={$branchUri}");
 
- if (!empty($result[0])) {
-  return $result[0]->$column;
- }
+    if (!empty($result[0])) {
+        return $result[0]->$column;
+    }
 
- return null;
-
+    return null;
 }
 
 function getBranchByName(string $branchName, string $column)
 {
- $branch     = new Branch();
- $result = $branch->get("WHERE name = :name", "name={$branchName}");
+    $branch     = new Branch();
+    $result = $branch->get("WHERE name = :name", "name={$branchName}");
 
- if (!empty($result[0])) {
-  return $result[0]->$column;
- }
+    if (!empty($result[0])) {
+        return $result[0]->$column;
+    }
 
- return null;
-
+    return null;
 }
 
 function getBranchById(int $branchId, string $column)
 {
- $branch     = new Branch();
- $result = $branch->get("WHERE id = :id", "id={$branchId}");
+    $branch     = new Branch();
+    $result = $branch->get("WHERE id = :id", "id={$branchId}");
 
- if (!empty($result[0])) {
-  return $result[0]->$column;
- }
+    if (!empty($result[0])) {
+        return $result[0]->$column;
+    }
 
- return null;
-
+    return null;
 }
 
 function getContact(string $column)
 {
- $contact     = new Contact();
- $result = $contact->get("WHERE id = :id", "id=1");
+    $contact     = new Contact();
+    $result = $contact->get("WHERE id = :id", "id=1");
 
- if (!empty($result[0])) {
-  return $result[0]->$column;
- }
+    if (!empty($result[0])) {
+        return $result[0]->$column;
+    }
 
- return null;
-
+    return null;
 }

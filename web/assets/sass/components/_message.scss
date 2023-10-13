@@ -1,0 +1,59 @@
+.message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 199;
+    width: 90%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-ice);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    display: none;
+
+    &__type {
+        width: 100%;
+        height: 80px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto 70%;
+
+        &.error {
+            background-color: var(--color-red);
+            background-image: url("../img/icon/error.svg");
+        }
+
+        &.success {
+            background-color: var(--color-secundary-dark);
+            background-image: url("../img/icon/success.svg");
+        }
+    }
+
+    &__text {
+        padding: 25px 15px;
+        width: 100%;
+        text-align: center;
+        color: var(--color-primary);
+    }
+
+    &__close {
+        padding: 10px;
+        width: 150px;
+        margin-bottom: 25px;
+        border-radius: 5px;
+        background-color: var(--color-red);
+        transition: .5s ease background-color;
+        color: var(--color-white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--color-red-light);
+        }
+    }
+}

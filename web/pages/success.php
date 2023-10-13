@@ -1,54 +1,6 @@
 <?php $v->layout("index"); ?>
-<div class="row slider">
-    <div class="slider__box style= width: 100%">
-        <div class="slider__box__item style= width: 100%">
 
-            <div class="slider__box__item__box">
-                <h1>Só Telhas</h1>
-                <p>Cobrindo o Brasil com Aço</p>
-            </div>
-
-            <picture alt="">
-                <source srcset="<?= thumb()->make("web/assets/img/slider-01.jpg", 1920, 600) ?>" media="(min-width: 1024px)">
-                <source srcset="<?= thumb()->make("web/assets/img/slider-01.jpg", 1920, 900) ?>" media="(min-width: 768px)">
-                <source srcset="<?= thumb()->make("web/assets/img/slider-01.jpg", 1200, 1000) ?>" media="(min-width: 510px)">
-                <img src="<?= thumb()->make("web/assets/img/slider-01.jpg", 1200, 1350) ?>" alt="">
-            </picture>
-
-        </div>
-
-        <div class="slider__controls">
-            <span></span>
-            <span class="active"></span>
-            <span></span>
-        </div>
-
-    </div>
-</div>
-
-<?= $v->insert('inc/products'); ?>
-
-<section class="row lead">
-    <div class="box lead__box">
-        <h1>Solicite um Orçamento sem Comprimisso</h1>
-
-        <form action="<?= url("ajax"); ?>" method="POST" class="lead__form">
-            <label>
-                <input type="text" autocomplete="off" name="name" placeholder="Qual seu nome?">
-            </label>
-
-            <label>
-                <input type="text" class="phone_mask" autocomplete="off" name="phone" placeholder="Qual seu telefone?">
-            </label>
-
-            <label>
-                <input type="text" autocomplete="off" name="email" placeholder="Qual seu e-mail?">
-            </label>
-
-            <input type="submit" name="send" value="Solicitar Orçamento">
-        </form>
-    </div>
-</section>
+<h1>Obrigado</h1>
 
 <section class="row about-us">
     <div class="box about-us__box">
@@ -59,7 +11,7 @@
 
         <main class="about-us__box__main">
             <div class="about-us__box__main__left">
-                <p>A Só Telhas é uma empresa do ramo siderúrgico que trabalha desde 2018 com a fabricação própria de telhas metálicas, termoacústica, com manta térmica e com PVC.</p>
+                <p>A Gigafer é uma empresa do ramo siderúrgico que trabalha desde 2018 com a fabricação própria de telhas metálicas, termoacústica, com manta térmica e com PVC.</p>
                 <p>A empresa conta com um trabalho sério, transparente e com foco em garantir sempre o melhor custo-benefício, agilidade e qualidade em nossos produtos, para que clientes e parceiros tenham, sempre, os melhores resultados.</p>
             </div>
 

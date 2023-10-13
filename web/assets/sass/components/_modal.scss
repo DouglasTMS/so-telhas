@@ -1,0 +1,110 @@
+.load {
+    position: fixed;
+    z-index: 200;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background-position: center;
+    background-size: 80% auto;
+    background-repeat: no-repeat;
+    background-color: var(--color-white);
+    background-image: url("../img/icon/load.svg");
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    display: none;
+}
+
+.alpha {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, .9);
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    z-index: 101;
+    width: 100%;
+    max-height: 100vh;
+    overflow-y: scroll;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    background-color: var(--color-white);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    display: none;
+
+    @include respond(768) {
+        max-width: 70%;
+        padding: 30px;
+    }
+
+    &::-webkit-scrollbar {
+        width: 5px;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--color-primary);
+    }
+
+    &__title {
+        color: var(--color-primary);
+        line-height: 1.5;
+        margin-bottom: 35px;
+        border-bottom: 2px solid var(--color-ice);
+        padding-bottom: 35px;
+        text-align: justify;
+        margin-top: 50px;
+
+        @include respond(768) {
+            margin-top: 0;
+        }
+    }
+
+    &__description {
+        width: 100%;
+    }
+
+    &__p {
+        color: var(--color-grey-dark);
+        line-height: 1.5;
+        margin-bottom: 25px;
+        text-align: justify;
+
+        & b {
+            font-family: 'Poppins Bold', sans-serif;
+        }
+    }
+}
+
+.modal__close {
+    position: fixed;
+    z-index: 110;
+    right: 0;
+    top: 0;
+    width: auto;
+    height: 35px;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+    font-style: normal;
+    padding: 10px;
+    background-color: var(--color-red);
+    transition: .5s ease background-color;
+    border-bottom-left-radius: 8px;
+    display: none;
+
+    &:hover {
+        background-color: var(--color-red-light);
+    }
+}

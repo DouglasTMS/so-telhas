@@ -65,11 +65,12 @@ define("CONF_UPLOAD_IMAGE_QUALITY", ["jpg" => 75, "png" => 5]);
 ##  Configuração de E-mail
 ##
 define("CONF_MAIL_HOST", "smtp.hostinger.com");
-define("CONF_MAIL_USER", "noreply@dignonome.com.br");
-define("CONF_MAIL", "contato@dignonome.com.br");
-define("CONF_MAIL_PASS", "Grupo@Tosta#1");
+define("CONF_MAIL_USER", "noreply@sotelhasmt.com");
+//define("CONF_MAIL", "vendas02@sotelhasmt.com");
+define("CONF_MAIL", "douglastms@outlook.com");
+define("CONF_MAIL_PASS", "@So#Telhas05348gR");
 define("CONF_MAIL_PORT", "587");
-define("CONF_MAIL_SENDER", ["name" => "Digno Nome", "address" => "noreply@dignonome.com.br"]);
+define("CONF_MAIL_SENDER", ["name" => "Só Telhas", "address" => "noreply@sotelhasmt.com"]);
 define("CONF_MAIL_OPTION_LANG", "br");
 define("CONF_MAIL_OPTION_HTML", true);
 define("CONF_MAIL_OPTION_AUTH", true);

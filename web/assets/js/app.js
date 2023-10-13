@@ -50,4 +50,57 @@ $(function () {
         }
         $(".whatsapp-fixed__list-box").toggleClass("visible");
     });
+
+    /**
+    * Função de mensagem
+    */
+    function message(type, message) {
+        $(".message").empty().html("<header class='message__type " + type + "'></header><p class='message__text'>" + message + "</p><p class='message__close'>Fechar</p>").fadeIn(200).css("display", "flex");
+    }
+
+    /**
+    * Cadastro de leads.
+    */
+    $('.lead__form').submit(function (e) {
+        e.preventDefault();
+
+        let name = $(this).find('input[name="name"]').val();
+        let phone = $(this).find('input[name="phone"]').val();
+        let email = $(this).find('input[name="email"]').val();
+
+        $.ajax({
+            url: HOME_PATH + "/ajax",
+            data: "action=createLead&name=" + name + "&phone=" + phone + "&email=" + email,
+            type: "POST",
+            dataType: "json",
+            beforeSend: function () {
+                $(".load").fadeIn(200);
+                $(".alpha").fadeIn(200);
+            },
+            success: function (e) {
+
+                if (e.redirect === "yes") {
+                    window.location.href = HOME_PATH + "/obrigado";
+                    return;
+                }
+                else {
+                    $(".load").fadeOut(200, function () {
+                        message(e.error, e.message);
+                    });
+                }
+            },
+            complete: function () {
+
+            }
+        });
+    });
+
+    /**
+    * Fechar modal de mensagem
+    */
+    $(".message").on("click", ".message__close", function () {
+        $(".message").fadeOut(300, function () {
+            $(".alpha").fadeOut(300);
+        });
+    });
 });

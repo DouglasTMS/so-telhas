@@ -19,6 +19,8 @@ $route->get("/quem-somos", "Web:whoWeAre");
 $route->get("/quem-somos/", "Web:whoWeAre");
 $route->get("/orcamento", "Web:leads");
 $route->get("/orcamento/", "Web:leads");
+$route->get("/obrigado", "Web:success");
+$route->get("/obrigado/", "Web:success");
 
 
 $route->post("/ajax", "Web:ajax");
