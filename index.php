@@ -15,6 +15,11 @@ $route->namespace("Source\Controllers");
 $route->get("/", "Web:home");
 $route->get("/telhas", "Web:products");
 $route->get("/telhas/", "Web:products");
+
+$route->get("/telhas/{uri}", "Web:productView");
+$route->get("/telhas/{uri}/", "Web:productView");
+
+
 $route->get("/quem-somos", "Web:whoWeAre");
 $route->get("/quem-somos/", "Web:whoWeAre");
 $route->get("/orcamento", "Web:leads");

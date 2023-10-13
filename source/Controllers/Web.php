@@ -31,12 +31,30 @@ class Web
     }
 
     /**
-     * Página produtos.
+     * Página lista de produtos.
      */
     public function products(?array $data)
     {
         echo $this->view->render("pages/products", [
             "products" => (new Products())->get()
+        ]);
+    }
+
+    /**
+     * Página produto.
+     */
+    public function productView(?array $data)
+    {
+        $product = (new Products())->get("WHERE uri = :uri", "uri={$data['uri']}");
+
+        if (empty($product)) {
+            header("Location: " . CONF_URL_BASE);
+            return;
+        }
+
+        echo $this->view->render("pages/product-view", [
+            "data" => $product[0],
+            "products" => (new Products())->get("ORDER BY rand() LIMIT :limit", "limit=3")
         ]);
     }
 
