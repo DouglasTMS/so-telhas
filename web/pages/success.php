@@ -1,28 +1,15 @@
 <?php $v->layout("index"); ?>
 
-<h1>Obrigado</h1>
+<section class="row thanks">
+    <div class="box thanks__box">
+        <img src="<?= url("web/assets/img/obrigado.svg"); ?>" alt="Obrigado" title="Obrigado">
 
-<section class="row about-us">
-    <div class="box about-us__box">
+        <h1>Obrigado pelo Contato</h1>
 
-        <header class="about-us__box__header">
-            <h1>Conheça mais sobre a Só Telhas</h1>
-        </header>
-
-        <main class="about-us__box__main">
-            <div class="about-us__box__main__left">
-                <p>A Gigafer é uma empresa do ramo siderúrgico que trabalha desde 2018 com a fabricação própria de telhas metálicas, termoacústica, com manta térmica e com PVC.</p>
-                <p>A empresa conta com um trabalho sério, transparente e com foco em garantir sempre o melhor custo-benefício, agilidade e qualidade em nossos produtos, para que clientes e parceiros tenham, sempre, os melhores resultados.</p>
-            </div>
-
-            <div class="about-us__box__main__right">
-                <img src="<?= url("web/assets/img/telhas-1.jpg"); ?>" title="" alt="">
-            </div>
-        </main>
-
-
+        <p>Vamos entrar em contato o mais rápido possível :)</p>
     </div>
 </section>
+
 
 <section class="row our-differentials">
     <div class="box our-differentials__box">
