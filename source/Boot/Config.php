@@ -66,8 +66,7 @@ define("CONF_UPLOAD_IMAGE_QUALITY", ["jpg" => 75, "png" => 5]);
 ##
 define("CONF_MAIL_HOST", "smtp.hostinger.com");
 define("CONF_MAIL_USER", "noreply@sotelhasmt.com");
-//define("CONF_MAIL", "vendas02@sotelhasmt.com");
-define("CONF_MAIL", "douglastms@outlook.com");
+define("CONF_MAIL", "vendas02@sotelhasmt.com");
 define("CONF_MAIL_PASS", "@So#Telhas05348gR");
 define("CONF_MAIL_PORT", "587");
 define("CONF_MAIL_SENDER", ["name" => "Só Telhas", "address" => "noreply@sotelhasmt.com"]);
