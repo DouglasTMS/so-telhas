@@ -1044,14 +1044,14 @@ body {
   .product-view__box__left {
     justify-content: flex-start; } }
 
-.product-view__box__left img {
+.product-view__box__left picture {
   display: flex;
   max-width: 500px;
   border-radius: 10px;
   margin-bottom: 25px; }
 
 @media (min-width: 64em) {
-  .product-view__box__left img {
+  .product-view__box__left picture {
     max-width: 100%; } }
 
 .product-view__box__right {
