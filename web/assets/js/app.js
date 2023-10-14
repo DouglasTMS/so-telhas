@@ -96,6 +96,47 @@ $(function () {
     });
 
     /**
+   * Cadastro de leads.
+   */
+    $('.newsletter__form').submit(function (e) {
+        e.preventDefault();
+
+        let name = $(this).find('input[name="name"]').val();
+        let email = $(this).find('input[name="email"]').val();
+
+        $.ajax({
+            url: HOME_PATH + "/ajax",
+            data: "action=newsletter&name=" + name + "&email=" + email,
+            type: "POST",
+            dataType: "json",
+            beforeSend: function () {
+                $(".load").fadeIn(200);
+                $(".alpha").fadeIn(200);
+            },
+            success: function (e) {
+
+                if (e.redirect === "yes") {
+                    $(".load").fadeOut(200, function () {
+                        message("success", "Obrigado! Seu e-mail foi cadastrado com sucesso.");
+                        $('.newsletter__form').find('input[name="name"]').val("");
+                        $('.newsletter__form').find('input[name="email"]').val("");
+                        return;
+                    });
+
+                }
+                else {
+                    $(".load").fadeOut(200, function () {
+                        message(e.error, e.message);
+                    });
+                }
+            },
+            complete: function () {
+
+            }
+        });
+    });
+
+    /**
     * Fechar modal de mensagem
     */
     $(".message").on("click", ".message__close", function () {

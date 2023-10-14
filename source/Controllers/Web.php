@@ -7,6 +7,7 @@ use Source\Models\Products;
 use Source\Supports\Seo;
 use Source\Supports\Email;
 use Source\Models\Lead;
+use Source\Models\Newsletter;
 
 class Web
 {
@@ -143,6 +144,54 @@ class Web
             /**
              * Enviar pra página de sucesso
              */
+            $response["redirect"] = "yes";
+            echo json_encode($response);
+            return;
+        }
+
+        if ($data["action"] == "newsletter") {
+
+            if (empty($data["email"])) {
+                $response["message"] = "Por favor, informe seu e-mail.";
+                $response["error"] = "error";
+                echo json_encode($response);
+                return;
+            }
+
+            if (!is_email($data["email"])) {
+                $response["message"] = "Por favor, informe um e-mail válido.";
+                $response["error"] = "error";
+                echo json_encode($response);
+                return;
+            }
+
+            if (empty($data["name"])) {
+                $response["message"] = "Por favor, informe seu nome.";
+                $response["error"] = "error";
+                echo json_encode($response);
+                return;
+            }
+
+            $newsletter = new Newsletter();
+
+            $checkEmail = $newsletter->checkEmail($data["email"]);
+
+            if (!empty($checkEmail)) {
+                $response["message"] = "Esse e-mail já está cadastrado.";
+                $response["error"] = "error";
+                echo json_encode($response);
+                return;
+            }
+
+            $save = $newsletter->setData($data["name"], $data["email"])->save();
+
+            if (!$save) {
+                $response["message"] = "Desculpe! Houve um erro inesperado.";
+                $response["error"] = "error";
+                echo json_encode($response);
+                return;
+            }
+
             $response["redirect"] = "yes";
             echo json_encode($response);
             return;

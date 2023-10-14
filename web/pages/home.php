@@ -102,13 +102,13 @@
         </header>
 
         <footer class="newsletter__box__footer">
-            <form action="<?= url("ajax"); ?>" method="POST" name="newsletter">
+            <form action="<?= url("ajax"); ?>" method="POST" name="newsletter" class="newsletter__form">
                 <label>
                     <input type="text" autocomplete="off" name="email" placeholder="Qual seu e-mail?">
                 </label>
 
                 <label>
-                    <input type="text" autocomplete="off" name="first_name" placeholder="Qual seu primeiro nome?">
+                    <input type="text" autocomplete="off" name="name" placeholder="Qual seu primeiro nome?">
                     <input type="submit" name="register" value="Cadastrar">
                 </label>
             </form>
