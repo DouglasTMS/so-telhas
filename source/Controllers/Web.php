@@ -38,6 +38,7 @@ class Web
     public function products(?array $data)
     {
         echo $this->view->render("pages/products", [
+            "header" => $this->seo->render("Conheça nossas Telhas | " . CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
             "products" => (new Products())->get()
         ]);
     }
@@ -55,6 +56,7 @@ class Web
         }
 
         echo $this->view->render("pages/product-view", [
+            "header" => $this->seo->render($product[0]->name, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
             "data" => $product[0],
             "products" => (new Products())->get("ORDER BY rand() LIMIT :limit", "limit=3")
         ]);
@@ -65,7 +67,9 @@ class Web
      */
     public function whoWeAre(?array $data)
     {
-        echo $this->view->render("pages/who-we-are", []);
+        echo $this->view->render("pages/who-we-are", [
+            "header" => $this->seo->render("Conheça Melhor a Só Telhas | " . CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628))
+        ]);
     }
 
     /**
@@ -73,7 +77,9 @@ class Web
      */
     public function leads(?array $data)
     {
-        echo $this->view->render("pages/leads", []);
+        echo $this->view->render("pages/leads", [
+            "header" => $this->seo->render(CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628))
+        ]);
     }
 
     /**
@@ -81,7 +87,9 @@ class Web
      */
     public function success(?array $data)
     {
-        echo $this->view->render("pages/success", []);
+        echo $this->view->render("pages/success", [
+            "header" => $this->seo->render(CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628))
+        ]);
     }
 
     /**

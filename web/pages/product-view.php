@@ -3,10 +3,10 @@
 <section class="row product-view">
     <div class="box product-view__box">
         <div class="box product-view__box__left">
-            <picture alt="">
-                <source srcset="<?= thumb()->make("web/assets/img/slider-01.jpg", 1600, 1200) ?>" media="(min-width: 768px)">
-                <source srcset="<?= thumb()->make("web/assets/img/slider-01.jpg", 900, 600) ?>" media="(min-width: 510px)">
-                <img src="<?= thumb()->make("web/assets/img/slider-01.jpg", 800, 500) ?>" alt="">
+            <picture alt="<?= $data->name; ?>">
+                <source srcset="<?= thumb()->make($data->image, 1600, 1200) ?>" media="(min-width: 768px)">
+                <source srcset="<?= thumb()->make($data->image, 900, 600) ?>" media="(min-width: 510px)">
+                <img src="<?= thumb()->make($data->image, 800, 500) ?>" alt="<?= $data->name; ?>">
             </picture>
         </div>
         <div class="box product-view__box__right">
