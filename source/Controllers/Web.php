@@ -27,6 +27,7 @@ class Web
     public function home(?array $data)
     {
         echo $this->view->render("pages/home", [
+            "header" => $this->seo->render(CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
             "products" => (new Products())->get("ORDER BY rand() LIMIT :limit", "limit=3")
         ]);
     }

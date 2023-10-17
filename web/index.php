@@ -9,7 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?= url('web/assets/css/style.css'); ?>">
     <link rel="shortcut icon" href="<?= url("web/assets/img/faveicon.png"); ?>">
-    <title><?= CONF_SITE_TITLE ?></title>
+
+    <?= $header; ?>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JQQ8P8DF67"></script>

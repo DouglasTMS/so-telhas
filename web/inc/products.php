@@ -9,7 +9,7 @@
             <?php foreach ($products as $resultProducts) : ?>
 
                 <article class="our-products__box__main__item">
-                    <img src="<?= thumb()->make("storage/01.jpg", 1200, 800); ?>" title="" alt="">
+                    <img src="<?= thumb()->make($resultProducts->image, 1200, 800); ?>" title="" alt="">
                     <div class="our-products__box__main__item__box">
                         <h1><?= $resultProducts->name; ?></h1>
                         <p class="price hide">R$ 89,90</p>
