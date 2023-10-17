@@ -4,7 +4,7 @@
     <div class="box product-view__box">
         <div class="box product-view__box__left">
             <picture alt="<?= $data->name; ?>">
-                <source srcset="<?= thumb()->make($data->image, 1600, 1200) ?>" media="(min-width: 768px)">
+                <source srcset="<?= thumb()->make($data->image, 1200, 800) ?>" media="(min-width: 768px)">
                 <source srcset="<?= thumb()->make($data->image, 900, 600) ?>" media="(min-width: 510px)">
                 <img src="<?= thumb()->make($data->image, 800, 500) ?>" alt="<?= $data->name; ?>">
             </picture>
@@ -15,8 +15,6 @@
         </div>
     </div>
 </section>
-
-<?= $v->insert('inc/products'); ?>
 
 <?= $v->insert('inc/lead-form'); ?>
 
