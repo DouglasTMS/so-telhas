@@ -2,27 +2,7 @@
 
 <?= $v->insert('inc/lead-form'); ?>
 
-<section class="row about-us">
-    <div class="box about-us__box">
-
-        <header class="about-us__box__header">
-            <h1>Conheça mais sobre a Só Telhas</h1>
-        </header>
-
-        <main class="about-us__box__main">
-            <div class="about-us__box__main__left">
-                <p>A Gigafer é uma empresa do ramo siderúrgico que trabalha desde 2018 com a fabricação própria de telhas metálicas, termoacústica, com manta térmica e com PVC.</p>
-                <p>A empresa conta com um trabalho sério, transparente e com foco em garantir sempre o melhor custo-benefício, agilidade e qualidade em nossos produtos, para que clientes e parceiros tenham, sempre, os melhores resultados.</p>
-            </div>
-
-            <div class="about-us__box__main__right">
-                <img src="<?= url("web/assets/img/telhas-1.jpg"); ?>" title="" alt="">
-            </div>
-        </main>
-
-
-    </div>
-</section>
+<?= $v->insert('inc/about-us'); ?>
 
 <section class="row our-differentials">
     <div class="box our-differentials__box">
