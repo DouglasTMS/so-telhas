@@ -14,6 +14,25 @@
             <p><?= $data->description; ?></p>
         </div>
     </div>
+
+    <?php if ($variations) : ?>
+        <section class="box product-view__variations">
+            <h1>Variações da <?= $data->name; ?></h1>
+
+            <?php foreach ($variations as $resultVariations) : ?>
+
+                <article class="product-view__variations__item">
+                    <img src="<?= thumb()->make($resultVariations->image, 250, 150); ?>" title="<?= $resultVariations->name; ?>" alt="<?= $resultVariations->name; ?>">
+                    <h1><?= $resultVariations->name; ?></h1>
+                </article>
+
+            <?php endforeach; ?>
+
+
+
+        </section>
+
+    <?php endif; ?>
 </section>
 
 <?= $v->insert('inc/lead-form'); ?>

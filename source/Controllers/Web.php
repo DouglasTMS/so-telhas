@@ -8,6 +8,7 @@ use Source\Supports\Seo;
 use Source\Supports\Email;
 use Source\Models\Lead;
 use Source\Models\Newsletter;
+use Source\Models\Variations;
 
 class Web
 {
@@ -58,7 +59,8 @@ class Web
         echo $this->view->render("pages/product-view", [
             "header" => $this->seo->render($product[0]->name, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
             "data" => $product[0],
-            "products" => (new Products())->get("ORDER BY rand() LIMIT :limit", "limit=3")
+            "products" => (new Products())->get("ORDER BY rand() LIMIT :limit", "limit=3"),
+            "variations" => (new Variations())->get("WHERE product_id = :product_id", "product_id={$product[0]->id}")
         ]);
     }
 

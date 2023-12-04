@@ -206,17 +206,6 @@
             </li>
 
             <li class="whatsapp-fixed__list-box__item">
-                <a href="https://api.whatsapp.com/send/?phone=5562981148604&text=Olá, Gessika! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Hihasmin" target="_blank" class="whatsapp-fixed__list-box__item__name">
-                    Gessika
-                </a>
-
-                <a href="https://api.whatsapp.com/send/?phone=5562981148604&text=Olá, Gessika! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Hihasmin" target="_blank" class="whatsapp-fixed__list-box__item__phone">
-                    (62) 98114-8604
-                </a>
-            </li>
-
-
-            <li class="whatsapp-fixed__list-box__item">
                 <a href="https://api.whatsapp.com/send/?phone=5562981589995&text=Olá, Jamille! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Gessika" target="_blank" class="whatsapp-fixed__list-box__item__name">
                     Jamille
                 </a>
