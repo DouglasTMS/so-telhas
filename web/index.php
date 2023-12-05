@@ -117,12 +117,12 @@
                     <p>Contato</p>
                     <li>
                         <img width="20" height="20.1" src="<?= url("web/assets/img/icon/whatsapp.svg"); ?>" title="WhatsApp" alt="WhatsApp">
-                        <a href="https://api.whatsapp.com/send/?phone=5562981752910&text=Olá, Luiz Kelwer! Eu estava no seu site e gostaria de tirar algumas dúvidas." target="_blank" title="Falar com a Só Telhas">(62) 98175-2910</a>
+                        <a href="https://api.whatsapp.com/send/?phone=5562981148564&text=Olá, Hihasmin! Eu estava no seu site e gostaria de tirar algumas dúvidas." target="_blank" title="Falar com a Só Telhas">(62) 98114-8564</a>
                     </li>
 
                     <li>
                         <img width="20" height="21.82" src="<?= url("web/assets/img/icon/phone.svg"); ?>" title="Telefone" alt="Telefone">
-                        <a href="tel:062981752910" target="_blank" title="Ligar para a Só Telhas">(62) 98175-2910</a>
+                        <a href="tel:062981148564" target="_blank" title="Ligar para a Só Telhas">(62) 98114-8564</a>
                     </li>
 
                     <li>
