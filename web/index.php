@@ -196,6 +196,18 @@
             </div>
 
             <li class="whatsapp-fixed__list-box__item">
+                <a href="https://api.whatsapp.com/send/?phone=5562981758803&text=Olá, Thaynara! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Gessika" target="_blank" class="whatsapp-fixed__list-box__item__name">
+                    Thaynara
+                </a>
+
+                <a href="https://api.whatsapp.com/send/?phone=5562981758803&text=Olá, Thaynara! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Gessika" target="_blank" class="whatsapp-fixed__list-box__item__phone">
+                    (62) 98175-8803
+                </a>
+            </li>
+
+            <!--
+
+            <li class="whatsapp-fixed__list-box__item">
                 <a href="https://api.whatsapp.com/send/?phone=5562981148564&text=Olá, Hihasmin! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Gessika" target="_blank" class="whatsapp-fixed__list-box__item__name">
                     Hihasmin
                 </a>
@@ -204,6 +216,8 @@
                     (62) 98114-8564
                 </a>
             </li>
+
+    -->
 
             <li class="whatsapp-fixed__list-box__item">
                 <a href="https://api.whatsapp.com/send/?phone=5562981589995&text=Olá, Jamille! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Gessika" target="_blank" class="whatsapp-fixed__list-box__item__name">
@@ -215,15 +229,7 @@
                 </a>
             </li>
 
-            <li class="whatsapp-fixed__list-box__item">
-                <a href="https://api.whatsapp.com/send/?phone=5562981758803&text=Olá, Thaynara! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Gessika" target="_blank" class="whatsapp-fixed__list-box__item__name">
-                    Thaynara
-                </a>
 
-                <a href="https://api.whatsapp.com/send/?phone=5562981758803&text=Olá, Thaynara! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Gessika" target="_blank" class="whatsapp-fixed__list-box__item__phone">
-                    (62) 98175-8803
-                </a>
-            </li>
 
         </ul>
     </div>
