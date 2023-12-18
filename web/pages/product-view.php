@@ -22,7 +22,7 @@
             <?php foreach ($variations as $resultVariations) : ?>
 
                 <article class="product-view__variations__item">
-                    <img src="<?= thumb()->make($resultVariations->image, 250, 150); ?>" title="<?= $resultVariations->name; ?>" alt="<?= $resultVariations->name; ?>">
+                    <img src="<?= thumb()->make($resultVariations->image, 450, 350); ?>" title="<?= $resultVariations->name; ?>" alt="<?= $resultVariations->name; ?>">
                     <h1><?= $resultVariations->name; ?></h1>
                 </article>
 
