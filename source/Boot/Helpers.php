@@ -238,7 +238,7 @@ function redirect(string $url): void
  */
 function whatsapp(string $whatsAppNumber): string
 {
-    return $whatsAppNumber = "https://wa.me/55" . str_replace(["(", ")", " ", "-"], "", $whatsAppNumber);
+    return $whatsAppNumber = "55" . str_replace(["(", ")", " ", "-"], "", $whatsAppNumber);
 }
 
 /**
