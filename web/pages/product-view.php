@@ -12,6 +12,24 @@
         <div class="box product-view__box__right">
             <h1><?= $data->name; ?></h1>
             <p><?= $data->description; ?></p>
+
+            <?php if ($details) : ?>
+                <ul class="product-view__box__right__details">
+                    <?php foreach ($details as $resultDetails) : ?>
+                        <li><?= $resultDetails->description; ?></li>
+                    <?php endforeach; ?>
+                </ul>
+            <?php endif; ?>
+
+            <?php if ($benefits) : ?>
+                <ul class="product-view__box__right__benefits">
+                    <p>Vantagens</p>
+                    <?php foreach ($benefits as $resultBenefits) : ?>
+                        <li><?= $resultBenefits->description; ?></li>
+                    <?php endforeach; ?>
+                </ul>
+            <?php endif; ?>
+
         </div>
     </div>
 

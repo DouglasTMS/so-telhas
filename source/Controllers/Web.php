@@ -9,6 +9,9 @@ use Source\Supports\Email;
 use Source\Models\Lead;
 use Source\Models\Newsletter;
 use Source\Models\Variations;
+use Source\Models\Details;
+use Source\Models\Benefits;
+use Source\Models\SellersWhatsApp;
 
 class Web
 {
@@ -29,7 +32,8 @@ class Web
     {
         echo $this->view->render("pages/home", [
             "header" => $this->seo->render(CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
-            "products" => (new Products())->get("ORDER BY rand() LIMIT :limit", "limit=3")
+            "products" => (new Products())->get("ORDER BY rand() LIMIT :limit", "limit=3"),
+            "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1")
         ]);
     }
 
@@ -40,7 +44,8 @@ class Web
     {
         echo $this->view->render("pages/products", [
             "header" => $this->seo->render("Conheça nossas Telhas | " . CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
-            "products" => (new Products())->get()
+            "products" => (new Products())->get(),
+            "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1")
         ]);
     }
 
@@ -60,7 +65,10 @@ class Web
             "header" => $this->seo->render($product[0]->name, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
             "data" => $product[0],
             "products" => (new Products())->get("ORDER BY rand() LIMIT :limit", "limit=3"),
-            "variations" => (new Variations())->get("WHERE product_id = :product_id", "product_id={$product[0]->id}")
+            "variations" => (new Variations())->get("WHERE product_id = :product_id", "product_id={$product[0]->id}"),
+            "details" => (new Details())->get("WHERE product_id = :product_id", "product_id={$product[0]->id}"),
+            "benefits" => (new Benefits())->get("WHERE product_id = :product_id", "product_id={$product[0]->id}"),
+            "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1")
         ]);
     }
 
@@ -70,7 +78,8 @@ class Web
     public function whoWeAre(?array $data)
     {
         echo $this->view->render("pages/who-we-are", [
-            "header" => $this->seo->render("Conheça Melhor a Só Telhas | " . CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628))
+            "header" => $this->seo->render("Conheça Melhor a Só Telhas | " . CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
+            "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1")
         ]);
     }
 
@@ -80,7 +89,8 @@ class Web
     public function leads(?array $data)
     {
         echo $this->view->render("pages/leads", [
-            "header" => $this->seo->render(CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628))
+            "header" => $this->seo->render(CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
+            "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1")
         ]);
     }
 
@@ -90,7 +100,8 @@ class Web
     public function success(?array $data)
     {
         echo $this->view->render("pages/success", [
-            "header" => $this->seo->render(CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628))
+            "header" => $this->seo->render(CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
+            "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1")
         ]);
     }
 

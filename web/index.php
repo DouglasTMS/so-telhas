@@ -183,56 +183,36 @@
         </div>
     </footer>
 
-    <div class="whatsapp-fixed">
-        <a target="_blank" data-icon-uri="<?= url("web/assets/img/icon"); ?>" href="#" title="Falar com Consultor" class="whatsapp-fixed__open-list">
-            <img width="50px" height="50px" src="<?= url("web/assets/img/icon/whatsapp-fixed.svg"); ?>" alt="Falar com Consultor">
-            <p>Falar com Consultor</p>
-        </a>
 
-        <ul class="whatsapp-fixed__list-box">
-            <div class="whatsapp-fixed__list-box__header">
-                <img src="<?= url("web/assets/img/icon/whatsapp.svg"); ?>" title="WhatsApp" alt="WhatsApp">
-                <p>Com qual consultor gostaria de falar?</p>
-            </div>
+    <?php if ($sellers_whatsapp) : ?>
 
-            <li class="whatsapp-fixed__list-box__item">
-                <a href="https://api.whatsapp.com/send/?phone=5562981758803&text=Olá, Thaynara! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Gessika" target="_blank" class="whatsapp-fixed__list-box__item__name">
-                    Thaynara
-                </a>
+        <div class="whatsapp-fixed">
+            <a target="_blank" data-icon-uri="<?= url("web/assets/img/icon"); ?>" href="#" title="Falar com Consultor" class="whatsapp-fixed__open-list">
+                <img width="50px" height="50px" src="<?= url("web/assets/img/icon/whatsapp-fixed.svg"); ?>" alt="Falar com Consultor">
+                <p>Falar com Consultor</p>
+            </a>
 
-                <a href="https://api.whatsapp.com/send/?phone=5562981758803&text=Olá, Thaynara! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Gessika" target="_blank" class="whatsapp-fixed__list-box__item__phone">
-                    (62) 98175-8803
-                </a>
-            </li>
+            <ul class="whatsapp-fixed__list-box">
+                <div class="whatsapp-fixed__list-box__header">
+                    <img src="<?= url("web/assets/img/icon/whatsapp.svg"); ?>" title="WhatsApp" alt="WhatsApp">
+                    <p>Com qual consultor gostaria de falar?</p>
+                </div>
 
-            <!--
+                <?php foreach ($sellers_whatsapp as $resultsellers_whatsapp) : ?>
 
-            <li class="whatsapp-fixed__list-box__item">
-                <a href="https://api.whatsapp.com/send/?phone=5562981148564&text=Olá, Hihasmin! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Gessika" target="_blank" class="whatsapp-fixed__list-box__item__name">
-                    Hihasmin
-                </a>
+                    <li class="whatsapp-fixed__list-box__item">
+                        <a href="https://api.whatsapp.com/send/?phone=<?= whatsapp($resultsellers_whatsapp->phone); ?>&text=Olá, <?= $resultsellers_whatsapp->name; ?>! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Gessika" target="_blank" class="whatsapp-fixed__list-box__item__name">
+                            <?= $resultsellers_whatsapp->name; ?>
+                        </a>
 
-                <a href="https://api.whatsapp.com/send/?phone=5562981148564&text=Olá, Hihasmin! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Gessika" target="_blank" class="whatsapp-fixed__list-box__item__phone">
-                    (62) 98114-8564
-                </a>
-            </li>
-
-    -->
-
-            <li class="whatsapp-fixed__list-box__item">
-                <a href="https://api.whatsapp.com/send/?phone=5562981589995&text=Olá, Jamille! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Gessika" target="_blank" class="whatsapp-fixed__list-box__item__name">
-                    Jamille
-                </a>
-
-                <a href="https://api.whatsapp.com/send/?phone=5562981589995&text=Olá, Jamille! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Gessika" target="_blank" class="whatsapp-fixed__list-box__item__phone">
-                    (62) 98158-9995
-                </a>
-            </li>
-
-
-
-        </ul>
-    </div>
+                        <a href="https://api.whatsapp.com/send/?phone=<?= whatsapp($resultsellers_whatsapp->phone); ?>&text=Olá, <?= $resultsellers_whatsapp->name; ?>! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Gessika" target="_blank" class="whatsapp-fixed__list-box__item__phone">
+                            <?= $resultsellers_whatsapp->phone; ?>
+                        </a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+    <?php endif; ?>
 
     <div class="load"></div>
     <div class="alpha"></div>
