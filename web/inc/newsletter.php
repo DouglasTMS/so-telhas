@@ -2,7 +2,7 @@
     <div class="box newsletter__box">
 
         <header class="newsletter__box__header">
-            <img width="60px" height="60px" src="<?= url("web/assets/img/icon/gift.svg"); ?>" alt="Newsletter" title="Newsletter">
+            <img width="60px" height="60px" src="<?= url("web/assets/img/icon/gift.svg"); ?>" alt="Receba novidades da Só Telhas" title="Receba novidades da Só Telhas">
             <h1>Gostaria de receber nossas novidades e promoções?</h1>
             <p>Cadastre seu e-mail em nossa newsletter e fique por dentro das novidades e promoções.</p>
         </header>

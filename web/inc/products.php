@@ -9,7 +9,7 @@
             <?php foreach ($products as $resultProducts) : ?>
 
                 <article class="our-products__box__main__item">
-                    <img src="<?= thumb()->make($resultProducts->image, 1200, 800); ?>" title="" alt="">
+                    <img src="<?= thumb()->make($resultProducts->image, 300, 200); ?>" width="300" height="200" title="<?= $resultProducts->name; ?>" alt="<?= $resultProducts->name; ?>">
                     <div class="our-products__box__main__item__box">
                         <h1><?= $resultProducts->name; ?></h1>
                         <p class="price hide">R$ 89,90</p>
@@ -23,7 +23,7 @@
         </main>
 
         <footer class="our-products__box__footer">
-            <a href="<?= url("telhas"); ?>" title="">Ver Todas</a>
+            <a href="<?= url("telhas"); ?>" title="Conheça todas nossas Telhas">Ver Todas</a>
         </footer>
     </div>
 </section>

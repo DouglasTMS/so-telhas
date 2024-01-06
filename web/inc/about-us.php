@@ -12,7 +12,7 @@
             </div>
 
             <div class="about-us__box__main__right">
-                <img src="<?= url("web/assets/img/telhas-1.jpg"); ?>" title="" alt="">
+                <img src="<?= thumb()->make("web/assets/img/telhas-1.jpg", 500, 215); ?>" width="500" height="215" title="Conheça mais sobre a Só Telhas" alt="Conheça mais sobre a Só Telhas">
             </div>
         </main>
 
