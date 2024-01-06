@@ -1,0 +1,12 @@
+user-agent: *
+allow: /
+allow: /quem-somos/
+allow: /orcamento/
+allow: /obrigado/
+allow: /telhas/
+allow: /telhas/telha-com-forro-metalico/
+allow: /telhas/telha-sanduiche/
+allow: /telhas/telha-isotermica-com-film/
+allow: /telhas/telha-semi-sanduiche/
+allow: /telhas/telha-simples/
+allow: /telhas/telha-forro-pvc/
