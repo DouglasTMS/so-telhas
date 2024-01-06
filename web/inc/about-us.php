@@ -12,7 +12,7 @@
             </div>
 
             <div class="about-us__box__main__right">
-                <img src="<?= thumb()->make("web/assets/img/telhas-1.jpg", 500, 215); ?>" width="500" height="215" title="Conheça mais sobre a Só Telhas" alt="Conheça mais sobre a Só Telhas">
+                <img src="<?= thumb()->make("web/assets/img/telhas-1.jpg", 500, 214); ?>" width="500" height="214" title="Conheça mais sobre a Só Telhas" alt="Conheça mais sobre a Só Telhas">
             </div>
         </main>
 
