@@ -4,9 +4,9 @@
 ##
 define("CONF_SITE_NAME", "Só Telhas");
 define("CONF_SITE_LANG", "pt_BR");
-define("CONF_SITE_TITLE", "Só Telhas");
-define("CONF_SITE_DESCRIPTION", "");
-define("CONF_SITE_DOMAIN", "sotelhasmt.com");
+define("CONF_SITE_TITLE", "Só Telhas - Cobrindo o Brasil com Aço");
+define("CONF_SITE_DESCRIPTION", "Só Telhas, uma empresa que trabalha com fabricação de telhas metálicas termoacústica. Fabricamos Telha com Forro Metálico, Telha Sanduiche, Telha Semi Sanduiche, Telha Simples, Telha Forro PVC, Telha Isotérmica com Film e Telha Ondulada.");
+define("CONF_SITE_DOMAIN", "sotelhas.ind.br");
 
 // Twitter
 define("CONF_TWITTER_CREATOR_PROFILE", "");
