@@ -114,7 +114,9 @@
             <footer class="footer__box__footer">
 
                 <ul class="footer__box__footer__contact">
-                    <p>Contato</p>
+                    <li class="footer__box__footer__contact__title">
+                        <p>Contato</p>
+                    </li>
                     <li>
                         <img width="20" height="20.1" src="<?= url("web/assets/img/icon/whatsapp.svg"); ?>" title="WhatsApp" alt="WhatsApp">
                         <a href="https://api.whatsapp.com/send/?phone=5562981148564&text=Olá, Hihasmin! Eu estava no seu site e gostaria de tirar algumas dúvidas." target="_blank" title="Falar com a Só Telhas">(62) 98114-8564</a>
@@ -132,7 +134,9 @@
                 </ul>
 
                 <ul class="footer__box__footer__social">
-                    <p>Redes Sociais</p>
+                    <li class="footer__box__footer__contact__title">
+                        <p>Redes Sociais</p>
+                    </li>
                     <li>
                         <img width="20" height="20" src="<?= url("web/assets/img/icon/instagram.svg"); ?>" title="Instagram" alt="Nos siga no Instagram">
                         <a href="https://www.instagram.com/sotelhasmt" target="_blank" title="Instagram da Só Telhas">Instagram</a>
@@ -145,7 +149,9 @@
                 </ul>
 
                 <ul class="footer__box__footer__payment-types">
-                    <p>Formas de Pagamento</p>
+                    <li class="footer__box__footer__contact__title">
+                        <p>Formas de Pagamento</p>
+                    </li>
                     <li>
                         <img width="60" height="35" src="<?= url("web/assets/img/icon/visa.svg"); ?>" title="Visa" alt="Aceitamos Visa">
                     </li>
@@ -188,13 +194,13 @@
 
         <div class="whatsapp-fixed">
             <a target="_blank" data-icon-uri="<?= url("web/assets/img/icon"); ?>" href="#" title="Falar com Consultor" class="whatsapp-fixed__open-list">
-                <img width="50px" height="50px" src="<?= url("web/assets/img/icon/whatsapp-fixed.svg"); ?>" alt="Falar com Consultor">
+                <img width="50px" height="50px" src="<?= url("web/assets/img/icon/whatsapp-fixed.svg"); ?>" alt="Tire suas Dúvidas com um Especialista">
                 <p>Falar com Consultor</p>
             </a>
 
             <ul class="whatsapp-fixed__list-box">
                 <div class="whatsapp-fixed__list-box__header">
-                    <img src="<?= url("web/assets/img/icon/whatsapp.svg"); ?>" title="WhatsApp" alt="WhatsApp">
+                    <img src="<?= url("web/assets/img/icon/whatsapp.svg"); ?>" title="WhatsApp" alt="Entre em contato via WhatsApp">
                     <p>Com qual consultor gostaria de falar?</p>
                 </div>
 
