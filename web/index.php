@@ -199,10 +199,12 @@
             </a>
 
             <ul class="whatsapp-fixed__list-box">
-                <div class="whatsapp-fixed__list-box__header">
-                    <img src="<?= url("web/assets/img/icon/whatsapp.svg"); ?>" title="WhatsApp" alt="Entre em contato via WhatsApp">
-                    <p>Com qual consultor gostaria de falar?</p>
-                </div>
+                <li>
+                    <div class="whatsapp-fixed__list-box__header">
+                        <img src="<?= url("web/assets/img/icon/whatsapp.svg"); ?>" title="WhatsApp" alt="Entre em contato via WhatsApp">
+                        <p>Com qual consultor gostaria de falar?</p>
+                    </div>
+                </li>
 
                 <?php foreach ($sellers_whatsapp as $resultsellers_whatsapp) : ?>
 
