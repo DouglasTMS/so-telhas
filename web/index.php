@@ -134,12 +134,12 @@
                 <ul class="footer__box__footer__social">
                     <p>Redes Sociais</p>
                     <li>
-                        <img width="20" height="20" src="<?= url("web/assets/img/icon/instagram.svg"); ?>" title="Instagram" alt="Instagram">
+                        <img width="20" height="20" src="<?= url("web/assets/img/icon/instagram.svg"); ?>" title="Instagram" alt="Nos siga no Instagram">
                         <a href="https://www.instagram.com/sotelhasmt" target="_blank" title="Instagram da Só Telhas">Instagram</a>
                     </li>
 
                     <li>
-                        <img width="20" height="20" src="<?= url("web/assets/img/icon/facebook.svg"); ?>" title="Facebook" alt="Facebook">
+                        <img width="20" height="20" src="<?= url("web/assets/img/icon/facebook.svg"); ?>" title="Facebook" alt="Nos siga no Facebook">
                         <a href="https://www.facebook.com/sotelhasmt" target="_blank" title="Facebook da Só Telhas">Facebook</a>
                     </li>
                 </ul>
@@ -147,35 +147,35 @@
                 <ul class="footer__box__footer__payment-types">
                     <p>Formas de Pagamento</p>
                     <li>
-                        <img width="60" height="35" src="<?= url("web/assets/img/icon/visa.svg"); ?>" title="Visa" alt="Visa">
+                        <img width="60" height="35" src="<?= url("web/assets/img/icon/visa.svg"); ?>" title="Visa" alt="Aceitamos Visa">
                     </li>
 
                     <li>
-                        <img width="60" height="35" src="<?= url("web/assets/img/icon/mastercard.svg"); ?>" title="Mastercard" alt="Mastercard">
+                        <img width="60" height="35" src="<?= url("web/assets/img/icon/mastercard.svg"); ?>" title="Mastercard" alt="Aceitamos Mastercard">
                     </li>
 
                     <li>
-                        <img width="60" height="35" src="<?= url("web/assets/img/icon/visa.svg"); ?>" title="Visa" alt="Visa">
+                        <img width="60" height="35" src="<?= url("web/assets/img/icon/visa.svg"); ?>" title="Visa" alt="Aceitamos Visa">
                     </li>
 
                     <li>
-                        <img width="60" height="35" src="<?= url("web/assets/img/icon/mastercard.svg"); ?>" title="Mastercard" alt="Mastercard">
+                        <img width="60" height="35" src="<?= url("web/assets/img/icon/mastercard.svg"); ?>" title="Mastercard" alt="Aceitamos Mastercard">
                     </li>
 
                     <li>
-                        <img width="60" height="35" src="<?= url("web/assets/img/icon/visa.svg"); ?>" title="Visa" alt="Visa">
+                        <img width="60" height="35" src="<?= url("web/assets/img/icon/visa.svg"); ?>" title="Visa" alt="Aceitamos Visa">
                     </li>
 
                     <li>
-                        <img width="60" height="35" src="<?= url("web/assets/img/icon/mastercard.svg"); ?>" title="Mastercard" alt="Mastercard">
+                        <img width="60" height="35" src="<?= url("web/assets/img/icon/mastercard.svg"); ?>" title="Mastercard" alt="Aceitamos Mastercard">
                     </li>
 
                     <li>
-                        <img width="60" height="35" src="<?= url("web/assets/img/icon/visa.svg"); ?>" title="Visa" alt="Visa">
+                        <img width="60" height="35" src="<?= url("web/assets/img/icon/visa.svg"); ?>" title="Visa" alt="Aceitamos Visa">
                     </li>
 
                     <li>
-                        <img width="60" height="35" src="<?= url("web/assets/img/icon/mastercard.svg"); ?>" title="Mastercard" alt="Mastercard">
+                        <img width="60" height="35" src="<?= url("web/assets/img/icon/mastercard.svg"); ?>" title="Mastercard" alt="Aceitamos Mastercard">
                     </li>
                 </ul>
 

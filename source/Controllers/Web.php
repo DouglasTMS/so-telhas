@@ -32,8 +32,10 @@ class Web
     {
         echo $this->view->render("pages/home", [
             "header" => $this->seo->render(CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
+            "headerPhone" => "(65) 3686-3804",
             "products" => (new Products())->get("ORDER BY rand() LIMIT :limit", "limit=3"),
             "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1")
+
         ]);
     }
 
@@ -45,7 +47,8 @@ class Web
         echo $this->view->render("pages/products", [
             "header" => $this->seo->render("Conheça nossas Telhas | " . CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
             "products" => (new Products())->get(),
-            "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1")
+            "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
+            "headerPhone" => "(65) 3686-3804"
         ]);
     }
 
@@ -68,7 +71,8 @@ class Web
             "variations" => (new Variations())->get("WHERE product_id = :product_id", "product_id={$product[0]->id}"),
             "details" => (new Details())->get("WHERE product_id = :product_id", "product_id={$product[0]->id}"),
             "benefits" => (new Benefits())->get("WHERE product_id = :product_id", "product_id={$product[0]->id}"),
-            "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1")
+            "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
+            "headerPhone" => "(65) 3686-3804"
         ]);
     }
 
@@ -79,7 +83,8 @@ class Web
     {
         echo $this->view->render("pages/who-we-are", [
             "header" => $this->seo->render("Conheça Melhor a Só Telhas | " . CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
-            "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1")
+            "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
+            "headerPhone" => "(65) 3686-3804"
         ]);
     }
 
@@ -90,7 +95,8 @@ class Web
     {
         echo $this->view->render("pages/leads", [
             "header" => $this->seo->render(CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
-            "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1")
+            "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
+            "headerPhone" => "(65) 3686-3804"
         ]);
     }
 
@@ -101,7 +107,8 @@ class Web
     {
         echo $this->view->render("pages/success", [
             "header" => $this->seo->render(CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
-            "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1")
+            "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
+            "headerPhone" => "(65) 3686-3804"
         ]);
     }
 
