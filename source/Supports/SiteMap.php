@@ -7,7 +7,6 @@ use Source\Models\Products;
 
 class SiteMap
 {
-
     private $products;
     private $dateTime;
     private $XML;
@@ -20,7 +19,6 @@ class SiteMap
         $this->XMLGenerate();
         $this->createXMLFile();
         $this->compactXML();
-        $this->sendToGoogle();
     }
 
     private function XMLGenerate()
@@ -86,7 +84,7 @@ class SiteMap
 
     private function createXMLFile()
     {
-        $file = fopen('sitemap.xml', 'w');
+        $file = fopen(url("sitemap.xml"), 'w');
         if (fwrite($file, $this->XML)) {
             echo "Arquivo sitemap.xml criado com sucesso";
         } else {
@@ -97,29 +95,10 @@ class SiteMap
 
     private function compactXML()
     {
-        $data = implode("", file("sitemap.xml"));
+        $data = implode("", file(url("sitemap.xml")));
         $gzdata = gzencode($data, 9);
-        $fp = fopen("sitemap.xml.gz", "w");
+        $fp = fopen(url("sitemap.xml.gz"), "w");
         fwrite($fp, $gzdata);
         fclose($fp);
-    }
-
-    private function sendToGoogle()
-    {
-        // Envia para o Google o novo sitemap gerado
-        $urlSitemap = "http://www.google.com/webmasters/sitemaps/ping?sitemap=" . url() . "/";
-
-        // Arquivos a serem enviados
-        $Files = ['sitemap.xml', 'sitemap.xml.gz'];
-
-        // Envia os dois arquivos sitemap gerados para a URL do Google
-        foreach ($Files as $file) {
-            $url = $urlSitemap . $file;
-            $ch = curl_init($url);
-            curl_setopt($ch, CURLOPT_HEADER, 0);
-            curl_exec($ch);
-            $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-            curl_close($ch);
-        }
     }
 }
