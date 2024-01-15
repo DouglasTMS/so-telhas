@@ -12,6 +12,7 @@ use Source\Models\Variations;
 use Source\Models\Details;
 use Source\Models\Benefits;
 use Source\Models\SellersWhatsApp;
+use Source\Supports\SiteMap;
 
 class Web
 {
