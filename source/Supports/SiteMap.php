@@ -84,7 +84,7 @@ class SiteMap
 
     private function createXMLFile()
     {
-        $file = fopen(url("sitemap.xml"), 'w');
+        $file = fopen("../sitemap.xml", 'w');
         if (fwrite($file, $this->XML)) {
             echo "Arquivo sitemap.xml criado com sucesso";
         } else {
@@ -97,7 +97,7 @@ class SiteMap
     {
         $data = implode("", file(url("sitemap.xml")));
         $gzdata = gzencode($data, 9);
-        $fp = fopen(url("sitemap.xml.gz"), "w");
+        $fp = fopen("../sitemap.xml.gz", "w");
         fwrite($fp, $gzdata);
         fclose($fp);
     }
