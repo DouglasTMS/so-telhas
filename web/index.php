@@ -27,12 +27,9 @@
             j.src =
                 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
             f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-NXPNP97F');
+        })(window, document, 'script', 'dataLayer', 'GTM-WZ235V5W');
     </script>
     <!-- End Google Tag Manager -->
-
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXPNP97F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- Meta Pixel Code -->
     <script>
@@ -63,6 +60,10 @@
 </head>
 
 <body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZ235V5W" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <header class="row header">
         <div class="header__box box">
