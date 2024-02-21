@@ -125,7 +125,7 @@
 
                     <li>
                         <img width="20" height="21.82" src="<?= url("web/assets/img/icon/phone.svg"); ?>" title="Telefone" alt="Telefone">
-                        <a href="tel:062981148564" target="_blank" title="Ligar para a Só Telhas">(62) 98114-8564</a>
+                        <a href="tel:062981148564" target="_blank" title="Ligar para a Só Telhas" class="callFromSite">(62) 98114-8564</a>
                     </li>
 
                     <li>
