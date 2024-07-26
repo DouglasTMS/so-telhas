@@ -7,7 +7,7 @@
     <meta name="description" content="<?= CONF_SITE_DESCRIPTION ?>">
     <meta name="home_path" content="<?= url(); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= url('web/assets/css/style.css'); ?>">
+    <link rel="stylesheet" href="<?= url('web/assets/css/style.min.85324632.css'); ?>">
     <link rel="shortcut icon" href="<?= url("web/assets/img/faveicon.png"); ?>">
 
     <?= $header; ?>
@@ -133,7 +133,7 @@
                     </li>
                     <li>
                         <img width="20" height="20.1" src="<?= url("web/assets/img/icon/whatsapp.svg"); ?>" title="WhatsApp" alt="WhatsApp">
-                        <a href="https://api.whatsapp.com/send/?phone=556233000460&text=Olá! Eu estava no site e gostaria de tirar algumas dúvidas." target="_blank" title="Falar com a Só Telhas">(62) 3300-0460</a>
+                        <a href="https://api.whatsapp.com/send/?phone=556233000460&text=Olá! Eu estava no site e gostaria de fazer uma sugestão/reclamação." target="_blank" title="Falar com a Só Telhas">(62) 3300-0460 | <span>Sugestão/Reclamação</span></a>
                     </li>
 
                     <li>

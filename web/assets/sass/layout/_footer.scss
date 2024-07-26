@@ -88,7 +88,12 @@
 
                 & li {
 
-                    & a {}
+                    & a {
+                        & span {
+                            font-size: .80em;
+                            color: var(--color-white);
+                        }
+                    }
                 }
             }
 
