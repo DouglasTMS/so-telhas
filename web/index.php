@@ -220,11 +220,11 @@
                 <?php foreach ($sellers_whatsapp as $resultsellers_whatsapp) : ?>
 
                     <li class="whatsapp-fixed__list-box__item">
-                        <a href="https://api.whatsapp.com/send/?phone=<?= whatsapp($resultsellers_whatsapp->phone); ?>&text=Olá! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Gessika" target="_blank" class="whatsapp-fixed__list-box__item__name">
-                            <?= $resultsellers_whatsapp->name; ?>
+                        <a href="https://api.whatsapp.com/send/?phone=<?= whatsapp($resultsellers_whatsapp->phone); ?>&text=Olá, <?= $resultsellers_whatsapp->name; ?>! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Gessika" target="_blank" class="whatsapp-fixed__list-box__item__name">
+                            <?= $resultsellers_whatsapp->name . " " . $resultsellers_whatsapp->last_name; ?>
                         </a>
 
-                        <a href="https://api.whatsapp.com/send/?phone=<?= whatsapp($resultsellers_whatsapp->phone); ?>&text=Olá! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Gessika" target="_blank" class="whatsapp-fixed__list-box__item__phone">
+                        <a href="https://api.whatsapp.com/send/?phone=<?= whatsapp($resultsellers_whatsapp->phone); ?>&text=Olá <?= $resultsellers_whatsapp->name; ?>! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Gessika" target="_blank" class="whatsapp-fixed__list-box__item__phone">
                             <?= $resultsellers_whatsapp->phone; ?>
                         </a>
                     </li>
