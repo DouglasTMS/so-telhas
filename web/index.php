@@ -116,7 +116,7 @@
         </div>
     </div>
 
-    <?= $v->section("content"); ?>
+    <?= $this->section("content"); ?>
 
 
     <footer class="row footer">
@@ -133,17 +133,17 @@
                     </li>
                     <li>
                         <img width="20" height="20.1" src="<?= url("web/assets/img/icon/whatsapp.svg"); ?>" title="WhatsApp" alt="WhatsApp">
-                        <a href="https://api.whatsapp.com/send/?phone=5562981148564&text=Olá, Hihasmin! Eu estava no seu site e gostaria de tirar algumas dúvidas." target="_blank" title="Falar com a Só Telhas">(62) 98114-8564</a>
+                        <a href="https://api.whatsapp.com/send/?phone=556233000460&text=Olá! Eu estava no site e gostaria de tirar algumas dúvidas." target="_blank" title="Falar com a Só Telhas">(62) 3300-0460</a>
                     </li>
 
                     <li>
                         <img width="20" height="21.82" src="<?= url("web/assets/img/icon/phone.svg"); ?>" title="Telefone" alt="Telefone">
-                        <a href="tel:062981148564" target="_blank" title="Ligar para a Só Telhas" class="callFromSite">(62) 98114-8564</a>
+                        <a href="tel:06233000460" target="_blank" title="Ligar para a Só Telhas" class="callFromSite">(62) 3300-0460</a>
                     </li>
 
                     <li>
                         <img width="20" height="15" src="<?= url("web/assets/img/icon/email.svg"); ?>" title="E-mail" alt="E-mail">
-                        <a href="mailto:comercial@sotelhasmt.com" target="_blank" title="Enviar e-mail para a Só Telhas">comercial@sotelhasmt.com</a>
+                        <a href="mailto:comercial@sotelhas.ind.br" target="_blank" title="Enviar e-mail para a Só Telhas">comercial@sotelhas.ind.br</a>
                     </li>
                 </ul>
 
@@ -153,7 +153,7 @@
                     </li>
                     <li>
                         <img width="20" height="20" src="<?= url("web/assets/img/icon/instagram.svg"); ?>" title="Instagram" alt="Nos siga no Instagram">
-                        <a href="https://www.instagram.com/sotelhasmt" target="_blank" title="Instagram da Só Telhas">Instagram</a>
+                        <a href="https://www.instagram.com/sotelhas.ind.br" target="_blank" title="Instagram da Só Telhas">Instagram</a>
                     </li>
 
                     <li>
@@ -194,9 +194,6 @@
                         <img width="60" height="35" src="<?= url("web/assets/img/icon/visa.svg"); ?>" title="Visa" alt="Aceitamos Visa">
                     </li>
 
-                    <li>
-                        <img width="60" height="35" src="<?= url("web/assets/img/icon/mastercard.svg"); ?>" title="Mastercard" alt="Aceitamos Mastercard">
-                    </li>
                 </ul>
 
             </footer>
@@ -223,11 +220,11 @@
                 <?php foreach ($sellers_whatsapp as $resultsellers_whatsapp) : ?>
 
                     <li class="whatsapp-fixed__list-box__item">
-                        <a href="https://api.whatsapp.com/send/?phone=<?= whatsapp($resultsellers_whatsapp->phone); ?>&text=Olá, <?= $resultsellers_whatsapp->name; ?>! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Gessika" target="_blank" class="whatsapp-fixed__list-box__item__name">
+                        <a href="https://api.whatsapp.com/send/?phone=<?= whatsapp($resultsellers_whatsapp->phone); ?>&text=Olá! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Gessika" target="_blank" class="whatsapp-fixed__list-box__item__name">
                             <?= $resultsellers_whatsapp->name; ?>
                         </a>
 
-                        <a href="https://api.whatsapp.com/send/?phone=<?= whatsapp($resultsellers_whatsapp->phone); ?>&text=Olá, <?= $resultsellers_whatsapp->name; ?>! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Gessika" target="_blank" class="whatsapp-fixed__list-box__item__phone">
+                        <a href="https://api.whatsapp.com/send/?phone=<?= whatsapp($resultsellers_whatsapp->phone); ?>&text=Olá! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Gessika" target="_blank" class="whatsapp-fixed__list-box__item__phone">
                             <?= $resultsellers_whatsapp->phone; ?>
                         </a>
                     </li>

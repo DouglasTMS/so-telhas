@@ -80,7 +80,10 @@ $(function () {
             success: function (e) {
 
                 if (e.redirect === "yes") {
-                    window.location.href = HOME_PATH + "/obrigado";
+                    //window.location.href = HOME_PATH + "/obrigado";
+                    $(".load").fadeOut(200);
+                    $(".alpha").fadeOut(200);
+                    window.open('https://api.whatsapp.com/send/?phone=556233000460&text=Olá! Eu estava no site e gostaria de tirar algumas dúvidas.', '_blank');
                     return;
                 }
                 else {

@@ -1,4 +1,4 @@
-<?php $v->layout("index"); ?>
+<?php $this->layout("index"); ?>
 
 <section class="row product-view">
     <div class="box product-view__box">
@@ -53,9 +53,9 @@
     <?php endif; ?>
 </section>
 
-<?= $v->insert('inc/lead-form'); ?>
-<?= $v->insert('inc/about-us'); ?>
-<?= $v->insert('inc/our-differentials'); ?>
-<?= $v->insert('inc/newsletter'); ?>
-<?= $v->insert('inc/feedback'); ?>
-<?= $v->insert('inc/contact'); ?>
+<?= $this->insert('inc/lead-form'); ?>
+<?= $this->insert('inc/about-us'); ?>
+<?= $this->insert('inc/our-differentials'); ?>
+<?= $this->insert('inc/newsletter'); ?>
+<?= $this->insert('inc/feedback'); ?>
+<?= $this->insert('inc/contact'); ?>

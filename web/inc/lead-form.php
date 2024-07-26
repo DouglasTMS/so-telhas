@@ -11,10 +11,6 @@
                 <input type="text" class="phone_mask" autocomplete="off" name="phone" placeholder="Qual seu telefone?">
             </label>
 
-            <label>
-                <input type="text" autocomplete="off" name="email" placeholder="Qual seu e-mail?">
-            </label>
-
             <input type="submit" name="send" value="Solicitar Orçamento">
         </form>
     </div>

@@ -44,7 +44,7 @@ abstract class Connect
      *
      * @return void
      */
-    final private function __construct()
+    private function __construct()
     {
     }
 
@@ -53,7 +53,7 @@ abstract class Connect
      *
      * @return void
      */
-    final private function __clone()
+    private function __clone()
     {
     }
 }

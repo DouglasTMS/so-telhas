@@ -1,8 +1,8 @@
-<?php $v->layout("index"); ?>
+<?php $this->layout("index"); ?>
 
-<?= $v->insert('inc/about-us'); ?>
+<?= $this->insert('inc/about-us'); ?>
 
-<?= $v->insert('inc/lead-form'); ?>
+<?= $this->insert('inc/lead-form'); ?>
 
 <section class="row our-differentials">
     <div class="box our-differentials__box">
@@ -44,9 +44,9 @@
     </div>
 </section>
 
-<?= $v->insert('inc/newsletter'); ?>
+<?= $this->insert('inc/newsletter'); ?>
 
-<?= $v->insert('inc/feedback'); ?>
+<?= $this->insert('inc/feedback'); ?>
 
 <section class="row contact">
     <div class="box contact__box">

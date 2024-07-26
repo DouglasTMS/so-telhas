@@ -1,4 +1,4 @@
-<?php $v->layout("index"); ?>
+<?php $this->layout("index"); ?>
 
 <section class="row thanks">
     <div class="box thanks__box">
@@ -10,7 +10,7 @@
     </div>
 </section>
 
-<?= $v->insert('inc/our-differentials'); ?>
-<?= $v->insert('inc/newsletter'); ?>
-<?= $v->insert('inc/feedback'); ?>
-<?= $v->insert('inc/contact'); ?>
+<?= $this->insert('inc/our-differentials'); ?>
+<?= $this->insert('inc/newsletter'); ?>
+<?= $this->insert('inc/feedback'); ?>
+<?= $this->insert('inc/contact'); ?>

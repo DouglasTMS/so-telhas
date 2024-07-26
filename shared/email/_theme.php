@@ -13,28 +13,24 @@
             font-family: Helvetica, sans-serif;
         }
 
-        a 
-        {
+        a {
             color: #000 !important;
             text-decoration: none;
         }
 
-        ul
-        {
+        ul {
             width: 100%;
             list-style: none;
             margin: 0;
             padding: 0;
         }
 
-        ul li 
-        {
+        ul li {
             margin-bottom: 15px;
             padding: 0;
         }
 
-        ul li a 
-        {
+        ul li a {
             color: #000 !important;
         }
 
@@ -78,8 +74,7 @@
             margin: 0 0 2px 0;
         }
 
-        .btn 
-        {
+        .btn {
             padding: 15px 25px;
             text-decoration: none;
             color: #fff;
@@ -93,7 +88,7 @@
         <tr>
             <td>
                 <div class="content">
-                    <?= $v->section("content"); ?>
+                    <?= $this->section("content"); ?>
                 </div>
             </td>
         </tr>

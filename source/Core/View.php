@@ -10,7 +10,7 @@ use League\Plates\Engine;
 class View
 {
     private $engine;
-    
+
     /**
      * Inicia o processo de configuração da view.
      *
@@ -20,9 +20,9 @@ class View
      */
     public function __construct(string $path = CONF_VIEW_PATH, string $ext = CONF_VIEW_EXT)
     {
-        $this->engine = Engine::create($path, $ext);
+        $this->engine = new Engine($path, $ext);
     }
-    
+
     /**
      * Adiciona novo diretório.
      *
@@ -35,7 +35,7 @@ class View
         $this->engine->addFolder($name, $path);
         return $this;
     }
-    
+
     /**
      * Renderiza a view.
      *
@@ -45,9 +45,10 @@ class View
      */
     public function render(string $templateName, array $data): string
     {
-        return $this->engine->render($templateName, $data);
+        $this->engine->addData($data);
+        return $this->engine->render($templateName);
     }
-    
+
     /**
      * Retorna o objeto Engine.
      *

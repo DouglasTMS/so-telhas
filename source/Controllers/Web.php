@@ -33,7 +33,7 @@ class Web
     {
         echo $this->view->render("pages/home", [
             "header" => $this->seo->render(CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
-            "headerPhone" => "(65) 3686-3804",
+            "headerPhone" => "(62) 3300-0460",
             "products" => (new Products())->get("ORDER BY rand() LIMIT :limit", "limit=3"),
             "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1")
 
@@ -49,7 +49,7 @@ class Web
             "header" => $this->seo->render("Conheça nossas Telhas | " . CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
             "products" => (new Products())->get(),
             "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
-            "headerPhone" => "(65) 3686-3804"
+            "headerPhone" => "(62) 3300-0460"
         ]);
     }
 
@@ -73,7 +73,7 @@ class Web
             "details" => (new Details())->get("WHERE product_id = :product_id", "product_id={$product[0]->id}"),
             "benefits" => (new Benefits())->get("WHERE product_id = :product_id", "product_id={$product[0]->id}"),
             "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
-            "headerPhone" => "(65) 3686-3804"
+            "headerPhone" => "(62) 3300-0460"
         ]);
     }
 
@@ -85,7 +85,7 @@ class Web
         echo $this->view->render("pages/who-we-are", [
             "header" => $this->seo->render("Conheça Melhor a Só Telhas | " . CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
             "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
-            "headerPhone" => "(65) 3686-3804"
+            "headerPhone" => "(62) 3300-0460"
         ]);
     }
 
@@ -97,7 +97,7 @@ class Web
         echo $this->view->render("pages/leads", [
             "header" => $this->seo->render(CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
             "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
-            "headerPhone" => "(65) 3686-3804"
+            "headerPhone" => "(62) 3300-0460"
         ]);
     }
 
@@ -109,7 +109,7 @@ class Web
         echo $this->view->render("pages/success", [
             "header" => $this->seo->render(CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
             "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
-            "headerPhone" => "(65) 3686-3804"
+            "headerPhone" => "(62) 3300-0460"
         ]);
     }
 
@@ -134,41 +134,25 @@ class Web
                 return;
             }
 
-            if (empty($data["email"])) {
-                $response["message"] = "Por favor, informe seu e-mail.";
-                $response["error"] = "error";
-                echo json_encode($response);
-                return;
-            }
-
-            if (!is_email($data["email"])) {
-                $response["message"] = "Por favor, informe um e-mail válido.";
-                $response["error"] = "error";
-                echo json_encode($response);
-                return;
-            }
-
-
             /**
              * Salvar no banco de dados
              */
 
             $lead = (new Lead())->setData(
                 $data["name"],
-                $data["phone"],
-                $data["email"]
+                $data["phone"]
             )->save();
 
             /**
              * Mail queue
              */
-            $mailBody = (new View(__DIR__ . "/../../shared/email"))->render("contact", [
-                "data" => (object) $data,
-                "whatsappLink" => whatsapp($data["phone"])
-            ]);
+            //$mailBody = (new View(__DIR__ . "/../../shared/email"))->render("contact", [
+            //"data" => (object) $data,
+            //"whatsappLink" => whatsapp($data["phone"])
+            //]);
 
-            $email = new Email();
-            $sendMail = $email->bootstrap("Lead via Site", $mailBody, CONF_MAIL, CONF_SITE_NAME)->queue();
+            //$email = new Email();
+            //$sendMail = $email->bootstrap("Lead via Site", $mailBody, CONF_MAIL, CONF_SITE_NAME)->queue();
 
 
             /**

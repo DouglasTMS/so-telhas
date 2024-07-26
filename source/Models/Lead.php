@@ -9,7 +9,7 @@ class Lead extends CRUD
 
     protected static $entity = "leads";
 
-    public function setData(string $name, string $phone, string $email): Lead
+    public function setData(string $name, string $phone, string $email = null): Lead
     {
         $this->name = $name;
         $this->phone = $phone;

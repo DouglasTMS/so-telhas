@@ -8,8 +8,8 @@
 
         <main class="contact__box__main">
             <p>Ligue agora</p>
-            <a class="contact__box__main__phone callFromSite" href="tel:06298114-8564" title="Ligue para a Só Telhas" target="_blank">62 <b>98114-8564</b></a>
-            <a class="contact__box__main__whatsapp" href="https://api.whatsapp.com/send/?phone=5562981148564&text=Olá, Hihasmin! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Fale com a Só Telhas" target="_blank">62 <b>98114-8564</b></a>
+            <a class="contact__box__main__phone callFromSite" href="tel:06233000460" title="Ligue para a Só Telhas" target="_blank">62 <b>3300-0460</b></a>
+            <a class="contact__box__main__whatsapp" href="https://api.whatsapp.com/send/?phone=556233000460&text=Olá! Eu estava no site e gostaria de tirar algumas dúvidas." title="Fale com a Só Telhas" target="_blank">62 <b>3300-0460</b></a>
         </main>
     </div>
 </section>
