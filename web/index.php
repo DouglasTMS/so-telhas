@@ -58,7 +58,8 @@
     <!-- End Meta Pixel Code -->
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11380481594"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16660059475">
+    </script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -67,7 +68,7 @@
         }
         gtag('js', new Date());
 
-        gtag('config', 'AW-11380481594');
+        gtag('config', 'AW-16660059475');
     </script>
 
 </head>
