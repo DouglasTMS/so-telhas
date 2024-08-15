@@ -9,6 +9,7 @@
 
             <label>
                 <input type="text" class="phone_mask" autocomplete="off" name="phone" placeholder="Qual seu telefone?">
+                <input type="hidden" name="whatsappseller" value="<?= whatsapp($whatsapp_form[0]->phone); ?>">
             </label>
 
             <input type="submit" name="send" value="Solicitar Orçamento">

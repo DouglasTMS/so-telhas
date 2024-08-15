@@ -35,8 +35,8 @@ class Web
             "header" => $this->seo->render(CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
             "headerPhone" => "(62) 3300-0460",
             "products" => (new Products())->get("ORDER BY rand() LIMIT :limit", "limit=6"),
-            "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1")
-
+            "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
+            "whatsapp_form" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1")
         ]);
     }
 
@@ -49,7 +49,8 @@ class Web
             "header" => $this->seo->render("Conheça nossas Telhas | " . CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
             "products" => (new Products())->get(),
             "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
-            "headerPhone" => "(62) 3300-0460"
+            "headerPhone" => "(62) 3300-0460",
+            "whatsapp_form" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1")
         ]);
     }
 
@@ -73,7 +74,8 @@ class Web
             "details" => (new Details())->get("WHERE product_id = :product_id", "product_id={$product[0]->id}"),
             "benefits" => (new Benefits())->get("WHERE product_id = :product_id", "product_id={$product[0]->id}"),
             "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
-            "headerPhone" => "(62) 3300-0460"
+            "headerPhone" => "(62) 3300-0460",
+            "whatsapp_form" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1")
         ]);
     }
 
@@ -85,7 +87,8 @@ class Web
         echo $this->view->render("pages/who-we-are", [
             "header" => $this->seo->render("Conheça Melhor a Só Telhas | " . CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
             "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
-            "headerPhone" => "(62) 3300-0460"
+            "headerPhone" => "(62) 3300-0460",
+            "whatsapp_form" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1")
         ]);
     }
 
@@ -97,7 +100,8 @@ class Web
         echo $this->view->render("pages/leads", [
             "header" => $this->seo->render(CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
             "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
-            "headerPhone" => "(62) 3300-0460"
+            "headerPhone" => "(62) 3300-0460",
+            "whatsapp_form" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1")
         ]);
     }
 

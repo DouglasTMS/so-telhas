@@ -67,6 +67,7 @@ $(function () {
         let name = $(this).find('input[name="name"]').val();
         let phone = $(this).find('input[name="phone"]').val();
         let email = $(this).find('input[name="email"]').val();
+        let whatsappseller = $(this).find('input[name="whatsappseller"]').val();
 
         $.ajax({
             url: HOME_PATH + "/ajax",
@@ -83,7 +84,7 @@ $(function () {
                     //window.location.href = HOME_PATH + "/obrigado";
                     $(".load").fadeOut(200);
                     $(".alpha").fadeOut(200);
-                    window.open('https://api.whatsapp.com/send/?phone=556233000460&text=Olá! Eu estava no site e gostaria de tirar algumas dúvidas.', '_blank');
+                    window.open('https://api.whatsapp.com/send/?phone=' + whatsappseller + '&text=Olá! Eu estava no site e gostaria de tirar algumas dúvidas.', '_blank');
                     return;
                 }
                 else {
