@@ -36,7 +36,8 @@ class Web
             "headerPhone" => "(62) 3300-0460",
             "products" => (new Products())->get("ORDER BY rand() LIMIT :limit", "limit=6"),
             "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
-            "whatsapp_form" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1")
+            "whatsapp_form" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1"),
+            "contact_phone" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1")
         ]);
     }
 
@@ -50,7 +51,8 @@ class Web
             "products" => (new Products())->get(),
             "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
             "headerPhone" => "(62) 3300-0460",
-            "whatsapp_form" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1")
+            "whatsapp_form" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1"),
+            "contact_phone" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1")
         ]);
     }
 
@@ -75,7 +77,8 @@ class Web
             "benefits" => (new Benefits())->get("WHERE product_id = :product_id", "product_id={$product[0]->id}"),
             "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
             "headerPhone" => "(62) 3300-0460",
-            "whatsapp_form" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1")
+            "whatsapp_form" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1"),
+            "contact_phone" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1")
         ]);
     }
 
@@ -88,7 +91,8 @@ class Web
             "header" => $this->seo->render("Conheça Melhor a Só Telhas | " . CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
             "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
             "headerPhone" => "(62) 3300-0460",
-            "whatsapp_form" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1")
+            "whatsapp_form" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1"),
+            "contact_phone" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1")
         ]);
     }
 
@@ -101,7 +105,8 @@ class Web
             "header" => $this->seo->render(CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
             "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
             "headerPhone" => "(62) 3300-0460",
-            "whatsapp_form" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1")
+            "whatsapp_form" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1"),
+            "contact_phone" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1")
         ]);
     }
 
@@ -113,7 +118,8 @@ class Web
         echo $this->view->render("pages/success", [
             "header" => $this->seo->render(CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
             "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
-            "headerPhone" => "(62) 3300-0460"
+            "headerPhone" => "(62) 3300-0460",
+            "contact_phone" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1")
         ]);
     }
 

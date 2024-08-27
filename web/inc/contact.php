@@ -6,10 +6,15 @@
             <p>Tire suas dúvidas e faça um orçamento entrando em contato:</p>
         </header>
 
-        <main class="contact__box__main">
-            <p>Ligue agora</p>
-            <a class="contact__box__main__phone callFromSite" href="tel:06233000460" title="Ligue para a Só Telhas" target="_blank">62 <b>3300-0460</b></a>
-            <a class="contact__box__main__whatsapp" href="https://api.whatsapp.com/send/?phone=556233000460&text=Olá! Eu estava no site e gostaria de tirar algumas dúvidas." title="Fale com a Só Telhas" target="_blank">62 <b>3300-0460</b></a>
-        </main>
+        <?php if ($contact_phone) : ?>
+
+            <main class="contact__box__main">
+                <p>Ligue agora</p>
+                <?php foreach ($contact_phone as $resultsellers_contact_phone) : ?>
+                    <a class="contact__box__main__phone callFromSite" href="tel:0<?= str_replace(["(", ")", " ", "-"], "", $resultsellers_contact_phone->phone); ?>" title="Ligue para a Só Telhas" target="_blank"><?= substr($resultsellers_contact_phone->phone, 0, -10); ?> <b><?= substr($resultsellers_contact_phone->phone, -10); ?></b></a>
+                    <a class="contact__box__main__whatsapp" href="https://api.whatsapp.com/send/?phone=<?= whatsapp($resultsellers_contact_phone->phone); ?>&text=Olá! Eu estava no site e gostaria de tirar algumas dúvidas." title="Fale com a Só Telhas" target="_blank"><?= substr($resultsellers_contact_phone->phone, 0, -10); ?> <b><?= substr($resultsellers_contact_phone->phone, -10); ?></b></a>
+                <?php endforeach; ?>
+            </main>
+        <?php endif; ?>
     </div>
 </section>
