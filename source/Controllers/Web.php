@@ -42,13 +42,43 @@ class Web
     }
 
     /**
-     * Página lista de produtos.
+     * Página lista Telhas Isotérmicas.
      */
-    public function products(?array $data)
+    public function productIsoterm(?array $data)
     {
         echo $this->view->render("pages/products", [
-            "header" => $this->seo->render("Conheça nossas Telhas | " . CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
-            "products" => (new Products())->get(),
+            "header" => $this->seo->render("Conheça nossas Telhas Isotérmicas | " . CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
+            "products" => (new Products())->get("WHERE type = :type", "type=1"),
+            "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
+            "headerPhone" => "(62) 3300-0460",
+            "whatsapp_form" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1"),
+            "contact_phone" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1")
+        ]);
+    }
+
+    /**
+     * Página lista de Telhas Simples.
+     */
+    public function productSimple(?array $data)
+    {
+        echo $this->view->render("pages/products", [
+            "header" => $this->seo->render("Conheça nossas Telhas Simples | " . CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
+            "products" => (new Products())->get("WHERE type = :type", "type=2"),
+            "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
+            "headerPhone" => "(62) 3300-0460",
+            "whatsapp_form" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1"),
+            "contact_phone" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1")
+        ]);
+    }
+
+    /**
+     * Página lista de Isopainel.
+     */
+    public function productIsopainel(?array $data)
+    {
+        echo $this->view->render("pages/products", [
+            "header" => $this->seo->render("Conheça nossos Isopainéis | " . CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
+            "products" => (new Products())->get("WHERE type = :type", "type=3"),
             "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
             "headerPhone" => "(62) 3300-0460",
             "whatsapp_form" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1"),

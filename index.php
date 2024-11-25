@@ -13,8 +13,18 @@ $route = new Router(url(), ":");
 ###----------------------------------------------------------------------------------------------------###
 $route->namespace("Source\Controllers");
 $route->get("/", "Web:home");
-$route->get("/telhas", "Web:products");
-$route->get("/telhas/", "Web:products");
+
+## Isotérmicas
+$route->get("/telhas-isotermicas", "Web:productIsoterm");
+$route->get("/telhas-isotermicas/", "Web:productIsoterm");
+
+## Simples
+$route->get("/telhas-simples", "Web:productSimple");
+$route->get("/telhas-simples/", "Web:productSimple");
+
+## Isopainel
+$route->get("/isopainel", "Web:productIsopainel");
+$route->get("/isopainel/", "Web:productIsopainel");
 
 $route->get("/telhas/{uri}", "Web:productView");
 $route->get("/telhas/{uri}/", "Web:productView");

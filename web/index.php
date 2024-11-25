@@ -94,15 +94,15 @@
         <ul class="menu__box box">
 
             <li>
-                <a href="<?= url(); ?>" title="Início">Início</a>
+                <a href="<?= url("telhas-isotermicas"); ?>" title="Telhas Isotérmicas">Telhas Isotérmicas</a>
             </li>
 
             <li>
-                <a href="<?= url("telhas"); ?>" title="Nossas Telhas">Nossas Telhas</a>
+                <a href="<?= url("telhas-simples"); ?>" title="Telhas Simples">Telhas Simples</a>
             </li>
 
             <li>
-                <a href="<?= url("quem-somos"); ?>" title="Quem Somos">Quem Somos</a>
+                <a href="<?= url("isopainel"); ?>" title="Isopainel">Isopainel</a>
             </li>
 
             <li>
