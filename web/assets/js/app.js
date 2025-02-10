@@ -188,7 +188,7 @@ $(function () {
             type: "POST",
             dataType: "json",
             beforeSend: function () {
-                $(".whatsapp-conversion__lead-fields__main__form").fadeOut(300);
+                $(".whatsapp-conversion__lead-fields__main__form").css("display", "nome");
             },
             success: function (e) {
 
