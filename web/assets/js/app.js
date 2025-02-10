@@ -195,12 +195,14 @@ $(function () {
                     $(".whatsapp-conversion__lead-fields__main__message p").text("Tudo certo! Só um segundo.");
                 });
 
+
             },
             success: function (e) {
 
                 if (e.success == "true") {
-                    $(".whatsapp-conversion__lead-fields__main__message").fadeOut(100).css("display", "none");
-
+                    setTimeout(() => {
+                        $(".whatsapp-conversion__lead-fields__main__sellers-list").fadeIn(100);
+                    }, 200);
                     return;
                 }
 
@@ -213,7 +215,7 @@ $(function () {
 
             },
             complete: function () {
-
+                $(".whatsapp-conversion__lead-fields__main__message").fadeOut(100);
             }
         });
     });
