@@ -199,7 +199,7 @@ $(function () {
             success: function (e) {
 
                 if (e.success == "true") {
-                    $(".whatsapp-conversion__lead-fields__main__message").fadeOut(100).css("display", "flex");
+                    $(".whatsapp-conversion__lead-fields__main__message").fadeOut(100).css("display", "none");
 
                     return;
                 }
