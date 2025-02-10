@@ -166,14 +166,14 @@ class Web
 
             if (empty($data["name"])) {
                 $response["message"] = "Por favor, informe seu nome.";
-                $response["error"] = true;
+                $response["error"] = "true";
                 echo json_encode($response);
                 return;
             }
 
             if (empty($data["phone"])) {
                 $response["message"] = "Por favor, informe seu telefone.";
-                $response["error"] = true;
+                $response["error"] = "true";
                 echo json_encode($response);
                 return;
             }
@@ -202,7 +202,7 @@ class Web
             /**
              * Enviar pra página de sucesso
              */
-            $response["success"] = true;
+            $response["success"] = "true";
             echo json_encode($response);
             return;
         }
