@@ -198,17 +198,19 @@ $(function () {
             },
             success: function (e) {
 
+                if (e.success === "true") {
+                    $(".whatsapp-conversion__lead-fields__main__message").fadeOut(100).css("display", "flex");
+
+                    return;
+                }
+
                 if (e.error === "true") {
                     $(".whatsapp-conversion__lead-fields__main__message").fadeIn(100).css("display", "flex");
                     $(".whatsapp-conversion__lead-fields__main__message p").text(e.message);
                     return;
                 }
 
-                if (e.success === "true") {
-                    $(".whatsapp-conversion__lead-fields__main__message").fadeOut(100).css("display", "flex");
 
-                    return;
-                }
             },
             complete: function () {
 
