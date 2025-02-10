@@ -39,8 +39,8 @@ define("CONF_VIEW_EXT", "php");
 ##
 ##  Configuração de Banco de Dados
 ##
-//define("CONF_DB_HOST", "45.151.120.4");
-define("CONF_DB_HOST", "localhost");
+define("CONF_DB_HOST", "45.151.120.4");
+//define("CONF_DB_HOST", "localhost");
 define("CONF_DB_USER", "u261531561_sotelhas");
 define("CONF_DB_PASS", "HX2581ODt&9");
 define("CONF_DB_NAME", "u261531561_sotelhas");
@@ -70,7 +70,7 @@ define("CONF_MAIL_USER", "noreply@sotelhas.ind.br");
 define("CONF_MAIL", "vendas02@sotelhasmt.com");
 define("CONF_MAIL_PASS", "@So#Telhas05348gR");
 define("CONF_MAIL_PORT", "587");
-define("CONF_MAIL_SENDER", ["name" => "Só Telhas | Não Responder esse E-mail", "address" => "noreply@sotelhas.ind.br"]);
+define("CONF_MAIL_SENDER", ["name" => "Só Telhas", "address" => "noreply@sotelhas.ind.br"]);
 define("CONF_MAIL_OPTION_LANG", "br");
 define("CONF_MAIL_OPTION_HTML", true);
 define("CONF_MAIL_OPTION_AUTH", true);

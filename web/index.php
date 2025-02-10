@@ -7,7 +7,7 @@
     <meta name="description" content="<?= CONF_SITE_DESCRIPTION ?>">
     <meta name="home_path" content="<?= url(); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= url('web/assets/css/style.min.251848481818.css'); ?>">
+    <link rel="stylesheet" href="<?= url('web/assets/css/style.min.56s2626s26ds.css'); ?>">
     <link rel="shortcut icon" href="<?= url("web/assets/img/faveicon.png"); ?>">
 
     <?= $header; ?>

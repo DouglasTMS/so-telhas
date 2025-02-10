@@ -194,6 +194,7 @@ $(function () {
 
                 if (e.success == "true") {
                     $(".whatsapp-conversion__lead-fields__main__sellers-list").fadeIn(100);
+                    $(".whatsapp-conversion__lead-fields__header p").text("Selecione seu atendente!");
                 }
 
                 if (e.error == "true") {

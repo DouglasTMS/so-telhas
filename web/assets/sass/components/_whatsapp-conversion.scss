@@ -85,10 +85,11 @@
         right: 0;
         bottom: 80px;
         box-shadow: 0 0 15px rgba(0, 0, 0, .15);
-        min-width: 400px;
         overflow: hidden;
         transform: translateY(250%);
         transition: .5s ease-out all;
+        width: 90vw;
+        max-width: 400px;
 
         &.visible {
             transform: translateY(0);

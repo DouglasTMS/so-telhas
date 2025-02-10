@@ -196,7 +196,7 @@ class Web
             ]);
 
             $email = new Email();
-            $sendMail = $email->bootstrap("Lead via Site | WhatsApp", $mailBody, "douglastms@outlook.com", $data["name"])->queue();
+            $sendMail = $email->bootstrap("Lead via Site | WhatsApp", $mailBody, "leads@sotelhas.ind.br", $data["name"])->queue();
 
 
             /**
