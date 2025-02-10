@@ -189,10 +189,6 @@ $(function () {
             dataType: "json",
             beforeSend: function () {
                 $(".whatsapp-conversion__lead-fields__main__form").fadeOut(300);
-                $(".whatsapp-conversion__lead-fields__main__message").fadeIn(300).css("display", "flex");
-                $(".whatsapp-conversion__lead-fields__main__message img").css("display", "none");
-                $(".whatsapp-conversion__lead-fields__main__message a").css("display", "none");
-                $(".whatsapp-conversion__lead-fields__main__message p").text("Tudo certo! Só um segundo.");
             },
             success: function (e) {
 
@@ -203,7 +199,6 @@ $(function () {
                 }
 
                 if (e.success) {
-                    $(".whatsapp-conversion__lead-fields__main__message").fadeOut(300);
                     $(".whatsapp-conversion__lead-fields__main__sellers-list").fadeIn(300).css("display", "flex");
                     $(".whatsapp-conversion__lead-fields__header p").text("Selecione seu Atendente!");
                     return;
