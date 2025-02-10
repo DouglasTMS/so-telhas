@@ -188,20 +188,28 @@ $(function () {
             type: "POST",
             dataType: "json",
             beforeSend: function () {
+                $(".whatsapp-conversion__lead-fields__main__form").fadeOut(100, function (e) {
+                    $(".whatsapp-conversion__lead-fields__main__message").fadeIn(100).css("display", "flex");
+                    $(".whatsapp-conversion__lead-fields__main__message img").css("display", "none");
+                    $(".whatsapp-conversion__lead-fields__main__message a").css("display", "none");
+                    $(".whatsapp-conversion__lead-fields__main__message p").text("Tudo certo! Só um segundo.");
+                });
+
             },
             success: function (e) {
 
-                $(".whatsapp-conversion__lead-fields__main__form").fadeOut(100);
-
                 if (e.error) {
-                    $(".whatsapp-conversion__lead-fields__main__message").fadeIn(300).css("display", "flex");
+                    $(".whatsapp-conversion__lead-fields__main__message").fadeIn(100).css("display", "flex");
                     $(".whatsapp-conversion__lead-fields__main__message p").text(e.message);
                     return;
                 }
 
                 if (e.success) {
-                    $(".whatsapp-conversion__lead-fields__main__sellers-list").fadeIn(300).css("display", "flex");
-                    $(".whatsapp-conversion__lead-fields__header p").text("Selecione seu Atendente!");
+                    $(".whatsapp-conversion__lead-fields__main__message").fadeOut(100, function (e) {
+                        $(".whatsapp-conversion__lead-fields__main__sellers-list").fadeIn(100).css("display", "flex");
+                        $(".whatsapp-conversion__lead-fields__header p").text("Selecione seu Atendente!");
+                    });
+
                     return;
                 }
             },
