@@ -188,7 +188,7 @@ $(function () {
             type: "POST",
             dataType: "json",
             beforeSend: function () {
-                $(".whatsapp-conversion__lead-fields__main__form").css("display", "nome");
+                $(".whatsapp-conversion__lead-fields__main__form").fadeOut(100);
             },
             success: function (e) {
 
@@ -199,8 +199,11 @@ $(function () {
                 }
 
                 if (e.success) {
-                    $(".whatsapp-conversion__lead-fields__main__sellers-list").fadeIn(300).css("display", "flex");
-                    $(".whatsapp-conversion__lead-fields__header p").text("Selecione seu Atendente!");
+                    setTimeout(function () {
+                        $(".whatsapp-conversion__lead-fields__main__sellers-list").fadeIn(300).css("display", "flex");
+                        $(".whatsapp-conversion__lead-fields__header p").text("Selecione seu Atendente!");
+                    }, 1000);
+
                     return;
                 }
             },
