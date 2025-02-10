@@ -198,16 +198,13 @@ $(function () {
             },
             success: function (e) {
 
-                console.log(e);
-
-
-                if (e.success === "true") {
+                if (e.success == "true") {
                     $(".whatsapp-conversion__lead-fields__main__message").fadeOut(100).css("display", "flex");
 
                     return;
                 }
 
-                if (e.error === "true") {
+                if (e.error == "true") {
                     $(".whatsapp-conversion__lead-fields__main__message").fadeIn(100).css("display", "flex");
                     $(".whatsapp-conversion__lead-fields__main__message p").text(e.message);
                     return;
