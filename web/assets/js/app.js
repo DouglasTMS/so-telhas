@@ -205,7 +205,7 @@ $(function () {
                 }
 
                 if (e.success) {
-                    $(".whatsapp-conversion__lead-fields__main__message").fadeOut(100);
+                    $(".whatsapp-conversion__lead-fields__main__message").fadeOut(100).css("display", "flex");
 
                     return;
                 }
