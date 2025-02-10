@@ -200,7 +200,7 @@ $(function () {
             success: function (e) {
 
                 if (e.success == "true") {
-                    $(".whatsapp-conversion__lead-fields__main__message").fadeOut(100);
+                    $(".whatsapp-conversion__lead-fields__main__message").css("display", "none");
 
                     setTimeout(() => {
                         $(".whatsapp-conversion__lead-fields__main__sellers-list").fadeIn(100);
