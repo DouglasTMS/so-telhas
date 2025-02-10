@@ -200,9 +200,11 @@ $(function () {
             success: function (e) {
 
                 if (e.success == "true") {
+                    $(".whatsapp-conversion__lead-fields__main__message").fadeOut(100);
+
                     setTimeout(() => {
                         $(".whatsapp-conversion__lead-fields__main__sellers-list").fadeIn(100);
-                    }, 200);
+                    }, 150);
                     return;
                 }
 
@@ -215,7 +217,7 @@ $(function () {
 
             },
             complete: function () {
-                $(".whatsapp-conversion__lead-fields__main__message").fadeOut(100);
+
             }
         });
     });
