@@ -188,24 +188,12 @@ $(function () {
             type: "POST",
             dataType: "json",
             beforeSend: function () {
-                $(".whatsapp-conversion__lead-fields__main__form").fadeOut(100, function (e) {
-                    $(".whatsapp-conversion__lead-fields__main__message").fadeIn(100).css("display", "flex");
-                    $(".whatsapp-conversion__lead-fields__main__message img").css("display", "none");
-                    $(".whatsapp-conversion__lead-fields__main__message a").css("display", "none");
-                    $(".whatsapp-conversion__lead-fields__main__message p").text("Tudo certo! Só um segundo.");
-                });
-
-
+                $(".whatsapp-conversion__lead-fields__main__form").fadeOut(100);
             },
             success: function (e) {
 
                 if (e.success == "true") {
-                    $(".whatsapp-conversion__lead-fields__main__message").css("display", "none");
-
-                    setTimeout(() => {
-                        $(".whatsapp-conversion__lead-fields__main__sellers-list").fadeIn(100);
-                    }, 150);
-                    return;
+                    $(".whatsapp-conversion__lead-fields__main__sellers-list").fadeIn(100);
                 }
 
                 if (e.error == "true") {
