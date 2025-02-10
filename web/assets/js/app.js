@@ -148,4 +148,84 @@ $(function () {
             $(".alpha").fadeOut(300);
         });
     });
+
+    /**
+     * Modal Conversion | Open
+     */
+    $(".open-modal-whatsapp-conversion .whatsapp-conversion__icon, .header__box__whatsapp").on("click", function (e) {
+        e.preventDefault();
+        $(".whatsapp-conversion__lead-fields").toggleClass("visible");
+    });
+
+    /**
+     * Modal Conversion | Send Lead Data
+     */
+    $(".send-data-whatsapp-conversion").on("click", function (e) {
+        e.preventDefault();
+
+        let name = $(".whatsapp-conversion__lead-fields__main__form").find('input[name="whatsapp-conversion-name"]').val();
+        let phone = $(".whatsapp-conversion__lead-fields__main__form").find('input[name="whatsapp-conversion-phone"]').val();
+
+        if (name == "") {
+            $(".whatsapp-conversion__lead-fields__main__form").fadeOut(300, function (e) {
+                $(".whatsapp-conversion__lead-fields__main__message").fadeIn(300).css("display", "flex");
+                $(".whatsapp-conversion__lead-fields__main__message p").text("Por favor, informe seu nome!");
+            });
+            return;
+        }
+
+        if (phone == "") {
+            $(".whatsapp-conversion__lead-fields__main__form").fadeOut(300, function (e) {
+                $(".whatsapp-conversion__lead-fields__main__message").fadeIn(300).css("display", "flex");
+                $(".whatsapp-conversion__lead-fields__main__message p").text("Por favor, informe seu telefone!");
+            });
+            return;
+        }
+
+        $.ajax({
+            url: HOME_PATH + "/ajax",
+            data: "action=whatsapp-conversion&name=" + name + "&phone=" + phone,
+            type: "POST",
+            dataType: "json",
+            beforeSend: function () {
+                $(".whatsapp-conversion__lead-fields__main__form").fadeOut(300, function (e) {
+                    $(".whatsapp-conversion__lead-fields__main__message").fadeIn(300).css("display", "flex");
+                    $(".whatsapp-conversion__lead-fields__main__message img").css("display", "none");
+                    $(".whatsapp-conversion__lead-fields__main__message a").css("display", "none");
+                    $(".whatsapp-conversion__lead-fields__main__message p").text("Tudo certo! Só um segundo.");
+                });
+            },
+            success: function (e) {
+
+                if (e.error) {
+                    $(".whatsapp-conversion__lead-fields__main__message").fadeIn(300).css("display", "flex");
+                    $(".whatsapp-conversion__lead-fields__main__message p").text(e.message);
+                    return;
+                }
+
+                if (e.success) {
+                    $(".whatsapp-conversion__lead-fields__main__message").fadeOut(300, function (e) {
+                        $(".whatsapp-conversion__lead-fields__main__sellers-list").fadeIn(300).css("display", "flex");
+                        $(".whatsapp-conversion__lead-fields__header p").text("Selecione seu Atendente!");
+                    });
+                    return;
+                }
+            },
+            complete: function () {
+
+            }
+        });
+    });
+
+    /**
+     * Modal Conversion | Voltar Mensagem
+     */
+    $(".whatsapp-conversion__lead-fields__main__message a").on("click", function (e) {
+        e.preventDefault();
+        $(".whatsapp-conversion__lead-fields__main__message").fadeOut(300, function (e) {
+            $(".whatsapp-conversion__lead-fields__main__form").fadeIn(300);
+        });
+    });
+
+
 });

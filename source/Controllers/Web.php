@@ -158,6 +158,55 @@ class Web
      */
     public function ajax(?array $data)
     {
+
+        /**
+         * WhatsApp Conversion.
+         */
+        if ($data["action"] == "whatsapp-conversion") {
+
+            if (empty($data["name"])) {
+                $response["message"] = "Por favor, informe seu nome.";
+                $response["error"] = true;
+                echo json_encode($response);
+                return;
+            }
+
+            if (empty($data["phone"])) {
+                $response["message"] = "Por favor, informe seu telefone.";
+                $response["error"] = true;
+                echo json_encode($response);
+                return;
+            }
+
+            /**
+             * Salvar no banco de dados
+             */
+
+            $lead = (new Lead())->setData(
+                $data["name"],
+                $data["phone"]
+            )->save();
+
+            /**
+             * Mail queue
+             */
+            $mailBody = (new View(__DIR__ . "/../../shared/email"))->render("whatsapp-conversion", [
+                "data" => (object) $data,
+                "whatsappLink" => whatsapp($data["phone"])
+            ]);
+
+            $email = new Email();
+            $sendMail = $email->bootstrap("Lead via Site | WhatsApp", $mailBody, "douglastms@outlook.com", $data["name"])->queue();
+
+
+            /**
+             * Enviar pra página de sucesso
+             */
+            $response["success"] = true;
+            echo json_encode($response);
+            return;
+        }
+
         if ($data["action"] == "createLead") {
 
             if (empty($data["name"])) {

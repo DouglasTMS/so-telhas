@@ -7,7 +7,7 @@
     <meta name="description" content="<?= CONF_SITE_DESCRIPTION ?>">
     <meta name="home_path" content="<?= url(); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= url('web/assets/css/style.5d262d626.css'); ?>">
+    <link rel="stylesheet" href="<?= url('web/assets/css/style.min.251848481818.css'); ?>">
     <link rel="shortcut icon" href="<?= url("web/assets/img/faveicon.png"); ?>">
 
     <?= $header; ?>
@@ -88,7 +88,7 @@
                 <img src="<?= url("web/assets/img/logo-so-telhas.svg"); ?>" alt="<?= CONF_SITE_TITLE ?>" title="<?= CONF_SITE_TITLE ?>">
             </a>
 
-            <a target="_blank" class="header__box__whatsapp" data-icon-uri="<?= url("web/assets/img/icon"); ?>" href="#" title="Só Telhas no WhatsApp"><i></i><span>Peça um Orçamento</span></a>
+            <a target="_blank" class="header__box__whatsapp open-modal-whatsapp-conversion" data-icon-uri="<?= url("web/assets/img/icon"); ?>" href="#" title="Só Telhas no WhatsApp"><i></i><span>Peça um Orçamento</span></a>
         </div>
     </header>
 
@@ -207,34 +207,58 @@
 
     <?php if ($sellers_whatsapp) : ?>
 
-        <div class="whatsapp-fixed">
-            <a target="_blank" data-icon-uri="<?= url("web/assets/img/icon"); ?>" href="#" title="Falar com Consultor" class="whatsapp-fixed__open-list">
-                <img width="50px" height="50px" src="<?= url("web/assets/img/icon/whatsapp-fixed.svg"); ?>" alt="Tire suas Dúvidas com um Especialista">
-                <p>Falar com Consultor</p>
-            </a>
+        <div class="whatsapp-conversion open-modal-whatsapp-conversion">
+            <div class="whatsapp-conversion__icon">
+                <img width="50px" height="50px" src="<?= url("web/assets/img/whatsapp-conversion/whatsapp-white-border.svg"); ?>" alt="Tire suas Dúvidas com um Especialista">
+                <p>Solicitar Orçamento</p>
+            </div>
 
-            <ul class="whatsapp-fixed__list-box">
-                <li>
-                    <div class="whatsapp-fixed__list-box__header">
-                        <img src="<?= url("web/assets/img/icon/whatsapp.svg"); ?>" title="WhatsApp" alt="Entre em contato via WhatsApp">
-                        <p>Com qual consultor gostaria de falar?</p>
+            <div class="whatsapp-conversion__lead-fields">
+
+                <header class="whatsapp-conversion__lead-fields__header">
+                    <img src="<?= url("web/assets/img/whatsapp-conversion/whatsapp-white.svg"); ?>" title="WhatsApp" alt="Entre em contato via WhatsApp">
+                    <p>Informe seu Nome e Telefone!</p>
+                </header>
+
+                <main class="whatsapp-conversion__lead-fields__main">
+
+                    <form class="whatsapp-conversion__lead-fields__main__form" action="" method="POST" name="whatsapp-conversion-form">
+                        <label>
+                            <input type="text" name="whatsapp-conversion-name" autocomplete="off" placeholder="Qual seu nome?">
+                        </label>
+
+                        <label>
+                            <input type="text" name="whatsapp-conversion-phone" class="phone_mask" autocomplete="off" placeholder="Qual seu telefone?">
+                        </label>
+
+                        <label>
+                            <input type="submit" name="change-seller" value="Escolher Atendente" class="send-data-whatsapp-conversion">
+                        </label>
+                    </form>
+
+                    <div class="whatsapp-conversion__lead-fields__main__message">
+                        <img class="error" src="<?= url("web/assets/img/whatsapp-conversion/error.svg"); ?>" alt="Erro">
+                        <p>Por favor, informe seu nome.</p>
+                        <a href="#" title="Voltar">Voltar</a>
                     </div>
-                </li>
 
-                <?php foreach ($sellers_whatsapp as $resultsellers_whatsapp) : ?>
+                    <ul class="whatsapp-conversion__lead-fields__main__sellers-list">
 
-                    <li class="whatsapp-fixed__list-box__item">
-                        <a href="https://api.whatsapp.com/send/?phone=<?= whatsapp($resultsellers_whatsapp->phone); ?>&text=Olá, <?= $resultsellers_whatsapp->name; ?>! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Gessika" target="_blank" class="whatsapp-fixed__list-box__item__name">
-                            <?= $resultsellers_whatsapp->name . " " . $resultsellers_whatsapp->last_name; ?>
-                        </a>
-
-                        <a href="https://api.whatsapp.com/send/?phone=<?= whatsapp($resultsellers_whatsapp->phone); ?>&text=Olá <?= $resultsellers_whatsapp->name; ?>! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com Gessika" target="_blank" class="whatsapp-fixed__list-box__item__phone">
-                            <?= $resultsellers_whatsapp->phone; ?>
-                        </a>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
+                        <?php foreach ($sellers_whatsapp as $resultsellers_whatsapp) : ?>
+                            <li>
+                                <a class="icon" href="https://api.whatsapp.com/send/?phone=<?= whatsapp($resultsellers_whatsapp->phone); ?>&text=Olá, <?= $resultsellers_whatsapp->name; ?>! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com <?= $resultsellers_whatsapp->name; ?>" target="_blank">
+                                    <img src="<?= url("web/assets/img/whatsapp-conversion/whatsapp-white.svg"); ?>" alt="">
+                                </a>
+                                <a href="https://api.whatsapp.com/send/?phone=<?= whatsapp($resultsellers_whatsapp->phone); ?>&text=Olá, <?= $resultsellers_whatsapp->name; ?>! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com <?= $resultsellers_whatsapp->name; ?>" target="_blank" class="name">
+                                    <?= $resultsellers_whatsapp->name; ?> <?= $resultsellers_whatsapp->last_name; ?>
+                                </a>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </main>
+            </div>
         </div>
+
     <?php endif; ?>
 
     <div class="load"></div>
