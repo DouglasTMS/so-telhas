@@ -205,10 +205,7 @@ $(function () {
                 }
 
                 if (e.success) {
-                    $(".whatsapp-conversion__lead-fields__main__message").fadeOut(100, function (e) {
-                        $(".whatsapp-conversion__lead-fields__main__sellers-list").fadeIn(100).css("display", "flex");
-                        $(".whatsapp-conversion__lead-fields__header p").text("Selecione seu Atendente!");
-                    });
+                    $(".whatsapp-conversion__lead-fields__main__message").fadeOut(100);
 
                     return;
                 }
