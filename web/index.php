@@ -7,7 +7,7 @@
     <meta name="description" content="<?= CONF_SITE_DESCRIPTION ?>">
     <meta name="home_path" content="<?= url(); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= url('web/assets/css/style.min.56s2626s26ds.css'); ?>">
+    <link rel="stylesheet" href="<?= url('web/assets/css/style.min.5843952.css'); ?>">
     <link rel="shortcut icon" href="<?= url("web/assets/img/faveicon.png"); ?>">
 
     <?= $header; ?>
@@ -217,11 +217,11 @@
 
                 <header class="whatsapp-conversion__lead-fields__header">
                     <img src="<?= url("web/assets/img/whatsapp-conversion/whatsapp-white.svg"); ?>" title="WhatsApp" alt="Entre em contato via WhatsApp">
-                    <p>Informe seu Nome e Telefone!</p>
+                    <p>Escolha seu Especialista!</p>
                 </header>
 
                 <main class="whatsapp-conversion__lead-fields__main">
-
+                    <!--
                     <form class="whatsapp-conversion__lead-fields__main__form" action="" method="POST" name="whatsapp-conversion-form">
                         <label>
                             <input type="text" name="whatsapp-conversion-name" autocomplete="off" placeholder="Qual seu nome?">
@@ -241,6 +241,8 @@
                         <p>Por favor, informe seu nome.</p>
                         <a href="#" title="Voltar">Voltar</a>
                     </div>
+
+    -->
 
                     <ul class="whatsapp-conversion__lead-fields__main__sellers-list">
 

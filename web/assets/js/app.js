@@ -160,6 +160,8 @@ $(function () {
     /**
      * Modal Conversion | Send Lead Data
      */
+
+    /** 
     $(".send-data-whatsapp-conversion").on("click", function (e) {
         e.preventDefault();
 
@@ -210,16 +212,17 @@ $(function () {
             }
         });
     });
+    */
 
     /**
      * Modal Conversion | Voltar Mensagem
      */
+    /** 
     $(".whatsapp-conversion__lead-fields__main__message a").on("click", function (e) {
         e.preventDefault();
         $(".whatsapp-conversion__lead-fields__main__message").fadeOut(300, function (e) {
             $(".whatsapp-conversion__lead-fields__main__form").fadeIn(300);
         });
     });
-
-
+    */
 });
