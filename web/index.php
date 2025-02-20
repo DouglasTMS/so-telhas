@@ -7,7 +7,7 @@
     <meta name="description" content="<?= CONF_SITE_DESCRIPTION ?>">
     <meta name="home_path" content="<?= url(); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= url('web/assets/css/style.min.5843952.css'); ?>">
+    <link rel="stylesheet" href="<?= url('web/assets/css/style.min.65992229959.css'); ?>">
     <link rel="shortcut icon" href="<?= url("web/assets/img/faveicon.png"); ?>">
 
     <?= $header; ?>
@@ -268,7 +268,7 @@
     <div class="load"></div>
     <div class="alpha"></div>
     <div class="message"></div>
-    <script src="<?= url("web/assets/js/scripts.js"); ?>"></script>
+    <script src="<?= url("web/assets/js/scripts.min.661626458.js"); ?>"></script>
 </body>
 
 </html>
