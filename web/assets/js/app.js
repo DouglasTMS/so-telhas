@@ -162,19 +162,14 @@ $(function () {
             type: "POST",
             dataType: "json",
             beforeSend: function () {
-                $(".load").fadeIn(200);
-                $(".alpha").fadeIn(200);
+
             },
             success: function (e) {
 
-                $(".load").fadeIn(200);
-                $(".alpha").fadeIn(200);
                 window.open(e.whatsapp, '_blank');
 
             },
             complete: function () {
-                $(".load").fadeIn(200);
-                $(".alpha").fadeIn(200);
             }
         });
 
