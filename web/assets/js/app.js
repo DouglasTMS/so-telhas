@@ -166,7 +166,8 @@ $(function () {
             },
             success: function (e) {
 
-                window.open(e.whatsapp, '_blank');
+                //window.open(e.whatsapp, '_blank');
+                window.location.href = e.whatsapp;
 
             },
             complete: function () {
