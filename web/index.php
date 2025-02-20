@@ -205,13 +205,15 @@
     </footer>
 
 
-    <?php if ($sellers_whatsapp) : ?>
 
-        <div class="whatsapp-conversion open-modal-whatsapp-conversion">
-            <div class="whatsapp-conversion__icon">
-                <img width="50px" height="50px" src="<?= url("web/assets/img/whatsapp-conversion/whatsapp-white-border.svg"); ?>" alt="Tire suas Dúvidas com um Especialista">
-                <p>Solicitar Orçamento</p>
-            </div>
+
+    <div class="whatsapp-conversion open-modal-whatsapp-conversion">
+        <div class="whatsapp-conversion__icon">
+            <img width="50px" height="50px" src="<?= url("web/assets/img/whatsapp-conversion/whatsapp-white-border.svg"); ?>" alt="Tire suas Dúvidas com um Especialista">
+            <p>Solicitar Orçamento</p>
+        </div>
+
+        <!--
 
             <div class="whatsapp-conversion__lead-fields">
 
@@ -221,7 +223,7 @@
                 </header>
 
                 <main class="whatsapp-conversion__lead-fields__main">
-                    <!--
+                  
                     <form class="whatsapp-conversion__lead-fields__main__form" action="" method="POST" name="whatsapp-conversion-form">
                         <label>
                             <input type="text" name="whatsapp-conversion-name" autocomplete="off" placeholder="Qual seu nome?">
@@ -242,26 +244,26 @@
                         <a href="#" title="Voltar">Voltar</a>
                     </div>
 
-    -->
+    
 
-                    <ul class="whatsapp-conversion__lead-fields__main__sellers-list">
+            <ul class="whatsapp-conversion__lead-fields__main__sellers-list">
 
-                        <?php foreach ($sellers_whatsapp as $resultsellers_whatsapp) : ?>
-                            <li>
-                                <a class="icon" href="https://api.whatsapp.com/send/?phone=<?= whatsapp($resultsellers_whatsapp->phone); ?>&text=Olá, <?= $resultsellers_whatsapp->name; ?>! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com <?= $resultsellers_whatsapp->name; ?>" target="_blank">
-                                    <img src="<?= url("web/assets/img/whatsapp-conversion/whatsapp-white.svg"); ?>" alt="">
-                                </a>
-                                <a href="https://api.whatsapp.com/send/?phone=<?= whatsapp($resultsellers_whatsapp->phone); ?>&text=Olá, <?= $resultsellers_whatsapp->name; ?>! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com <?= $resultsellers_whatsapp->name; ?>" target="_blank" class="name">
-                                    <?= $resultsellers_whatsapp->name; ?> <?= $resultsellers_whatsapp->last_name; ?>
-                                </a>
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
-                </main>
-            </div>
+                <?php foreach ($sellers_whatsapp as $resultsellers_whatsapp) : ?>
+                    <li>
+                        <a class="icon" href="https://api.whatsapp.com/send/?phone=<?= whatsapp($resultsellers_whatsapp->phone); ?>&text=Olá, <?= $resultsellers_whatsapp->name; ?>! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com <?= $resultsellers_whatsapp->name; ?>" target="_blank">
+                            <img src="<?= url("web/assets/img/whatsapp-conversion/whatsapp-white.svg"); ?>" alt="">
+                        </a>
+                        <a href="https://api.whatsapp.com/send/?phone=<?= whatsapp($resultsellers_whatsapp->phone); ?>&text=Olá, <?= $resultsellers_whatsapp->name; ?>! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com <?= $resultsellers_whatsapp->name; ?>" target="_blank" class="name">
+                            <?= $resultsellers_whatsapp->name; ?> <?= $resultsellers_whatsapp->last_name; ?>
+                        </a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+            </main>
         </div>
+        -->
+    </div>
 
-    <?php endif; ?>
 
     <div class="load"></div>
     <div class="alpha"></div>

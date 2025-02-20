@@ -154,7 +154,30 @@ $(function () {
      */
     $(".open-modal-whatsapp-conversion .whatsapp-conversion__icon, .header__box__whatsapp").on("click", function (e) {
         e.preventDefault();
-        $(".whatsapp-conversion__lead-fields").toggleClass("visible");
+        //$(".whatsapp-conversion__lead-fields").toggleClass("visible");
+
+        $.ajax({
+            url: HOME_PATH + "/ajax",
+            data: "action=choicheWhatsAppSeller",
+            type: "POST",
+            dataType: "json",
+            beforeSend: function () {
+                $(".load").fadeIn(200);
+                $(".alpha").fadeIn(200);
+            },
+            success: function (e) {
+
+                $(".load").fadeIn(200);
+                $(".alpha").fadeIn(200);
+                window.open(e.whatsapp, '_blank');
+
+            },
+            complete: function () {
+                $(".load").fadeIn(200);
+                $(".alpha").fadeIn(200);
+            }
+        });
+
     });
 
     /**

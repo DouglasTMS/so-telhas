@@ -35,7 +35,6 @@ class Web
             "header" => $this->seo->render(CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
             "headerPhone" => "(62) 3300-0460",
             "products" => (new Products())->get("ORDER BY rand() LIMIT :limit", "limit=6"),
-            "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
             "whatsapp_form" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1"),
             "contact_phone" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1")
         ]);
@@ -164,6 +163,7 @@ class Web
          */
         if ($data["action"] == "whatsapp-conversion") {
 
+
             if (empty($data["name"])) {
                 $response["message"] = "Por favor, informe seu nome.";
                 $response["error"] = "true";
@@ -203,6 +203,23 @@ class Web
              * Enviar pra página de sucesso
              */
             $response["success"] = "true";
+            echo json_encode($response);
+            return;
+        }
+
+        /**
+         * Escolher qual vendedor vai receber o lead.
+         */
+        if ($data["action"] == "choicheWhatsAppSeller") {
+            $seller = (new SellersWhatsApp())->get("WHERE status = :status ORDER BY updated_at ASC LIMIT :limit", "status=1&limit=1");
+
+            $response["whatsapp"] = "https://api.whatsapp.com/send/?phone=" . whatsapp($seller[0]->phone) . "&text=Olá, {$seller[0]->name}! Eu estava no seu site e gostaria de tirar algumas dúvidas.";
+
+            /**
+             * Atualizar o vendedor.
+             */
+            $updateSeller = (new SellersWhatsApp())->updateUpdatedAt($seller[0]->id);
+
             echo json_encode($response);
             return;
         }
