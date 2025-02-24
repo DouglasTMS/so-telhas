@@ -88,7 +88,7 @@
                 <img src="<?= url("web/assets/img/logo-so-telhas.svg"); ?>" alt="<?= CONF_SITE_TITLE ?>" title="<?= CONF_SITE_TITLE ?>">
             </a>
 
-            <a target="_blank" class="header__box__whatsapp open-modal-whatsapp-conversion" data-icon-uri="<?= url("web/assets/img/icon"); ?>" href="#" title="Só Telhas no WhatsApp"><i></i><span>Peça um Orçamento</span></a>
+            <a target="_blank" id="api-whatsapp-conversion" class="header__box__whatsapp open-modal-whatsapp-conversion" data-icon-uri="<?= url("web/assets/img/icon"); ?>" href="#" title="Só Telhas no WhatsApp"><i></i><span>Peça um Orçamento</span></a>
         </div>
     </header>
 
@@ -207,7 +207,7 @@
 
 
 
-    <div class="whatsapp-conversion open-modal-whatsapp-conversion">
+    <div class="whatsapp-conversion open-modal-whatsapp-conversion" id="api-whatsapp-conversion">
         <div class="whatsapp-conversion__icon">
             <img width="50px" height="50px" src="<?= url("web/assets/img/whatsapp-conversion/whatsapp-white-border.svg"); ?>" alt="Tire suas Dúvidas com um Especialista">
             <p>Solicitar Orçamento</p>
