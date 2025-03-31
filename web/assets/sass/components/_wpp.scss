@@ -1,0 +1,111 @@
+.wpp
+{
+    display: flex;
+    background-color: var(--color-white );
+    width: 90%;
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 50px;
+
+    & ul 
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        alighalign-items: center;
+
+        & li 
+        {
+            position: relative; 
+
+            &:not(:last-child)
+            {
+                margin-bottom: 50px;
+            }
+
+            & p 
+            {
+                width: 100%;
+
+                &.name 
+                {
+                    font-weight: bold;
+                    font-size: 1.2em;
+                    color: var(--color-primary-dark);
+                }
+
+                &.phone 
+                {
+                    font-size: 1.1em;
+                }
+            }
+
+            & span 
+            {
+                position: absolute;
+                top: 50%;
+                right: -80px;
+                transform: translateY(-50%);
+                display: flex;
+                width: 60px;
+                height: 25px;
+                border-radius: 10px;
+                background-color: var(--color-grey-extra-light);
+
+                & i 
+                {
+                    position: absolute;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background-color: var(--color-grey-light);
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    cursor: pointer;
+
+                    &:before
+                    {
+                        content: "";
+                        position: absolute;
+                        width: 45px;
+                        height: 45px;
+                        border-radius: 50%;
+                        background-color: blue;
+                        left: 50%;
+                        top: 50%;
+                        background-color: var(--color-grey-light);
+                        opacity: 100;
+                        animation-duration: 3s;
+                        animation-name: activeEffect;
+                        animation-iteration-count: infinite;
+                    }
+
+                    &.active 
+                    {
+                        left: auto;
+                        right: 0;
+                        background-color: var(--color-primary-dark);
+
+                        &:before
+                        {
+                            background-color: var(--color-primary-dark);
+                        }
+                    }
+                } 
+            }
+        }
+    }
+}
+
+@keyframes activeEffect {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 100;
+  }
+
+  to {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}

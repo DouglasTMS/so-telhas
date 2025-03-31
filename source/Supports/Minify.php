@@ -7,7 +7,7 @@ use MatthiasMullie\Minify\JS;
  * CSS
  */
 $minifyCSS = new CSS();
-$minifyCSS->add(dirname(__DIR__, 2) . "/web/assets/css/style.css");
+$minifyCSS->add(dirname(__DIR__, 2) . "/web/assets/sass/style.css");
 $minifyCSS->minify(dirname(__DIR__, 2) . "/web/assets/css/style.css");
 
 

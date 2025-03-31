@@ -153,10 +153,44 @@ class Web
     }
 
     /**
+     * PAINEL FAKE wpp.
+     */
+    public function wpp(?array $data)
+    {
+        echo $this->view->render("pages/wpp", [
+            "header" => null,
+            "sellers_whatsapp" => (new SellersWhatsApp())->get()
+        ]);
+    }
+
+    /**
      * Ajax.
      */
     public function ajax(?array $data)
     {
+
+
+
+        /**
+         * Ativar e desativar whatsapp de vendedor.
+         */
+        if ($data["action"] == "activeWhatsAppSeller") {
+
+
+            /**
+             * Verificação e atualização do status desejado.
+             */
+            $status = ($data["status"] == 1 ? 0 : 1);
+
+            /**
+             * Atualizar status no banco de dados.
+             */
+            $updateStatus = (new SellersWhatsApp())->updateSellerStatus($data["id"], $status);
+            $response["newStatus"] = $status;
+
+            echo json_encode($response);
+            return;
+        }
 
         /**
          * WhatsApp Conversion.

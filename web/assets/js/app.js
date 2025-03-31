@@ -177,6 +177,28 @@ $(function () {
     });
 
     /**
+     * Efeito de ativar e desativar whatsapp do vendedor.
+     */
+    $(".wpp span").on("click", function (e) {
+        e.preventDefault();
+        $(this).find("i").toggleClass("active");
+        let sellerId = $(this).data("id");
+        let sellerStatus = $(this).data("status");
+
+
+        $.ajax({
+            url: HOME_PATH + "/ajax",
+            data: "action=activeWhatsAppSeller&id=" + sellerId + "&status=" + sellerStatus,
+            type: "POST",
+            dataType: "json",
+            success: function (e) {
+                $(".whatsapp-sellers-status-change-" + sellerId).data("status", e.newStatus);
+            }
+        });
+
+    });
+
+    /**
      * Modal Conversion | Send Lead Data
      */
 

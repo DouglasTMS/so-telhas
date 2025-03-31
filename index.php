@@ -37,6 +37,10 @@ $route->get("/orcamento/", "Web:leads");
 $route->get("/obrigado", "Web:success");
 $route->get("/obrigado/", "Web:success");
 
+## PAINEL FAKE wpp
+$route->get("/wpp", "Web:wpp");
+$route->get("/wpp/", "Web:wpp");
+
 
 $route->post("/ajax", "Web:ajax");
 $route->post("/ajax/", "Web:ajax");
