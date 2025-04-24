@@ -36,14 +36,15 @@ class Web
             "headerPhone" => "(62) 3300-0460",
             "products" => (new Products())->get("ORDER BY rand() LIMIT :limit", "limit=6"),
             "whatsapp_form" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1"),
-            "contact_phone" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1")
+            "contact_phone" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1"),
+            "titleType" => 5
         ]);
     }
 
     /**
      * Página lista Telhas Isotérmicas.
      */
-    public function productIsoterm(?array $data)
+    public function productRoof(?array $data)
     {
         echo $this->view->render("pages/products", [
             "header" => $this->seo->render("Conheça nossas Telhas Isotérmicas | " . CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
@@ -55,20 +56,6 @@ class Web
         ]);
     }
 
-    /**
-     * Página lista de Telhas Simples.
-     */
-    public function productSimple(?array $data)
-    {
-        echo $this->view->render("pages/products", [
-            "header" => $this->seo->render("Conheça nossas Telhas Simples | " . CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
-            "products" => (new Products())->get("WHERE type = :type", "type=2"),
-            "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
-            "headerPhone" => "(62) 3300-0460",
-            "whatsapp_form" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1"),
-            "contact_phone" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1")
-        ]);
-    }
 
     /**
      * Página lista de Isopainel.
@@ -86,10 +73,26 @@ class Web
     }
 
     /**
+     * Página lista de Perfis.
+     */
+    public function productPerfis(?array $data)
+    {
+        echo $this->view->render("pages/products", [
+            "header" => $this->seo->render("Conheça nossos Perfis | " . CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
+            "products" => (new Products())->get("WHERE type = :type", "type=4"),
+            "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
+            "headerPhone" => "(62) 3300-0460",
+            "whatsapp_form" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1"),
+            "contact_phone" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1")
+        ]);
+    }
+
+    /**
      * Página produto.
      */
     public function productView(?array $data)
     {
+
         $product = (new Products())->get("WHERE uri = :uri", "uri={$data['uri']}");
 
         if (empty($product)) {
@@ -102,8 +105,6 @@ class Web
             "data" => $product[0],
             "products" => (new Products())->get("ORDER BY rand() LIMIT :limit", "limit=3"),
             "variations" => (new Variations())->get("WHERE product_id = :product_id", "product_id={$product[0]->id}"),
-            "details" => (new Details())->get("WHERE product_id = :product_id", "product_id={$product[0]->id}"),
-            "benefits" => (new Benefits())->get("WHERE product_id = :product_id", "product_id={$product[0]->id}"),
             "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
             "headerPhone" => "(62) 3300-0460",
             "whatsapp_form" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1"),

@@ -1,7 +1,9 @@
 <section class="row our-products">
     <div class="box our-products__box">
         <header class="our-products__box__header">
-            <h1>Nossas Telhas</h1>
+
+            <?= (!empty($titleType) ? "<h1>Nosso Produtos</h1>" : ($products[0]->type == 1 ? "<h1>Telhas Isotérmicas</h1>" : ($products[0]->type == 3 ? "<h1>Isopainel</h1>" : "<h1>Perfis</h1>"))); ?>
+
         </header>
 
         <main class="our-products__box__main">
@@ -22,8 +24,10 @@
 
         </main>
 
+        <!--
         <footer class="our-products__box__footer">
             <a href="<?= url("telhas"); ?>" title="Conheça todas nossas Telhas">Ver Todas</a>
         </footer>
+            -->
     </div>
 </section>

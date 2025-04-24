@@ -7,7 +7,7 @@
     <meta name="description" content="<?= CONF_SITE_DESCRIPTION ?>">
     <meta name="home_path" content="<?= url(); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= url('web/assets/css/style.min.2025.03.30.css'); ?>">
+    <link rel="stylesheet" href="<?= url('web/assets/css/style.2025-04-24-17-35.css'); ?>">
     <link rel="shortcut icon" href="<?= url("web/assets/img/faveicon.png"); ?>">
 
     <?= $header; ?>
@@ -97,11 +97,11 @@
         <ul class="menu__box box">
 
             <li>
-                <a href="<?= url("telhas-isotermicas"); ?>" title="Telhas Isotérmicas">Telhas Isotérmicas</a>
+                <a href="<?= url("telhas"); ?>" title="Telhas Isotérmicas">Telhas</a>
             </li>
 
             <li>
-                <a href="<?= url("telhas-simples"); ?>" title="Telhas Simples">Telhas Simples</a>
+                <a href="<?= url("perfil"); ?>" title="Perfis">Perfis</a>
             </li>
 
             <li>

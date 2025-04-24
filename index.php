@@ -15,12 +15,13 @@ $route->namespace("Source\Controllers");
 $route->get("/", "Web:home");
 
 ## Isotérmicas
-$route->get("/telhas-isotermicas", "Web:productIsoterm");
-$route->get("/telhas-isotermicas/", "Web:productIsoterm");
+$route->get("/telhas", "Web:productRoof");
+$route->get("/telhas/", "Web:productRoof");
 
-## Simples
-$route->get("/telhas-simples", "Web:productSimple");
-$route->get("/telhas-simples/", "Web:productSimple");
+## Isotérmicas
+$route->get("/perfil", "Web:productPerfis");
+$route->get("/perfil/", "Web:productPerfis");
+
 
 ## Isopainel
 $route->get("/isopainel", "Web:productIsopainel");
@@ -28,6 +29,9 @@ $route->get("/isopainel/", "Web:productIsopainel");
 
 $route->get("/telhas/{uri}", "Web:productView");
 $route->get("/telhas/{uri}/", "Web:productView");
+
+$route->get("/perfil/{uri}", "Web:productView");
+$route->get("/perfil/{uri}/", "Web:productView");
 
 
 $route->get("/quem-somos", "Web:whoWeAre");
