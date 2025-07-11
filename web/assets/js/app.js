@@ -185,7 +185,6 @@ $(function () {
         let sellerId = $(this).data("id");
         let sellerStatus = $(this).data("status");
 
-
         $.ajax({
             url: HOME_PATH + "/ajax",
             data: "action=activeWhatsAppSeller&id=" + sellerId + "&status=" + sellerStatus,
@@ -195,8 +194,56 @@ $(function () {
                 $(".whatsapp-sellers-status-change-" + sellerId).data("status", e.newStatus);
             }
         });
-
     });
+
+    /**
+     * Slider
+     */
+    $(".slider__controls").on("click", "span", function () {
+
+        clearInterval(autoInterval);
+
+        let positon = $(this).index() + 1;
+
+        $(".slider__controls span").removeClass("active");
+        $(this).addClass("active");
+
+        if (positon === 1) {
+            $(".slider__box").css("margin-left", 0);
+            return;
+        }
+
+        if (positon === 2) {
+            $(".slider__box").css("margin-left", "-100%");
+            return;
+        }
+
+        if (positon === 3) {
+            $(".slider__box").css("margin-left", "-200%");
+            return;
+        }
+    });
+
+    countAutoSlider = 1;
+
+    function autoSlider() {
+        autoInterval = setInterval(() => {
+
+            $(".slider__controls span").removeClass("active");
+
+            if (countAutoSlider !== 3) {
+                $(".slider__box").css("margin-left", "-=" + countAutoSlider + "00%");
+                countAutoSlider++;
+                $(".slider__controls ." + countAutoSlider).addClass("active");
+            } else {
+                $(".slider__box").css("margin-left", "0");
+                countAutoSlider = 1;
+                $(".slider__controls ." + countAutoSlider).addClass("active");
+            }
+
+        }, 5000);
+    }
+    autoSlider();
 
     /**
      * Modal Conversion | Send Lead Data

@@ -7,7 +7,7 @@
     <meta name="description" content="<?= CONF_SITE_DESCRIPTION ?>">
     <meta name="home_path" content="<?= url(); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= url('web/assets/css/style.2025-04-24-17-35.css'); ?>">
+    <link rel="stylesheet" href="<?= url('web/assets/css/style.min.10.07.2025.css'); ?>">
     <link rel="shortcut icon" href="<?= url("web/assets/img/faveicon.png"); ?>">
 
     <?= $header; ?>
@@ -268,7 +268,7 @@
     <div class="load"></div>
     <div class="alpha"></div>
     <div class="message"></div>
-    <script src="<?= url("web/assets/js/scripts.min.2025.03.30.js"); ?>"></script>
+    <script src="<?= url("web/assets/js/scripts.min.10.07.2025.js"); ?>"></script>
 </body>
 
 </html>
