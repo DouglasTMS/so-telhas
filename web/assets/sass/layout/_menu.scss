@@ -1,7 +1,7 @@
 .menu {
     background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary-light));
-    min-height: 60px;
     position: relative;
+    border-bottom: 5px solid var(--color-white);
 
     &__mobile-icon {
         @include respond(768) {
@@ -80,66 +80,75 @@
     }
 
     &__box {
-        @media (max-width: 47.9em) {
-            position: fixed;
-            left: -100%;
-            top: 0;
-            height: 100%;
-            background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary-light));
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+
+        & li 
+        {
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 80%;
-            max-width: 350px;
-            min-height: 100vh;
-            transition: .5s ease all;
-            z-index: 100;
+            width: 100%;
+            position: relative;
 
-            &.active {
-                left: 0;
+            & a 
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px 10px;
+                width: 100%;
+                height: 100%;
+                transition: .5s ease all;
+                color: var(--color-white);
             }
 
-            & li {
-                display: flex;
-                width: 100%;
+            &:hover 
+            {
+                background-color: var(--color-primary-light);
 
-                &:not(:last-child) {
-                    margin-bottom: 10px;
-                }
-
-                & a {
+                & ul
+                {
                     display: flex;
-                    width: 100%;
-                    color: var(--color-white);
-                    font-size: 1.2em;
-                    padding: 20px 10px 20px 50px;
-                    border-left: 5px solid var(--color-primary-light);
-                }
+                }                
             }
         }
 
-        @media (min-width: 48em) {
-            display: flex;
+        &__sub
+        {
+            display: none;
+            overflow: hidden;
+            position: absolute;
+            width: 200%;
+            top: 100%;
+            left: 0;
+            background-color: var(--color-grey-extra-light);
+            z-index: 1;
+            flex-direction: column;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-top: 5px solid var(--color-white);
 
-            & li {
+            & li 
+            {
                 display: flex;
-                width: 100%;
 
-                & a {
+                & a 
+                {
                     display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 100%;
-                    padding: 20px 0 15px 0;
-                    border-bottom: 5px solid var(--color-primary);
-                    color: var(--color-white);
+                    justify-content: flex-start;
+                    padding: 25px;
+                    font-size: .9em;
                     transition: .5s ease all;
+                    color: var(--color-grey-dark);
 
-                    &:hover {
-                        border-bottom: 5px solid var(--color-white);
+                    &:hover 
+                    {
+                        background-color: var(--color-primary-dark);
+                        color: var(--color-white);
                     }
-
                 }
             }
         }

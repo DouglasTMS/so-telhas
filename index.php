@@ -14,9 +14,9 @@ $route = new Router(url(), ":");
 $route->namespace("Source\Controllers");
 $route->get("/", "Web:home");
 
-## Isotérmicas
-$route->get("/telhas", "Web:productRoof");
-$route->get("/telhas/", "Web:productRoof");
+## Termoacústica
+$route->get("/termoacustica", "Web:thermoacoustics");
+$route->get("/termoacustica/", "Web:thermoacoustics");
 
 ## Isotérmicas
 $route->get("/perfil", "Web:productPerfis");

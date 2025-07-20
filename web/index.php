@@ -7,7 +7,7 @@
     <meta name="description" content="<?= CONF_SITE_DESCRIPTION ?>">
     <meta name="home_path" content="<?= url(); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= url('web/assets/css/style.min.10.07.2025.css'); ?>">
+    <link rel="stylesheet" href="<?= url('web/assets/css/style.css'); ?>">
     <link rel="shortcut icon" href="<?= url("web/assets/img/faveicon.png"); ?>">
 
     <?= $header; ?>
@@ -97,11 +97,35 @@
         <ul class="menu__box box">
 
             <li>
-                <a href="<?= url("telhas"); ?>" title="Telhas Isotérmicas">Telhas</a>
+                <a href="<?= url("telha-termoacustica"); ?>" title="Telhas Termoacústica">Termoacústica</a>
+
+                <ul class="menu__box__sub show">
+                    <li><a href="<?= url("telha-termoacustica/forro-metalico"); ?>" title="Telha Termoacústica com Forro Metálico">Telha Termoacústica com Forro Metálico</a></li>
+                    <li><a href="<?= url("telha-termoacustica/sanduiche"); ?>" title="Telha Termoacústica Sanduíche">Telha Termoacústica Sanduíche</a></li>
+                    <li><a href="<?= url("telha-termoacustica/semi-sanduiche"); ?>" title="Telha Termoacústica Semi Sanduíche">Telha Termoacústica Semi Sanduíche</a></li>
+                    <li><a href="<?= url("telha-termoacustica/forro-pvc"); ?>" title="Telha Termoacústica com Forro PVC">Telha Termoacústica com Forro PVC</a></li>
+                </ul>
+
+            </li>
+
+            <li>
+                <a href="<?= url("telha-metalica"); ?>" title="Telha Metálica">Telha Metálica</a>
+
+                <ul class="menu__box__sub">
+                    <li><a href="<?= url("telha-metalica/galvalume"); ?>" title="Telha Metálica Galvalume">Telha Metálica Galvalume</a></li>
+                </ul>
+
             </li>
 
             <li>
                 <a href="<?= url("perfil"); ?>" title="Perfis">Perfis</a>
+
+                <ul class="menu__box__sub">
+                    <li><a href="<?= url("perfil/u"); ?>" title="Perfil U">Perfil U</a></li>
+                    <li><a href="<?= url("perfil/u-enrijecido"); ?>" title="Perfil Enrijecido">Perfil U Enrijecido</a></li>
+                    <li><a href="<?= url("perfil/cartola"); ?>" title="Perfil Cartola">Perfil Cartola</a></li>
+                </ul>
+
             </li>
 
             <li>
@@ -109,7 +133,31 @@
             </li>
 
             <li>
-                <a href="<?= url("orcamento"); ?>" title="Orçamento">Orçamento</a>
+                <a href="<?= url("acabamento"); ?>" title="Acabamentos">Acabamentos</a>
+
+                <ul class="menu__box__sub">
+                    <li><a href="<?= url("acabamento/frontal"); ?>" title="Acabamento Telha Termoacústica Frontal">Acabamento Telha Termoacústica Frontal</a></li>
+                    <li><a href="<?= url("acabamento/lateral"); ?>" title="Acabamento Telha Termoacústica Lateral">Acabamento Telha Termoacústica Lateral</a></li>
+                </ul>
+
+            </li>
+
+            <li>
+                <a href="<?= url("parafuso"); ?>" title="Parafusos Fixadores">Parafusos</a>
+
+                <ul class="menu__box__sub">
+                    <li><a href="<?= url("parafuso/4-polegadas"); ?>" title="Parafusos Fixadores 4''">Parafusos Fixadores 4''</a></li>
+                    <li><a href="<?= url("parafuso/5-polegadas"); ?>" title="Parafusos Fixadores 5''">Parafusos Fixadores 5''</a></li>
+                    <li><a href="<?= url("parafuso/4.5-polegadas-madeira"); ?>" title="Parafusos Fixadores 4.5'' Madeira">Parafusos Fixadores 4.5'' Madeira</a></li>
+                    <li><a href="<?= url("parafuso/5-polegadas-madeira"); ?>" title="Parafusos Fixadores 5'' Madeira">Parafusos Fixadores 5'' Madeira</a></li>
+                    <li><a href="<?= url("parafuso/3/4-polegadas"); ?>" title="Parafusos Fixadores 3/4''">Parafusos Fixadores 3/4''</a></li>
+                    <li><a href="<?= url("parafuso/7/8-polegadas"); ?>" title="Parafusos Fixadores 7/8''">Parafusos Fixadores 7/8''</a></li>
+                </ul>
+
+            </li>
+
+            <li>
+                <a href="<?= url("cumeeiras"); ?>" title="Cumeeiras">Cumeeiras</a>
             </li>
         </ul>
 
@@ -268,7 +316,7 @@
     <div class="load"></div>
     <div class="alpha"></div>
     <div class="message"></div>
-    <script src="<?= url("web/assets/js/scripts.min.10.07.2025.js"); ?>"></script>
+    <script src="<?= url("web/assets/js/scripts.js"); ?>"></script>
 </body>
 
 </html>

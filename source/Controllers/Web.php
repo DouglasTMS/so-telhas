@@ -42,12 +42,12 @@ class Web
     }
 
     /**
-     * Página lista Telhas Isotérmicas.
+     * Página lista Telhas Termoacústica.
      */
-    public function productRoof(?array $data)
+    public function thermoacoustics(?array $data)
     {
         echo $this->view->render("pages/products", [
-            "header" => $this->seo->render("Conheça nossas Telhas Isotérmicas | " . CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
+            "header" => $this->seo->render("Conheça nossas Telhas Termoacústicas | " . CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
             "products" => (new Products())->get("WHERE type = :type", "type=1"),
             "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
             "headerPhone" => "(62) 3300-0460",
