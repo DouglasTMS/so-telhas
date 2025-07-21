@@ -1,8 +1,6 @@
 .menu {
     background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary-light));
-    border-right: 10px solid var(--color-white);
-    box-shadow: 0 0 25px rgba(0, 0, 0, .3);
-
+    
     @media (max-width: 47.99em) {
         position: fixed;
         z-index: 10000;
@@ -15,6 +13,8 @@
         align-items: flex-start; 
         overflow-y: scroll;
         transition: .5s ease all;
+        border-right: 10px solid var(--color-white);
+        box-shadow: 0 0 25px rgba(0, 0, 0, .3);
 
         &.active 
         {
