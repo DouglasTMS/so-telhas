@@ -2,7 +2,7 @@
     <div class="box our-products__box">
         <header class="our-products__box__header">
 
-            <?= (!empty($titleType) ? "<h1>Nosso Produtos</h1>" : ($products[0]->type == 1 ? "<h1>Telhas Isotérmicas</h1>" : ($products[0]->type == 3 ? "<h1>Isopainel</h1>" : "<h1>Perfis</h1>"))); ?>
+            <?= (!empty($titleType) ? "<h1>Alguns de Nossos Produtos</h1>" : ($products[0]->type == 1 ? "<h1>Telhas Isotérmicas</h1>" : ($products[0]->type == 3 ? "<h1>Isopainel</h1>" : "<h1>Perfis</h1>"))); ?>
 
         </header>
 
@@ -11,7 +11,7 @@
             <?php foreach ($products as $resultProducts) : ?>
 
                 <article class="our-products__box__main__item">
-                    <img src="<?= thumb()->make($resultProducts->image, 600, 400); ?>" width="300" height="200" title="<?= $resultProducts->name; ?>" alt="<?= $resultProducts->name; ?>">
+                    <img src="<?= thumb()->make($resultProducts->image, 600, 400); ?>" width="600" height="auto" title="<?= $resultProducts->name; ?>" alt="<?= $resultProducts->name; ?>">
                     <div class="our-products__box__main__item__box">
                         <h1><?= $resultProducts->name; ?></h1>
                         <p class="price hide">R$ 89,90</p>

@@ -34,7 +34,7 @@ class Web
         echo $this->view->render("pages/home", [
             "header" => $this->seo->render(CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
             "headerPhone" => "(62) 3300-0460",
-            "products" => (new Products())->get("ORDER BY rand() LIMIT :limit", "limit=6"),
+            "products" => (new Products())->get("ORDER BY rand() LIMIT :limit", "limit=4"),
             "whatsapp_form" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1"),
             "contact_phone" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1"),
             "titleType" => 5
