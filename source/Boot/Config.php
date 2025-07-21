@@ -21,7 +21,7 @@ define("CONF_FACEBOOK_ADMINS", []);
 ##
 ##  Configuração de URL
 ##
-define("CONF_URL_BASE", "https://www.sotelhas.ind.br");
+define("CONF_URL_BASE", "https://www.sotelhas.ind.br/teste");
 define("CONF_URL_TEST", "https://www.localhost/so-telhas");
 
 ##
@@ -39,8 +39,8 @@ define("CONF_VIEW_EXT", "php");
 ##
 ##  Configuração de Banco de Dados
 ##
-define("CONF_DB_HOST", "45.151.120.4");
-//define("CONF_DB_HOST", "localhost");
+//define("CONF_DB_HOST", "45.151.120.4");
+define("CONF_DB_HOST", "localhost");
 define("CONF_DB_USER", "u261531561_sotelhas");
 define("CONF_DB_PASS", "HX2581ODt&9");
 define("CONF_DB_NAME", "u261531561_sotelhas");
