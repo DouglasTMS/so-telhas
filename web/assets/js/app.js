@@ -16,10 +16,11 @@ $(function () {
     //---------------------------------------------------------------------------------------------
     // Menu mobile --------------------------------------------------------------------------------
     //---------------------------------------------------------------------------------------------
-    $(".menu__mobile-icon__box").on("click", function (e) {
+    $(".mobile-icon__box").on("click", function (e) {
         e.preventDefault();
         $(this).toggleClass("active");
-        $(".menu__box").toggleClass("active");
+        $(".menu").toggleClass("active");
+        $(".menu-icon-mobile__box p").toggleClass("off");
     });
 
     //---------------------------------------------------------------------------------------------
@@ -313,4 +314,9 @@ $(function () {
         });
     });
     */
+
+    $("body").on("click", ".no-action", (e) => {
+        e.preventDefault();
+        return;
+    });
 });

@@ -97,9 +97,10 @@
         <ul class="menu__box box">
 
             <li>
-                <a href="<?= url("telha-termoacustica"); ?>" title="Telhas Termoacústica">Termoacústica</a>
+                <a href="#" class="no-action" title="Telhas Termoacústica">Termoacústica</a>
 
                 <ul class="menu__box__sub show">
+                    <li><a href="<?= url("telha-termoacustica"); ?>" title="Todas Telhas Termoacústica">Todas Telhas Termoacústica</a></li>
                     <li><a href="<?= url("telha-termoacustica/forro-metalico"); ?>" title="Telha Termoacústica com Forro Metálico">Telha Termoacústica com Forro Metálico</a></li>
                     <li><a href="<?= url("telha-termoacustica/sanduiche"); ?>" title="Telha Termoacústica Sanduíche">Telha Termoacústica Sanduíche</a></li>
                     <li><a href="<?= url("telha-termoacustica/semi-sanduiche"); ?>" title="Telha Termoacústica Semi Sanduíche">Telha Termoacústica Semi Sanduíche</a></li>
@@ -109,7 +110,7 @@
             </li>
 
             <li>
-                <a href="<?= url("telha-metalica"); ?>" title="Telha Metálica">Telha Metálica</a>
+                <a href="#" class="no-action" title="Telha Metálica">Metálica</a>
 
                 <ul class="menu__box__sub">
                     <li><a href="<?= url("telha-metalica/galvalume"); ?>" title="Telha Metálica Galvalume">Telha Metálica Galvalume</a></li>
@@ -118,9 +119,10 @@
             </li>
 
             <li>
-                <a href="<?= url("perfil"); ?>" title="Perfis">Perfis</a>
+                <a href="#" class="no-action" title="Perfis">Perfis</a>
 
                 <ul class="menu__box__sub">
+                    <li><a href="<?= url("perfil"); ?>" title="Todos Perfis">Todos Perfis</a></li>
                     <li><a href="<?= url("perfil/u"); ?>" title="Perfil U">Perfil U</a></li>
                     <li><a href="<?= url("perfil/u-enrijecido"); ?>" title="Perfil Enrijecido">Perfil U Enrijecido</a></li>
                     <li><a href="<?= url("perfil/cartola"); ?>" title="Perfil Cartola">Perfil Cartola</a></li>
@@ -133,9 +135,10 @@
             </li>
 
             <li>
-                <a href="<?= url("acabamento"); ?>" title="Acabamentos">Acabamentos</a>
+                <a href="#" class="no-action" title="Acabamentos">Acabamentos</a>
 
                 <ul class="menu__box__sub">
+                    <li><a href="<?= url("acabamento"); ?>" title="Todos Acabamentos">Todos Acabamentos</a></li>
                     <li><a href="<?= url("acabamento/frontal"); ?>" title="Acabamento Telha Termoacústica Frontal">Acabamento Telha Termoacústica Frontal</a></li>
                     <li><a href="<?= url("acabamento/lateral"); ?>" title="Acabamento Telha Termoacústica Lateral">Acabamento Telha Termoacústica Lateral</a></li>
                 </ul>
@@ -143,9 +146,10 @@
             </li>
 
             <li>
-                <a href="<?= url("parafuso"); ?>" title="Parafusos Fixadores">Parafusos</a>
+                <a href="#" class="no-action" title="Parafusos Fixadores">Parafusos</a>
 
                 <ul class="menu__box__sub">
+                    <li><a href="<?= url("parafuso"); ?>" title="Todos Parafusos Fixadores">Todos Parafusos Fixadores</a></li>
                     <li><a href="<?= url("parafuso/4-polegadas"); ?>" title="Parafusos Fixadores 4''">Parafusos Fixadores 4''</a></li>
                     <li><a href="<?= url("parafuso/5-polegadas"); ?>" title="Parafusos Fixadores 5''">Parafusos Fixadores 5''</a></li>
                     <li><a href="<?= url("parafuso/4.5-polegadas-madeira"); ?>" title="Parafusos Fixadores 4.5'' Madeira">Parafusos Fixadores 4.5'' Madeira</a></li>
@@ -161,10 +165,18 @@
             </li>
         </ul>
 
-        <div class="menu__mobile-icon">
-            <div class="menu__mobile-icon__box">
-                <span></span>
+    </div>
+
+    <div class="menu-icon-mobile row">
+        <div class="menu-icon-mobile__box box">
+            <p>Ver Todos os Produtos</p>
+
+            <div class="mobile-icon">
+                <div class="mobile-icon__box">
+                    <span></span>
+                </div>
             </div>
+
         </div>
     </div>
 

@@ -18,7 +18,7 @@
         }
 
         &__whatsapp {
-            @media (max-width: 47.9em) {
+            @media (max-width: 47.99em) {
                 background-color: var(--color-primary);
                 display: flex;
                 position: relative;
@@ -32,7 +32,7 @@
                     height: 35px;
                     background-color: var(--color-primary);
                     position: absolute;
-                    top: -85%;
+                    top: -100%;
                     left: 50%;
                     transform: translate(-50% -50%);
                     background-image: url("../img/icon/whatsapp.svg");

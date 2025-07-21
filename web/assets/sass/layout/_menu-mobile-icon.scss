@@ -1,0 +1,102 @@
+.menu-icon-mobile
+{
+    display: none;
+    
+     @media (max-width: 47.99em) {
+        height: 60px;
+        background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary-light));
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        &__box 
+        {
+            position: relative;
+
+            & p 
+            {
+                color: var(--color-white);
+                display: flex;
+                justify-content: flex-end;
+                padding-right: 60px;
+                transition: .5s ease all;
+
+                &.off
+                {
+                    display: none;
+                }
+            }
+
+            & .mobile-icon {
+
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                width: 33%;
+                display: flex;
+                justify-content: flex-end;
+
+                &__box {
+                    width: 45px;
+                    height: 45px;
+                    cursor: pointer;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    position: relative;
+
+                    &.active {
+                        & span {
+                            width: 100%;
+                            transform: translate(-50%, -50%) rotate(45deg);
+
+                            &::after {
+                                display: none;
+                            }
+
+                            &::before {
+                                top: 0;
+                                width: 100%;
+                                transform: translateX(-50%) rotate(90deg);
+                            }
+                        }
+                    }
+
+                    & span {
+                        width: 60%;
+                        height: 4px;
+                        background-color: var(--color-white);
+                        border-radius: 50px;
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        transition: .5s ease all;
+
+                        &::before,
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            width: 140%;
+                            height: 4px;
+                            background-color: var(--color-white);
+                            border-radius: 50px;
+                            transition: 0.5s ease all;
+                        }
+
+                        &::before {
+                            top: 10px;
+                        }
+
+                        &::after {
+                            top: -10px;
+                        }
+                    }
+                }
+            }
+        }
+     }
+}
