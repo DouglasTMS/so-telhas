@@ -15,7 +15,7 @@
 
                 <article class="our-differentials__box__scroll-box__main__item">
                     <img width="50" height="50" src="<?= url("web/assets/img/icon/truck.svg"); ?>" title="Entregamos para GO, MT, MG e DF" alt="Entregamos para GO, MT, MG e DF">
-                    <h1>Entregamos para GO, MT, MG e DF!</h1>
+                    <h1>Entregamos para GO e DF!</h1>
                 </article>
 
                 <article class="our-differentials__box__scroll-box__main__item">

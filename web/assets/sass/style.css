@@ -773,12 +773,12 @@ ul {
 }
 .our-differentials__box__header h1 {
   font-size: 1.8em;
-  text-transform: uppercase;
   font-weight: bold;
   letter-spacing: -1px;
   width: 100%;
   text-align: center;
   line-height: 1;
+  margin-bottom: 15px;
 }
 @media (min-width: 64em) {
   .our-differentials__box__header h1 {
