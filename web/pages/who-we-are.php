@@ -44,7 +44,7 @@
     </div>
 </section>
 
-<?= $this->insert('inc/newsletter'); ?>
+<?= $this->insert('inc/answers'); ?>
 
 <?= $this->insert('inc/feedback'); ?>
 

@@ -319,4 +319,13 @@ $(function () {
         e.preventDefault();
         return;
     });
+
+    /**
+     * Perguntas frequentes - Effect.
+     */
+    $(".answers__box__item").click(function (e) {
+        e.preventDefault();
+        $(".answers__box__item").removeClass("active");
+        $(this).toggleClass("active");
+    });
 });

@@ -11,6 +11,6 @@
 </section>
 
 <?= $this->insert('inc/our-differentials'); ?>
-<?= $this->insert('inc/newsletter'); ?>
+<?= $this->insert('inc/answers'); ?>
 <?= $this->insert('inc/feedback'); ?>
 <?= $this->insert('inc/contact'); ?>
