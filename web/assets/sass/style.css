@@ -903,7 +903,7 @@ ul {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
   transition: 0.5s ease all;
 }
 .answers__box__item.active > .question {
@@ -921,12 +921,12 @@ ul {
 }
 .answers__box__item__question {
   width: 100%;
-  padding: 10px;
+  padding: 10px 50px 10px 10px;
   background-color: var(--color-white);
   cursor: pointer;
   color: var(--color-primary-dark);
-  font-white: 700;
-  font-size: 1.1em;
+  font-weight: 700;
+  font-size: 1em;
   border-radius: 8px;
   position: relative;
 }
