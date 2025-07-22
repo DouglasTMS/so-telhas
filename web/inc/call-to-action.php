@@ -2,6 +2,10 @@
     <div class="box call-to-action__box">
 
         <article class="call-to-action__box__item">
+            <h1>Colagem Industrial</h1>
+        </article>
+
+        <article class="call-to-action__box__item">
             <h1>Melhor Preço</h1>
         </article>
 
@@ -19,10 +23,6 @@
 
         <article class="call-to-action__box__item">
             <h1>Variedade</h1>
-        </article>
-
-        <article class="call-to-action__box__item">
-            <h1>Colagem Industrial</h1>
         </article>
 
         <a target="_blank" href="#" title="Fale com um especialista da Só Telhas">
