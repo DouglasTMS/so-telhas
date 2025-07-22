@@ -2,7 +2,7 @@
 
 <?= $this->insert('inc/about-us'); ?>
 
-<?= $this->insert('inc/lead-form'); ?>
+<?= $this->insert('inc/call-to-action'); ?>
 
 <section class="row our-differentials">
     <div class="box our-differentials__box">

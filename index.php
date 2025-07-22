@@ -15,8 +15,8 @@ $route->namespace("Source\Controllers");
 $route->get("/", "Web:home");
 
 ## Termoacústica
-$route->get("/termoacustica", "Web:thermoacoustics");
-$route->get("/termoacustica/", "Web:thermoacoustics");
+$route->get("/telha-termoacustica", "Web:thermoacoustics");
+$route->get("/telha-termoacustica/", "Web:thermoacoustics");
 
 ## Isotérmicas
 $route->get("/perfil", "Web:productPerfis");
