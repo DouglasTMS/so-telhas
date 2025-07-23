@@ -17,7 +17,7 @@
         </div>
     </div>
 
-    <?php if ($variations) : ?>
+    <?php if (!empty($variations)) : ?>
         <section class="box product-view__variations">
             <h1>Variações da <?= $data->name; ?></h1>
 

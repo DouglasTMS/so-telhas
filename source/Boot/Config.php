@@ -21,8 +21,8 @@ define("CONF_FACEBOOK_ADMINS", []);
 ##
 ##  Configuração de URL
 ##
-define("CONF_URL_BASE", "https://www.sotelhas.ind.br/teste");
-define("CONF_URL_TEST", "https://www.localhost/so-telhas");
+//define("CONF_URL_BASE", "https://www.sotelhas.ind.br/teste");
+define("CONF_URL_BASE", "https://www.localhost/so-telhas");
 
 ##
 ##  Configuração de Datas

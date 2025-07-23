@@ -141,67 +141,13 @@ function str_limit_chars(string $string, int $limit, string $pointer = "..."): s
  * @param null|string $path
  * @return string
  */
-function url(string $path = null): string
+function url($path = null): string
 {
-    if (mb_strpos($_SERVER["HTTP_HOST"], "localhost")) {
-        if (!empty($path)) {
-            return CONF_URL_TEST . "/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
-        }
-
-        return CONF_URL_TEST;
-    }
-
     if (!empty($path)) {
         return CONF_URL_BASE . "/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
     }
 
     return CONF_URL_BASE;
-}
-
-/**
- * Configura URL padrão do tema. Faz a verificação se está em ambiente de teste ou produção.
- *
- * @param null|string $path
- * @return string
- */
-function url_theme(string $path = null): string
-{
-    if (mb_strpos($_SERVER["HTTP_HOST"], "localhost")) {
-        if (!empty($path)) {
-            return CONF_URL_TEST . "/themes/" . CONF_THEME_NAME . "/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
-        }
-
-        return CONF_URL_TEST . "/themes/" . CONF_THEME_NAME;
-    }
-
-    if (!empty($path)) {
-        return CONF_URL_BASE . "/themes/" . CONF_THEME_NAME . "/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
-    }
-
-    return CONF_URL_BASE . "/themes/" . CONF_THEME_NAME;
-}
-
-/**
- * Configura URL padrão do admin. Faz a verificação se está em ambiente de teste ou produção.
- *
- * @param null|string $path
- * @return string
- */
-function url_admin(string $path = null): string
-{
-    if (mb_strpos($_SERVER["HTTP_HOST"], "localhost")) {
-        if (!empty($path)) {
-            return CONF_URL_TEST . "/themes/admin/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
-        }
-
-        return CONF_URL_TEST . "/themes/admin";
-    }
-
-    if (!empty($path)) {
-        return CONF_URL_BASE . "/themes/admin/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
-    }
-
-    return CONF_URL_BASE . "/themes/admin";
 }
 
 function to_real(float $price): string

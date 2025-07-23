@@ -111,6 +111,7 @@
                     <li><a href="<?= url("telha-termoacustica/sanduiche"); ?>" title="Telha Termoacústica Sanduíche">Telha Termoacústica Sanduíche</a></li>
                     <li><a href="<?= url("telha-termoacustica/semi-sanduiche"); ?>" title="Telha Termoacústica Semi Sanduíche">Telha Termoacústica Semi Sanduíche</a></li>
                     <li><a href="<?= url("telha-termoacustica/forro-pvc"); ?>" title="Telha Termoacústica com Forro PVC">Telha Termoacústica com Forro PVC</a></li>
+                    <li><a href="<?= url("telha-termoacustica/com-film"); ?>" title="Telha Termoacústica com Film">Telha Termoacústica com Film</a></li>
                 </ul>
 
             </li>

@@ -14,21 +14,26 @@ $route = new Router(url(), ":");
 $route->namespace("Source\Controllers");
 $route->get("/", "Web:home");
 
-## Termoacústica
+########## Termoacústica
 $route->get("/telha-termoacustica", "Web:thermoacoustics");
 $route->get("/telha-termoacustica/", "Web:thermoacoustics");
+#
+$route->get("/telha-termoacustica/{uri}", "Web:thermoacousticsView");
+$route->get("/telha-termoacustica/{uri}/", "Web:thermoacousticsView");
 
-## Isotérmicas
+########## Metálica
+$route->get("/telha-metalica/{uri}", "Web:metallic");
+$route->get("/telha-metalica/{uri}/", "Web:metallic");
+
+########### Trocar
 $route->get("/perfil", "Web:productPerfis");
 $route->get("/perfil/", "Web:productPerfis");
 
 
 ## Isopainel
-$route->get("/isopainel", "Web:productIsopainel");
-$route->get("/isopainel/", "Web:productIsopainel");
+$route->get("/{isopainel}", "Web:productIsopainel");
+$route->get("/{isopainel}/", "Web:productIsopainel");
 
-$route->get("/telhas/{uri}", "Web:productView");
-$route->get("/telhas/{uri}/", "Web:productView");
 
 $route->get("/perfil/{uri}", "Web:productView");
 $route->get("/perfil/{uri}/", "Web:productView");
