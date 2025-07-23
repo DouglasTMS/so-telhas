@@ -103,7 +103,7 @@
         <ul class="menu__box box">
 
             <li>
-                <a href="#" class="no-action" title="Telhas Termoacústica">Termoacústica</a>
+                <a href="" class="no-action" title="Telhas Termoacústica">Termoacústica</a>
 
                 <ul class="menu__box__sub show">
                     <li><a href="<?= url("telha-termoacustica"); ?>" title="Todas Telhas Termoacústica">Todas Telhas Termoacústica</a></li>
@@ -117,7 +117,7 @@
             </li>
 
             <li>
-                <a href="#" class="no-action" title="Telha Metálica">Metálica</a>
+                <a href="" class="no-action" title="Telha Metálica">Metálica</a>
 
                 <ul class="menu__box__sub">
                     <li><a href="<?= url("telha-metalica/galvalume"); ?>" title="Telha Metálica Galvalume">Telha Metálica Galvalume</a></li>
@@ -126,7 +126,7 @@
             </li>
 
             <li>
-                <a href="#" class="no-action" title="Perfis">Perfis</a>
+                <a href="" class="no-action" title="Perfis">Perfis</a>
 
                 <ul class="menu__box__sub">
                     <li><a href="<?= url("perfil"); ?>" title="Todos Perfis">Todos Perfis</a></li>
@@ -142,7 +142,7 @@
             </li>
 
             <li>
-                <a href="#" class="no-action" title="Acabamentos">Acabamentos</a>
+                <a href="" class="no-action" title="Acabamentos">Acabamentos</a>
 
                 <ul class="menu__box__sub">
                     <li><a href="<?= url("acabamento"); ?>" title="Todos Acabamentos">Todos Acabamentos</a></li>
@@ -153,7 +153,7 @@
             </li>
 
             <li>
-                <a href="#" class="no-action" title="Parafusos Fixadores">Parafusos</a>
+                <a href="" class="no-action" title="Parafusos Fixadores">Parafusos</a>
 
                 <ul class="menu__box__sub">
                     <li><a href="<?= url("parafuso"); ?>" title="Todos Parafusos Fixadores">Todos Parafusos Fixadores</a></li>
@@ -168,7 +168,7 @@
             </li>
 
             <li>
-                <a href="<?= url("cumeeiras"); ?>" title="Cumeeiras">Cumeeiras</a>
+                <a href="<?= url("cumeeira"); ?>" title="Cumeeiras">Cumeeiras</a>
             </li>
         </ul>
 

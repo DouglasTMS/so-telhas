@@ -9,10 +9,7 @@ use Source\Supports\Email;
 use Source\Models\Lead;
 use Source\Models\Newsletter;
 use Source\Models\Variations;
-use Source\Models\Details;
-use Source\Models\Benefits;
 use Source\Models\SellersWhatsApp;
-use Source\Supports\SiteMap;
 
 class Web
 {
@@ -25,6 +22,8 @@ class Web
         $this->view = new View();
         $this->seo  = new Seo();
     }
+
+
 
     /**
      * Página home.
@@ -41,13 +40,15 @@ class Web
         ]);
     }
 
+
+
     /**
      * Página lista Telhas Termoacústica.
      */
-    public function thermoacoustics()
+    public function thermoacoustics(?array $data)
     {
         echo $this->view->render("pages/products", [
-            "header" => $this->seo->render("Conheça nossas Telhas Termoacústicas | " . CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
+            "header" => $this->seo->render("Conheça nossas Telhas Isotérmicas | " . CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
             "products" => (new Products())->get("WHERE type = :type", "type=1"),
             "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
             "headerPhone" => "(62) 3300-0460",
@@ -55,6 +56,8 @@ class Web
             "contact_phone" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1")
         ]);
     }
+
+
 
     /**
      * Página de Telha Termoacústica.
@@ -81,25 +84,24 @@ class Web
         ]);
     }
 
+
+
     /**
-     * Página lista Telhas Termoacústica.
+     * Página de Telha Metálica.
      */
-    public function metallic(array $data)
+    public function metallicView(?array $data)
     {
 
         $product = (new Products())->get("WHERE uri = :uri", "uri={$data['uri']}");
-
-        var_dump($product);
 
         if (empty($product)) {
             header("Location: " . CONF_URL_BASE);
             return;
         }
 
-
-        echo $this->view->render("pages/products", [
-            "header" => $this->seo->render("Conheça nossas Telhas Termoacústicas | " . CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
-            "products" => (new Products())->get("WHERE type = :type", "type=1"),
+        echo $this->view->render("pages/product-view", [
+            "header" => $this->seo->render($product[0]->name, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
+            "data" => $product[0],
             "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
             "headerPhone" => "(62) 3300-0460",
             "whatsapp_form" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1"),
@@ -109,18 +111,55 @@ class Web
 
 
 
+    /**
+     * Página lista de Perfis.
+     */
+    public function perfil(?array $data)
+    {
+        echo $this->view->render("pages/products", [
+            "header" => $this->seo->render("Conheça nossos Perfis | " . CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
+            "products" => (new Products())->get("WHERE type = :type", "type=4"),
+            "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
+            "headerPhone" => "(62) 3300-0460",
+            "whatsapp_form" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1"),
+            "contact_phone" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1")
+        ]);
+    }
+
+
+
+    /**
+     * Página de visualização de perfil.
+     */
+    public function perfilView(?array $data)
+    {
+
+        $product = (new Products())->get("WHERE uri = :uri", "uri={$data['uri']}");
+
+        if (empty($product)) {
+            header("Location: " . CONF_URL_BASE);
+            return;
+        }
+
+        echo $this->view->render("pages/product-view", [
+            "header" => $this->seo->render($product[0]->name, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
+            "data" => $product[0],
+            "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
+            "headerPhone" => "(62) 3300-0460",
+            "whatsapp_form" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1"),
+            "contact_phone" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1")
+        ]);
+    }
 
 
 
     /**
      * Página de visualização do Isopainel.
      */
-    public function productIsopainel(?array $data)
+    public function isopainelView(?array $data)
     {
 
-        $product = (new Products())->get("WHERE uri = :uri", "uri={$data['isopainel']}");
-
-        var_dump($product);
+        $product = (new Products())->get("WHERE uri = :uri", "uri=isopainel");
 
         if (empty($product)) {
             header("Location: " . CONF_URL_BASE);
@@ -139,20 +178,79 @@ class Web
         ]);
     }
 
+
+
     /**
-     * Página lista de Perfis.
+     * Página lista de acabamentos.
      */
-    public function productPerfis(?array $data)
+    public function finish(?array $data)
     {
         echo $this->view->render("pages/products", [
-            "header" => $this->seo->render("Conheça nossos Perfis | " . CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
-            "products" => (new Products())->get("WHERE type = :type", "type=4"),
+            "header" => $this->seo->render("Conheça nossos Acabamentos de Telhas Termoacústicas | " . CONF_SITE_TITLE, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
+            "products" => (new Products())->get("WHERE type = :type", "type=4"), // Trocar pra 5
             "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
             "headerPhone" => "(62) 3300-0460",
             "whatsapp_form" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1"),
             "contact_phone" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1")
         ]);
     }
+
+
+
+    /**
+     * Página de visualização de perfil.
+     */
+    public function finishView(?array $data)
+    {
+
+        $product = (new Products())->get("WHERE uri = :uri", "uri={$data['uri']}");
+
+        if (empty($product)) {
+            header("Location: " . CONF_URL_BASE);
+            return;
+        }
+
+        echo $this->view->render("pages/product-view", [
+            "header" => $this->seo->render($product[0]->name, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
+            "data" => $product[0],
+            "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
+            "headerPhone" => "(62) 3300-0460",
+            "whatsapp_form" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1"),
+            "contact_phone" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1")
+        ]);
+    }
+
+
+
+    ##### PARAFUSOS
+
+
+    /**
+     * Página de visualização de Cumeeiras.
+     */
+    public function ridgesView(?array $data)
+    {
+
+        $product = (new Products())->get("WHERE uri = :uri", "uri=cumeeira");
+
+        if (empty($product)) {
+            header("Location: " . CONF_URL_BASE);
+            return;
+        }
+
+        echo $this->view->render("pages/product-view", [
+            "header" => $this->seo->render($product[0]->name, CONF_SITE_DESCRIPTION, url(), thumb()->make("shared/img/seo.png", 1200, 628)),
+            "data" => $product[0],
+            "products" => (new Products())->get("ORDER BY rand() LIMIT :limit", "limit=3"),
+            "variations" => (new Variations())->get("WHERE product_id = :product_id", "product_id={$product[0]->id}"),
+            "sellers_whatsapp" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand()", "status=1"),
+            "headerPhone" => "(62) 3300-0460",
+            "whatsapp_form" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1"),
+            "contact_phone" => (new SellersWhatsApp())->get("WHERE status = :status ORDER BY rand() LIMIT :limit", "status=1&limit=1")
+        ]);
+    }
+
+
 
 
 
@@ -170,6 +268,8 @@ class Web
         ]);
     }
 
+
+
     /**
      * Página orçamento.
      */
@@ -184,6 +284,8 @@ class Web
         ]);
     }
 
+
+
     /**
      * Página sucesso.
      */
@@ -197,6 +299,8 @@ class Web
         ]);
     }
 
+
+
     /**
      * PAINEL FAKE wpp.
      */
@@ -208,14 +312,13 @@ class Web
         ]);
     }
 
+
+
     /**
      * Ajax.
      */
     public function ajax(?array $data)
     {
-
-
-
         /**
          * Ativar e desativar whatsapp de vendedor.
          */
