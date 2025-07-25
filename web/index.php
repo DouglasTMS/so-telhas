@@ -246,32 +246,17 @@
                     </li>
 
                     <li>
-                        <img width="60" height="35" src="<?= url("web/assets/img/icon/visa.svg"); ?>" title="Visa" alt="Aceitamos Visa">
+                        <img width="60" height="35" src="<?= url("web/assets/img/icon/hipercard.svg"); ?>" title="Visa" alt="Aceitamos Visa">
                     </li>
 
                     <li>
-                        <img width="60" height="35" src="<?= url("web/assets/img/icon/mastercard.svg"); ?>" title="Mastercard" alt="Aceitamos Mastercard">
+                        <img width="60" height="35" src="<?= url("web/assets/img/icon/elo.svg"); ?>" title="Mastercard" alt="Aceitamos Mastercard">
                     </li>
-
-                    <li>
-                        <img width="60" height="35" src="<?= url("web/assets/img/icon/visa.svg"); ?>" title="Visa" alt="Aceitamos Visa">
-                    </li>
-
-                    <li>
-                        <img width="60" height="35" src="<?= url("web/assets/img/icon/mastercard.svg"); ?>" title="Mastercard" alt="Aceitamos Mastercard">
-                    </li>
-
-                    <li>
-                        <img width="60" height="35" src="<?= url("web/assets/img/icon/visa.svg"); ?>" title="Visa" alt="Aceitamos Visa">
-                    </li>
-
                 </ul>
 
             </footer>
         </div>
     </footer>
-
-
 
 
     <div class="whatsapp-conversion open-modal-whatsapp-conversion api-whatsapp-conversion">

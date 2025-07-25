@@ -773,16 +773,16 @@ ul {
 }
 .our-differentials__box__header h1 {
   font-size: 1.8em;
-  font-weight: bold;
   letter-spacing: -1px;
   width: 100%;
   text-align: center;
   line-height: 1;
   margin-bottom: 15px;
+  font-weight: 700;
 }
 @media (min-width: 64em) {
   .our-differentials__box__header h1 {
-    font-size: 2.5em;
+    font-size: 2em;
   }
 }
 .our-differentials__box__scroll-box {
@@ -883,7 +883,7 @@ ul {
 @media (min-width: 48em) {
   .answers__box__header h1 {
     text-align: center;
-    font-size: 1.8em;
+    font-size: 2em;
     max-width: 580px;
   }
 }
@@ -967,77 +967,89 @@ ul {
   transition: 0.5s ease all;
 }
 
-.feedback {
+.youtube {
   padding: 50px 0;
 }
 @media (min-width: 64em) {
-  .feedback {
+  .youtube {
     padding: 80px 0;
   }
 }
-.feedback__box__header {
+.youtube__box__header {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 15px;
 }
-.feedback__box__header h1 {
+.youtube__box__header h1 {
   font-size: 1.8em;
-  text-transform: uppercase;
+  margin-bottom: 10px;
   font-weight: bold;
   letter-spacing: -1px;
   width: 100%;
   text-align: center;
   line-height: 1;
 }
-.feedback .box {
-  overflow: hidden;
-  position: relative;
+@media (min-width: 64em) {
+  .youtube__box__header h1 {
+    font-size: 2em;
+  }
 }
-.feedback__container {
-  display: flex;
-}
-.feedback__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.youtube__box__header p {
   width: 100%;
-}
-.feedback__item img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50% !important;
-}
-.feedback__item h1 {
-  font-weight: 700;
-  font-size: 1.1em;
-  color: var(--color-tertiary);
-  margin: 5px auto 10px auto;
-  max-width: 600px;
-}
-.feedback__item p {
-  color: var(--color-tertiary);
   max-width: 600px;
   text-align: center;
-  line-height: 2;
+  line-height: 1.5;
 }
-.feedback__controls {
+.youtube__box__main {
+  position: relative;
+  border-radius: 10px;
   width: 100%;
+  max-width: 500px;
   display: flex;
-  justify-content: space-between;
-  position: absolute;
-  top: 100px;
+  justify-content: center;
+  align-items: center;
+  margin: 15px auto 50px auto;
 }
-.feedback__controls li {
+.youtube__box__main img {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
   cursor: pointer;
+}
+.youtube__box__main i {
+  width: 60px;
+  height: 60px;
+  background-image: url("../img/icon/player.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90% auto;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
+}
+.youtube__box__footer {
   display: flex;
+  justify-content: center;
+  width: 100%;
 }
-.feedback__controls li:first-child {
-  transform: rotate(180deg);
+.youtube__box__footer a {
+  width: 100%;
+  max-width: 200px;
+  display: flex;
+  justify-content: center;
+  padding: 15px 10px;
+  border-radius: 8px;
+  background-color: var(--color-secundary);
+  transition: 0.5s ease all;
+  color: var(--color-white);
 }
-.feedback__controls li svg {
-  stroke: var(--color-tertiary);
+.youtube__box__footer a:hover {
+  background-color: var(--color-secundary-light);
 }
 
 .contact {
@@ -1077,11 +1089,12 @@ ul {
   margin: 20px auto 10px auto;
   line-height: 1.2;
   max-width: 400px;
+  font-weight: 700;
 }
 @media (min-width: 48em) {
   .contact__box__header h1 {
     text-align: center;
-    font-size: 1.8em;
+    font-size: 2em;
     max-width: 580px;
     display: flex;
     justify-content: center;
@@ -1118,6 +1131,7 @@ ul {
 }
 .contact__box__main__phone b {
   color: var(--color-white);
+  font-weight: 700;
 }
 .contact__box__main__whatsapp {
   padding: 15px 30px 15px 60px;
@@ -1139,6 +1153,7 @@ ul {
 .contact__box__main__whatsapp b {
   color: var(--color-white);
   margin-left: 10px;
+  font-weight: 700;
 }
 
 .footer {

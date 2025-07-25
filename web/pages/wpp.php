@@ -1,6 +1,5 @@
 <?php $this->layout("index"); ?>
 
-
 <div class="wpp">
     <ul>
         <?php if ($sellers_whatsapp): ?>

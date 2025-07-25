@@ -35,10 +35,11 @@
                 margin: 20px auto 10px auto;
                 line-height: 1.2;
                 max-width: 400px;
+                font-weight: 700;
 
                 @include respond(768) {
                     text-align: center;
-                    font-size: 1.8em;
+                    font-size: 2em;
                     max-width: 580px;
                     display: flex;
                     justify-content: center;
@@ -69,7 +70,7 @@
                 color: var(--color-white);
                 width: 100%;
                 text-align: center;
-                font-size: 1.3em;
+                font-size: 1.3em;                
             }
 
             &__phone {
@@ -78,6 +79,7 @@
 
                 & b {
                     color: var(--color-white);
+                    font-weight: 700;
                 }
             }
 
@@ -102,6 +104,7 @@
                 & b {
                     color: var(--color-white);
                     margin-left: 10px;
+                    font-weight: 700;
                 }
             }
         }

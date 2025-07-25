@@ -46,7 +46,7 @@
 
 <?= $this->insert('inc/answers'); ?>
 
-<?= $this->insert('inc/feedback'); ?>
+<?= $this->insert('inc/youtube'); ?>
 
 <section class="row contact">
     <div class="box contact__box">
