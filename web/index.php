@@ -64,8 +64,7 @@
     <!-- End Meta Pixel Code -->
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16777000904">
-    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17349328704"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -74,12 +73,8 @@
         }
         gtag('js', new Date());
 
-        gtag('config', 'AW-16777000904');
+        gtag('config', 'AW-17349328704');
     </script>
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5182123534844534"
-        crossorigin="anonymous"></script>
-
 </head>
 
 <body>
