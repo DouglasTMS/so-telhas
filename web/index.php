@@ -89,7 +89,8 @@
                 <img src="<?= url("web/assets/img/logo-so-telhas.svg"); ?>" alt="<?= CONF_SITE_TITLE ?>" title="<?= CONF_SITE_TITLE ?>">
             </a>
 
-            <a target="_blank" class="api-whatsapp-conversion header__box__whatsapp open-modal-whatsapp-conversion" data-icon-uri="<?= url("web/assets/img/icon"); ?>" href="#" title="Só Telhas no WhatsApp"><i class="api-whatsapp-conversion"></i><span class="api-whatsapp-conversion">Peça um Orçamento</span></a>
+            <a target="_blank" class="header__box__whatsapp" data-icon-uri="<?= url("web/assets/img/icon"); ?>" href="https://api.whatsapp.com/send/?phone=556233000460&text=Olá! Eu estava no site e gostaria de falar com um especialista." title="Peça um Orçamento na Só Telhas pelo WhatsApp"><i></i><span>Peça um Orçamento</span></a>
+
         </div>
     </header>
 
@@ -148,16 +149,14 @@
             </li>
 
             <li>
-                <a href="" class="no-action" title="Parafusos Fixadores">Parafusos</a>
+                <a href="" class="no-action" title="Parafusos">Parafusos</a>
 
                 <ul class="menu__box__sub">
-                    <li><a href="<?= url("parafuso"); ?>" title="Todos Parafusos Fixadores">Todos Parafusos Fixadores</a></li>
-                    <li><a href="<?= url("parafuso/4-polegadas"); ?>" title="Parafusos Fixadores 4''">Parafusos Fixadores 4''</a></li>
-                    <li><a href="<?= url("parafuso/5-polegadas"); ?>" title="Parafusos Fixadores 5''">Parafusos Fixadores 5''</a></li>
-                    <li><a href="<?= url("parafuso/4.5-polegadas-madeira"); ?>" title="Parafusos Fixadores 4.5'' Madeira">Parafusos Fixadores 4.5'' Madeira</a></li>
-                    <li><a href="<?= url("parafuso/5-polegadas-madeira"); ?>" title="Parafusos Fixadores 5'' Madeira">Parafusos Fixadores 5'' Madeira</a></li>
-                    <li><a href="<?= url("parafuso/3/4-polegadas"); ?>" title="Parafusos Fixadores 3/4''">Parafusos Fixadores 3/4''</a></li>
-                    <li><a href="<?= url("parafuso/7/8-polegadas"); ?>" title="Parafusos Fixadores 7/8''">Parafusos Fixadores 7/8''</a></li>
+                    <li><a href="<?= url("parafuso"); ?>" title="Todos Parafusos Fixadores">Todos Parafusos</a></li>
+                    <li><a href="<?= url("parafuso/ponta-broca"); ?>" title="Parafusos Fixadores Ponta Broca">Parafusos Fixadores Ponta Broca</a></li>
+                    <li><a href="<?= url("parafuso/ponta-agulia"); ?>" title="Parafusos Fixadores Ponta Agulia">Parafusos Fixadores Ponta Agulia</a></li>
+                    <li><a href="<?= url("parafuso/flangeado-phillips"); ?>" title="Parafusos Acabamento Flangeado Phillips">Parafusos Acabamento Flangeado Phillips</a></li>
+                    <li><a href="<?= url("parafuso/costura"); ?>" title="Parafusos Costura">Parafusos Costura</a></li>
                 </ul>
 
             </li>
@@ -254,63 +253,18 @@
     </footer>
 
 
-    <div class="whatsapp-conversion open-modal-whatsapp-conversion api-whatsapp-conversion">
+    <div class="whatsapp-conversion api-whatsapp-conversion">
         <div class="whatsapp-conversion__icon api-whatsapp-conversion">
-            <img class="api-whatsapp-conversion" width="50px" height="50px" src="<?= url("web/assets/img/whatsapp-conversion/whatsapp-white-border.svg"); ?>" alt="Tire suas Dúvidas com um Especialista">
-            <p class="api-whatsapp-conversion">Solicitar Orçamento</p>
+
+            <a href="https://api.whatsapp.com/send/?phone=556233000460&text=Olá! Eu estava no site e gostaria de falar com um especialista." target="_blank" title="Tire suas Dúvidas com um Especialista">
+                <img class="api-whatsapp-conversion" width="50px" height="50px" src="<?= url("web/assets/img/whatsapp-conversion/whatsapp-white-border.svg"); ?>" alt="Tire suas Dúvidas com um Especialista">
+            </a>
+
+            <a href="https://api.whatsapp.com/send/?phone=556233000460&text=Olá! Eu estava no site e gostaria de falar com um especialista." target="_blank" title="Tire suas Dúvidas com um Especialista">
+                <p class="api-whatsapp-conversion">Fale com um Especialista</p>
+            </a>
         </div>
-
-        <!--
-
-            <div class="whatsapp-conversion__lead-fields">
-
-                <header class="whatsapp-conversion__lead-fields__header">
-                    <img src="<?= url("web/assets/img/whatsapp-conversion/whatsapp-white.svg"); ?>" title="WhatsApp" alt="Entre em contato via WhatsApp">
-                    <p>Escolha seu Especialista!</p>
-                </header>
-
-                <main class="whatsapp-conversion__lead-fields__main">
-                  
-                    <form class="whatsapp-conversion__lead-fields__main__form" action="" method="POST" name="whatsapp-conversion-form">
-                        <label>
-                            <input type="text" name="whatsapp-conversion-name" autocomplete="off" placeholder="Qual seu nome?">
-                        </label>
-
-                        <label>
-                            <input type="text" name="whatsapp-conversion-phone" class="phone_mask" autocomplete="off" placeholder="Qual seu telefone?">
-                        </label>
-
-                        <label>
-                            <input type="submit" name="change-seller" value="Escolher Atendente" class="send-data-whatsapp-conversion">
-                        </label>
-                    </form>
-
-                    <div class="whatsapp-conversion__lead-fields__main__message">
-                        <img class="error" src="<?= url("web/assets/img/whatsapp-conversion/error.svg"); ?>" alt="Erro">
-                        <p>Por favor, informe seu nome.</p>
-                        <a href="#" title="Voltar">Voltar</a>
-                    </div>
-
-    
-
-            <ul class="whatsapp-conversion__lead-fields__main__sellers-list">
-
-                <?php foreach ($sellers_whatsapp as $resultsellers_whatsapp) : ?>
-                    <li>
-                        <a class="icon" href="https://api.whatsapp.com/send/?phone=<?= whatsapp($resultsellers_whatsapp->phone); ?>&text=Olá, <?= $resultsellers_whatsapp->name; ?>! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com <?= $resultsellers_whatsapp->name; ?>" target="_blank">
-                            <img src="<?= url("web/assets/img/whatsapp-conversion/whatsapp-white.svg"); ?>" alt="">
-                        </a>
-                        <a href="https://api.whatsapp.com/send/?phone=<?= whatsapp($resultsellers_whatsapp->phone); ?>&text=Olá, <?= $resultsellers_whatsapp->name; ?>! Eu estava no seu site e gostaria de tirar algumas dúvidas." title="Falar com <?= $resultsellers_whatsapp->name; ?>" target="_blank" class="name">
-                            <?= $resultsellers_whatsapp->name; ?> <?= $resultsellers_whatsapp->last_name; ?>
-                        </a>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
-            </main>
-        </div>
-        -->
     </div>
-
 
     <div class="load"></div>
     <div class="alpha"></div>
